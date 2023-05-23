@@ -1,0 +1,17 @@
+E:\pttk-us-2223-team3\HotelSystem\bin\Debug\HotelSystem.exe.config
+E:\pttk-us-2223-team3\HotelSystem\bin\Debug\HotelSystem.exe
+E:\pttk-us-2223-team3\HotelSystem\bin\Debug\HotelSystem.pdb
+E:\pttk-us-2223-team3\HotelSystem\bin\Debug\Guna.UI2.dll
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.Properties.Resources.resources
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.csproj.GenerateResource.cache
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.csproj.CoreCompileInputs.cache
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.csproj.CopyComplete
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.exe
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.pdb
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.SignInForm.resources
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.Bellman_Overview.resources
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.Bellman_HomePage.resources
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.Bellman_Service.resources
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.Bellman_Room.resources
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.Bellman_Rule.resources
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.csproj.AssemblyReference.cache
