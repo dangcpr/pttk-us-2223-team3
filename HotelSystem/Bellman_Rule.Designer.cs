@@ -42,13 +42,12 @@ namespace HotelSystem
             this.HomeLabel.Size = new System.Drawing.Size(389, 47);
             this.HomeLabel.TabIndex = 0;
             this.HomeLabel.Text = "QUY ĐỊNH KHÁCH SẠN";
-            this.HomeLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Bellman_Rule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Controls.Add(this.HomeLabel);
             this.Name = "Bellman_Rule";
             this.Size = new System.Drawing.Size(914, 671);

@@ -31,6 +31,7 @@ namespace HotelSystem
         {
             this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.forgotPass = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.signInButton = new Guna.UI2.WinForms.Guna2Button();
             this.role = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -44,7 +45,6 @@ namespace HotelSystem
             this.SignInFormCancel = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.forgotPass = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -68,6 +68,26 @@ namespace HotelSystem
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(384, 517);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // forgotPass
+            // 
+            this.forgotPass.BorderColor = System.Drawing.Color.DeepPink;
+            this.forgotPass.BorderRadius = 4;
+            this.forgotPass.BorderThickness = 1;
+            this.forgotPass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.forgotPass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.forgotPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.forgotPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.forgotPass.FillColor = System.Drawing.Color.White;
+            this.forgotPass.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.forgotPass.ForeColor = System.Drawing.Color.DeepPink;
+            this.forgotPass.Location = new System.Drawing.Point(176, 405);
+            this.forgotPass.Margin = new System.Windows.Forms.Padding(2);
+            this.forgotPass.Name = "forgotPass";
+            this.forgotPass.Size = new System.Drawing.Size(156, 41);
+            this.forgotPass.TabIndex = 14;
+            this.forgotPass.Text = "Quên mật khẩu";
+            this.forgotPass.Click += new System.EventHandler(this.forgotPass_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -249,26 +269,6 @@ namespace HotelSystem
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
-            // forgotPass
-            // 
-            this.forgotPass.BorderColor = System.Drawing.Color.DeepPink;
-            this.forgotPass.BorderRadius = 4;
-            this.forgotPass.BorderThickness = 1;
-            this.forgotPass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.forgotPass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.forgotPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.forgotPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.forgotPass.FillColor = System.Drawing.Color.White;
-            this.forgotPass.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold);
-            this.forgotPass.ForeColor = System.Drawing.Color.DeepPink;
-            this.forgotPass.Location = new System.Drawing.Point(176, 405);
-            this.forgotPass.Margin = new System.Windows.Forms.Padding(2);
-            this.forgotPass.Name = "forgotPass";
-            this.forgotPass.Size = new System.Drawing.Size(156, 41);
-            this.forgotPass.TabIndex = 14;
-            this.forgotPass.Text = "Quên mật khẩu";
-            this.forgotPass.Click += new System.EventHandler(this.forgotPass_Click);
-            // 
             // SignInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,6 +281,7 @@ namespace HotelSystem
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SignInForm";
             this.Text = "ĐĂNG NHẬP";
+            this.Load += new System.EventHandler(this.SignInForm_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
@@ -303,9 +304,9 @@ namespace HotelSystem
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel LabelSignIn;
         private Guna.UI2.WinForms.Guna2ControlBox SignInFormCancel;
-        protected Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button forgotPass;
+        public Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
 

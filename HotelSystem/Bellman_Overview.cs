@@ -20,6 +20,7 @@ namespace HotelSystem
 
         private void Bellman_Overview_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
             bellman_HomePage1.BringToFront();
             BellmanCancel.BringToFront();
         }

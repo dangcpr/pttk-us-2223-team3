@@ -32,6 +32,8 @@ namespace HotelSystem
             this.components = new System.ComponentModel.Container();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.accountService = new Guna.UI2.WinForms.Guna2Button();
+            this.logoutButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.hoverPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.RuleButton = new Guna.UI2.WinForms.Guna2Button();
@@ -43,15 +45,12 @@ namespace HotelSystem
             this.hello = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.serviceController1 = new System.ServiceProcess.ServiceController();
             this.BellmanCancel = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.bellman_Rule1 = new HotelSystem.Bellman_Rule();
-            this.bellman_Room1 = new HotelSystem.Bellman_Room();
-            this.bellman_Service1 = new HotelSystem.Bellman_Service();
             this.bellman_HomePage1 = new HotelSystem.Bellman_HomePage();
-            this.logoutButton = new Guna.UI2.WinForms.Guna2Button();
-            this.accountService = new Guna.UI2.WinForms.Guna2Button();
+            this.bellman_Service1 = new HotelSystem.Bellman_Service();
+            this.bellman_Room1 = new HotelSystem.Bellman_Room();
+            this.bellman_Rule1 = new HotelSystem.Bellman_Rule();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -82,6 +81,54 @@ namespace HotelSystem
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(243, 671);
             this.guna2Panel1.TabIndex = 5;
+            // 
+            // accountService
+            // 
+            this.accountService.Animated = true;
+            this.accountService.AutoRoundedCorners = true;
+            this.accountService.BorderColor = System.Drawing.Color.DeepPink;
+            this.accountService.BorderRadius = 21;
+            this.accountService.BorderThickness = 1;
+            this.accountService.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.accountService.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.accountService.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.accountService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.accountService.FillColor = System.Drawing.Color.White;
+            this.accountService.Font = new System.Drawing.Font("Google Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountService.ForeColor = System.Drawing.Color.DeepPink;
+            this.accountService.HoverState.FillColor = System.Drawing.Color.DeepPink;
+            this.accountService.HoverState.Font = new System.Drawing.Font("Google Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountService.HoverState.ForeColor = System.Drawing.Color.White;
+            this.accountService.Location = new System.Drawing.Point(9, 454);
+            this.accountService.Name = "accountService";
+            this.accountService.Size = new System.Drawing.Size(106, 45);
+            this.accountService.TabIndex = 19;
+            this.accountService.Text = "TÀI KHOẢN";
+            this.accountService.Click += new System.EventHandler(this.accountService_Click);
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.Animated = true;
+            this.logoutButton.AutoRoundedCorners = true;
+            this.logoutButton.BorderColor = System.Drawing.Color.DeepPink;
+            this.logoutButton.BorderRadius = 21;
+            this.logoutButton.BorderThickness = 1;
+            this.logoutButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.logoutButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.logoutButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.logoutButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.logoutButton.FillColor = System.Drawing.Color.White;
+            this.logoutButton.Font = new System.Drawing.Font("Google Sans", 9.75F, System.Drawing.FontStyle.Bold);
+            this.logoutButton.ForeColor = System.Drawing.Color.DeepPink;
+            this.logoutButton.HoverState.FillColor = System.Drawing.Color.DeepPink;
+            this.logoutButton.HoverState.Font = new System.Drawing.Font("Google Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.HoverState.ForeColor = System.Drawing.Color.White;
+            this.logoutButton.Location = new System.Drawing.Point(126, 454);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(106, 45);
+            this.logoutButton.TabIndex = 18;
+            this.logoutButton.Text = "ĐĂNG XUẤT";
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // guna2Separator2
             // 
@@ -269,11 +316,12 @@ namespace HotelSystem
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Controls.Add(this.BellmanCancel);
+            this.guna2Panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.guna2Panel2.Controls.Add(this.bellman_Rule1);
             this.guna2Panel2.Controls.Add(this.bellman_Room1);
             this.guna2Panel2.Controls.Add(this.bellman_Service1);
             this.guna2Panel2.Controls.Add(this.bellman_HomePage1);
+            this.guna2Panel2.Controls.Add(this.BellmanCancel);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel2.Location = new System.Drawing.Point(243, 0);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -281,85 +329,37 @@ namespace HotelSystem
             this.guna2Panel2.Size = new System.Drawing.Size(914, 671);
             this.guna2Panel2.TabIndex = 6;
             // 
-            // bellman_Rule1
-            // 
-            this.bellman_Rule1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.bellman_Rule1.Location = new System.Drawing.Point(0, 0);
-            this.bellman_Rule1.Name = "bellman_Rule1";
-            this.bellman_Rule1.Size = new System.Drawing.Size(914, 671);
-            this.bellman_Rule1.TabIndex = 8;
-            // 
-            // bellman_Room1
-            // 
-            this.bellman_Room1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.bellman_Room1.Location = new System.Drawing.Point(0, 0);
-            this.bellman_Room1.Name = "bellman_Room1";
-            this.bellman_Room1.Size = new System.Drawing.Size(914, 671);
-            this.bellman_Room1.TabIndex = 7;
-            // 
-            // bellman_Service1
-            // 
-            this.bellman_Service1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.bellman_Service1.Location = new System.Drawing.Point(0, 0);
-            this.bellman_Service1.Name = "bellman_Service1";
-            this.bellman_Service1.Size = new System.Drawing.Size(914, 671);
-            this.bellman_Service1.TabIndex = 6;
-            // 
             // bellman_HomePage1
             // 
-            this.bellman_HomePage1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.bellman_HomePage1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.bellman_HomePage1.Location = new System.Drawing.Point(0, 0);
             this.bellman_HomePage1.Name = "bellman_HomePage1";
             this.bellman_HomePage1.Size = new System.Drawing.Size(914, 671);
             this.bellman_HomePage1.TabIndex = 5;
             // 
-            // logoutButton
+            // bellman_Service1
             // 
-            this.logoutButton.Animated = true;
-            this.logoutButton.AutoRoundedCorners = true;
-            this.logoutButton.BorderColor = System.Drawing.Color.DeepPink;
-            this.logoutButton.BorderRadius = 21;
-            this.logoutButton.BorderThickness = 1;
-            this.logoutButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.logoutButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.logoutButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.logoutButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.logoutButton.FillColor = System.Drawing.Color.White;
-            this.logoutButton.Font = new System.Drawing.Font("Google Sans", 9.75F, System.Drawing.FontStyle.Bold);
-            this.logoutButton.ForeColor = System.Drawing.Color.DeepPink;
-            this.logoutButton.HoverState.FillColor = System.Drawing.Color.DeepPink;
-            this.logoutButton.HoverState.Font = new System.Drawing.Font("Google Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutButton.HoverState.ForeColor = System.Drawing.Color.White;
-            this.logoutButton.Location = new System.Drawing.Point(126, 454);
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(106, 45);
-            this.logoutButton.TabIndex = 18;
-            this.logoutButton.Text = "ĐĂNG XUẤT";
-            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            this.bellman_Service1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bellman_Service1.Location = new System.Drawing.Point(0, 0);
+            this.bellman_Service1.Name = "bellman_Service1";
+            this.bellman_Service1.Size = new System.Drawing.Size(914, 671);
+            this.bellman_Service1.TabIndex = 6;
             // 
-            // accountService
+            // bellman_Room1
             // 
-            this.accountService.Animated = true;
-            this.accountService.AutoRoundedCorners = true;
-            this.accountService.BorderColor = System.Drawing.Color.DeepPink;
-            this.accountService.BorderRadius = 21;
-            this.accountService.BorderThickness = 1;
-            this.accountService.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.accountService.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.accountService.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.accountService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.accountService.FillColor = System.Drawing.Color.White;
-            this.accountService.Font = new System.Drawing.Font("Google Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accountService.ForeColor = System.Drawing.Color.DeepPink;
-            this.accountService.HoverState.FillColor = System.Drawing.Color.DeepPink;
-            this.accountService.HoverState.Font = new System.Drawing.Font("Google Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accountService.HoverState.ForeColor = System.Drawing.Color.White;
-            this.accountService.Location = new System.Drawing.Point(9, 454);
-            this.accountService.Name = "accountService";
-            this.accountService.Size = new System.Drawing.Size(106, 45);
-            this.accountService.TabIndex = 19;
-            this.accountService.Text = "TÀI KHOẢN";
-            this.accountService.Click += new System.EventHandler(this.accountService_Click);
+            this.bellman_Room1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bellman_Room1.Location = new System.Drawing.Point(0, 0);
+            this.bellman_Room1.Name = "bellman_Room1";
+            this.bellman_Room1.Size = new System.Drawing.Size(914, 671);
+            this.bellman_Room1.TabIndex = 7;
+            // 
+            // bellman_Rule1
+            // 
+            this.bellman_Rule1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bellman_Rule1.Location = new System.Drawing.Point(0, 0);
+            this.bellman_Rule1.Name = "bellman_Rule1";
+            this.bellman_Rule1.Size = new System.Drawing.Size(914, 671);
+            this.bellman_Rule1.TabIndex = 8;
             // 
             // Bellman_Overview
             // 
@@ -397,14 +397,13 @@ namespace HotelSystem
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2Panel hoverPanel;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
-        private System.ServiceProcess.ServiceController serviceController1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2ControlBox BellmanCancel;
+        private Guna.UI2.WinForms.Guna2Button logoutButton;
+        private Guna.UI2.WinForms.Guna2Button accountService;
         private Bellman_HomePage bellman_HomePage1;
         private Bellman_Service bellman_Service1;
         private Bellman_Room bellman_Room1;
         private Bellman_Rule bellman_Rule1;
-        private Guna.UI2.WinForms.Guna2Button logoutButton;
-        private Guna.UI2.WinForms.Guna2Button accountService;
     }
 }
