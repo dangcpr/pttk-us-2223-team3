@@ -40,3 +40,11 @@ D:\VS_project\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Room.re
 D:\VS_project\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Checkin.resources
 D:\VS_project\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Checkout.resources
 D:\VS_project\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Tour.resources
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.csproj.AssemblyReference.cache
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Tour.resources
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Checkout.resources
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Checkin.resources
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Room.resources
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Service.resources
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_HomePage.resources
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Overview.resources

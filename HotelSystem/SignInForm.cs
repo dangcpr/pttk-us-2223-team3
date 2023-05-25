@@ -21,7 +21,7 @@ namespace HotelSystem
             Console.WriteLine("Sign in form loaded");
 
             // Get connect to database 
-            this.sqlConn = databaseDAO.getConnectDB("Data Source=DESKTOP-DMLAI4E\\SQLEXPRESS;Initial Catalog=QUANLYKHACHSAN;Integrated Security=True");          
+            this.sqlConn = databaseDAO.getConnectDB("Data Source=.;Initial Catalog=QUANLYKHACHSAN;Integrated Security=True");          
             //this.sqlConn.Open();
 
             this.CenterToScreen();
