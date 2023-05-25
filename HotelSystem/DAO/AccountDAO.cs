@@ -10,6 +10,7 @@ namespace HotelSystem.DAO
     public class AccountDAO
     {
         private string getAllAccountQuery = "SELECT * FROM TAI_KHOAN";
+        public static string overviewUsername = "";
 
         public bool checkAccount(SqlConnection sqlConn, string username, string password, string role)
         {
@@ -23,6 +24,7 @@ namespace HotelSystem.DAO
             {
                 if (reader.GetString(1) == username && reader.GetString(2) == password && reader.GetString(3) == role)
                 {
+                    overviewUsername = username;
                     checkAccount = true;
                 }
 

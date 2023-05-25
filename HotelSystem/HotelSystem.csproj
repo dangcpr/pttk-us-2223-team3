@@ -57,6 +57,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LeTan_Tour.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Tour.Designer.cs">
+      <DependentUpon>LeTan_Tour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_Checkout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Checkout.Designer.cs">
+      <DependentUpon>LeTan_Checkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_Checkin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Checkin.Designer.cs">
+      <DependentUpon>LeTan_Checkin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_Room.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Room.Designer.cs">
+      <DependentUpon>LeTan_Room.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_Service.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Service.Designer.cs">
+      <DependentUpon>LeTan_Service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_HomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_HomePage.Designer.cs">
+      <DependentUpon>LeTan_HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_Overview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeTan_Overview.Designer.cs">
+      <DependentUpon>LeTan_Overview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bellman_Service.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -97,6 +139,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LeTan_Tour.resx">
+      <DependentUpon>LeTan_Tour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_Checkout.resx">
+      <DependentUpon>LeTan_Checkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_Checkin.resx">
+      <DependentUpon>LeTan_Checkin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_Room.resx">
+      <DependentUpon>LeTan_Room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_Service.resx">
+      <DependentUpon>LeTan_Service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_HomePage.resx">
+      <DependentUpon>LeTan_HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_Overview.resx">
+      <DependentUpon>LeTan_Overview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bellman_Service.resx">
       <DependentUpon>Bellman_Service.cs</DependentUpon>
     </EmbeddedResource>

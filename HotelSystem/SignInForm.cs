@@ -51,6 +51,13 @@ namespace HotelSystem
                 bellman_Overview.Show();
                 this.Hide();
             }
+            // Open Lễ tân account
+            else if (checkAccount && role.Text == "Lễ tân")
+            {
+                LeTan_Overview LeTan_Overview = new LeTan_Overview();
+                LeTan_Overview.Show();
+                this.Hide();
+            }
             else
             {
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu hoặc vai trò", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
