@@ -319,21 +319,23 @@ namespace HotelSystem
             // 
             // leTanOverviewName
             // 
+            this.leTanOverviewName.AutoSize = false;
             this.leTanOverviewName.BackColor = System.Drawing.Color.Transparent;
             this.leTanOverviewName.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.leTanOverviewName.ForeColor = System.Drawing.Color.Black;
-            this.leTanOverviewName.Location = new System.Drawing.Point(96, 144);
+            this.leTanOverviewName.Location = new System.Drawing.Point(0, 144);
             this.leTanOverviewName.Name = "leTanOverviewName";
-            this.leTanOverviewName.Size = new System.Drawing.Size(51, 23);
+            this.leTanOverviewName.Size = new System.Drawing.Size(243, 23);
             this.leTanOverviewName.TabIndex = 8;
             this.leTanOverviewName.Text = "Lễ tân";
+            this.leTanOverviewName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // hello
             // 
             this.hello.BackColor = System.Drawing.Color.Transparent;
             this.hello.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hello.ForeColor = System.Drawing.Color.DeepPink;
-            this.hello.Location = new System.Drawing.Point(82, 115);
+            this.hello.Location = new System.Drawing.Point(81, 115);
             this.hello.Name = "hello";
             this.hello.Size = new System.Drawing.Size(84, 23);
             this.hello.TabIndex = 7;

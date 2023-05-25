@@ -23,6 +23,7 @@ namespace HotelSystem
             this.CenterToScreen();
             bellman_HomePage1.BringToFront();
             BellmanCancel.BringToFront();
+            name.Text = DAO.AccountDAO.overviewUsername;
         }
 
         private void HomeButton_Click(object sender, EventArgs e)

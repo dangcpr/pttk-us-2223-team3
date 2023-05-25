@@ -47,10 +47,10 @@ namespace HotelSystem
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.BellmanCancel = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.bellman_HomePage1 = new HotelSystem.Bellman_HomePage();
-            this.bellman_Service1 = new HotelSystem.Bellman_Service();
-            this.bellman_Room1 = new HotelSystem.Bellman_Room();
             this.bellman_Rule1 = new HotelSystem.Bellman_Rule();
+            this.bellman_Room1 = new HotelSystem.Bellman_Room();
+            this.bellman_Service1 = new HotelSystem.Bellman_Service();
+            this.bellman_HomePage1 = new HotelSystem.Bellman_HomePage();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -202,7 +202,7 @@ namespace HotelSystem
             this.guna2PictureBox2.Image = global::HotelSystem.Properties.Resources.Cover;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(30, 529);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(180, 131);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -263,14 +263,16 @@ namespace HotelSystem
             // 
             // name
             // 
+            this.name.AutoSize = false;
             this.name.BackColor = System.Drawing.Color.Transparent;
             this.name.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name.ForeColor = System.Drawing.Color.Black;
-            this.name.Location = new System.Drawing.Point(67, 139);
+            this.name.Location = new System.Drawing.Point(0, 139);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(113, 23);
+            this.name.Size = new System.Drawing.Size(243, 23);
             this.name.TabIndex = 8;
             this.name.Text = "Nguyễn Văn A";
+            this.name.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // hello
             // 
@@ -308,7 +310,7 @@ namespace HotelSystem
             this.BellmanCancel.FillColor = System.Drawing.Color.DeepPink;
             this.BellmanCancel.IconColor = System.Drawing.Color.White;
             this.BellmanCancel.Location = new System.Drawing.Point(872, 10);
-            this.BellmanCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.BellmanCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BellmanCancel.Name = "BellmanCancel";
             this.BellmanCancel.Size = new System.Drawing.Size(34, 24);
             this.BellmanCancel.TabIndex = 4;
@@ -324,42 +326,46 @@ namespace HotelSystem
             this.guna2Panel2.Controls.Add(this.BellmanCancel);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel2.Location = new System.Drawing.Point(243, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(914, 671);
             this.guna2Panel2.TabIndex = 6;
-            // 
-            // bellman_HomePage1
-            // 
-            this.bellman_HomePage1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bellman_HomePage1.Location = new System.Drawing.Point(0, 0);
-            this.bellman_HomePage1.Name = "bellman_HomePage1";
-            this.bellman_HomePage1.Size = new System.Drawing.Size(914, 671);
-            this.bellman_HomePage1.TabIndex = 5;
-            // 
-            // bellman_Service1
-            // 
-            this.bellman_Service1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bellman_Service1.Location = new System.Drawing.Point(0, 0);
-            this.bellman_Service1.Name = "bellman_Service1";
-            this.bellman_Service1.Size = new System.Drawing.Size(914, 671);
-            this.bellman_Service1.TabIndex = 6;
-            // 
-            // bellman_Room1
-            // 
-            this.bellman_Room1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bellman_Room1.Location = new System.Drawing.Point(0, 0);
-            this.bellman_Room1.Name = "bellman_Room1";
-            this.bellman_Room1.Size = new System.Drawing.Size(914, 671);
-            this.bellman_Room1.TabIndex = 7;
             // 
             // bellman_Rule1
             // 
             this.bellman_Rule1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.bellman_Rule1.Location = new System.Drawing.Point(0, 0);
+            this.bellman_Rule1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bellman_Rule1.Name = "bellman_Rule1";
             this.bellman_Rule1.Size = new System.Drawing.Size(914, 671);
             this.bellman_Rule1.TabIndex = 8;
+            // 
+            // bellman_Room1
+            // 
+            this.bellman_Room1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bellman_Room1.Location = new System.Drawing.Point(0, 0);
+            this.bellman_Room1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bellman_Room1.Name = "bellman_Room1";
+            this.bellman_Room1.Size = new System.Drawing.Size(914, 671);
+            this.bellman_Room1.TabIndex = 7;
+            // 
+            // bellman_Service1
+            // 
+            this.bellman_Service1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bellman_Service1.Location = new System.Drawing.Point(0, 0);
+            this.bellman_Service1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bellman_Service1.Name = "bellman_Service1";
+            this.bellman_Service1.Size = new System.Drawing.Size(914, 671);
+            this.bellman_Service1.TabIndex = 6;
+            // 
+            // bellman_HomePage1
+            // 
+            this.bellman_HomePage1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bellman_HomePage1.Location = new System.Drawing.Point(0, 0);
+            this.bellman_HomePage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bellman_HomePage1.Name = "bellman_HomePage1";
+            this.bellman_HomePage1.Size = new System.Drawing.Size(914, 671);
+            this.bellman_HomePage1.TabIndex = 5;
             // 
             // Bellman_Overview
             // 
