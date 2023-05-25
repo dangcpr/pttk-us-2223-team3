@@ -27,6 +27,10 @@ namespace HotelSystem.DAO
                 }
 
             }
+
+            // Đóng reader sau khi truy xuất tài khoản xong
+            reader.Close();
+
             return checkAccount;
         }
     }

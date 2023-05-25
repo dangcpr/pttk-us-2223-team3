@@ -12,6 +12,7 @@ namespace HotelSystem.DAO
         public SqlConnection getConnectDB(string connectStr)
         {
             SqlConnection sqlConn = new SqlConnection(connectStr);
+            sqlConn.Open();
             return sqlConn;
         }
     }

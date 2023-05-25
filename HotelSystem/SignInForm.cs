@@ -22,6 +22,7 @@ namespace HotelSystem
 
             // Get connect to database 
             this.sqlConn = databaseDAO.getConnectDB("Data Source=DESKTOP-DMLAI4E\\SQLEXPRESS;Initial Catalog=QUANLYKHACHSAN;Integrated Security=True");          
+            //this.sqlConn.Open();
 
             this.CenterToScreen();
         }
@@ -38,7 +39,6 @@ namespace HotelSystem
 
         private void signInButton_Click(object sender, EventArgs e)
         {
-            this.sqlConn.Open();
 
             // Check account from database
             AccountDAO accountDAO = new AccountDAO();
@@ -54,15 +54,12 @@ namespace HotelSystem
             else
             {
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu hoặc vai trò", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-            }
-
-            this.sqlConn.Close();
-
+            }   
         }
 
         private void SignInFormCancel_Click(object sender, EventArgs e)
         {
+            this.sqlConn.Close();
             this.Close();
             Application.Exit();
         }
