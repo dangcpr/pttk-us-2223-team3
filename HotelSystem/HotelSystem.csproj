@@ -87,6 +87,8 @@
     <Compile Include="Bellman_Overview.Designer.cs">
       <DependentUpon>Bellman_Overview.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\DatabaseDAO.cs" />
     <Compile Include="SignInForm.cs">
       <SubType>Form</SubType>
     </Compile>
