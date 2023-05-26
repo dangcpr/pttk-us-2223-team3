@@ -1,4 +1,6 @@
 ﻿using HotelSystem.DAO;
+using HotelSystem.CLASS;
+using HotelSystem.BUS;
 using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -7,8 +9,6 @@ namespace HotelSystem
 {
     public partial class SignInForm : Form
     {
-        // Declair DAO class
-        private DatabaseDAO databaseDAO = new DatabaseDAO();
         private SqlConnection sqlConn = null;
 
         public SignInForm()
@@ -21,8 +21,7 @@ namespace HotelSystem
             Console.WriteLine("Sign in form loaded");
 
             // Get connect to database 
-            this.sqlConn = databaseDAO.getConnectDB("Data Source=.;Initial Catalog=QUANLYKHACHSAN;Integrated Security=True");          
-            //this.sqlConn.Open();
+            this.sqlConn = DatabaseDAO.getConnectDB();
 
             this.CenterToScreen();
         }
@@ -39,29 +38,38 @@ namespace HotelSystem
 
         private void signInButton_Click(object sender, EventArgs e)
         {
+            Account signinAccount = new Account(username.Text, password.Text, role.Text);
+            Boolean checkAcountBUS = AccountBUS.checkSigninInput(signinAccount.username, signinAccount.password, signinAccount.role);
 
-            // Check account from database
-            AccountDAO accountDAO = new AccountDAO();
-            bool checkAccount = accountDAO.checkAccount(this.sqlConn, username.Text, password.Text, role.Text);
+            if(checkAcountBUS)
+            {
+                // Check account from database
+                AccountDAO accountDAO = new AccountDAO();
+                bool checkAccount = accountDAO.checkAccount(this.sqlConn, username.Text, password.Text, role.Text);
 
-            // Open Bellman account
-            if (checkAccount && role.Text == "Bellman")
-            {
-                Bellman_Overview bellman_Overview = new Bellman_Overview();
-                bellman_Overview.Show();
-                this.Hide();
-            }
-            // Open Lễ tân account
-            else if (checkAccount && role.Text == "Lễ tân")
-            {
-                LeTan_Overview LeTan_Overview = new LeTan_Overview();
-                LeTan_Overview.Show();
-                this.Hide();
+                // Open Bellman account
+                if (checkAccount && role.Text == "Bellman")
+                {
+                    Bellman_Overview bellman_Overview = new Bellman_Overview();
+                    bellman_Overview.Show();
+                    this.Hide();
+                }
+                // Open Lễ tân account
+                else if (checkAccount && role.Text == "Lễ tân")
+                {
+                    LeTan_Overview LeTan_Overview = new LeTan_Overview();
+                    LeTan_Overview.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Sai tài khoản hoặc mật khẩu hoặc vai trò", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu hoặc vai trò", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }   
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }       
         }
 
         private void SignInFormCancel_Click(object sender, EventArgs e)

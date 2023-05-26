@@ -9,7 +9,7 @@ namespace HotelSystem.DAO
 {
     public class AccountDAO
     {
-        private string getAllAccountQuery = "SELECT * FROM TAI_KHOAN";
+        public static string getAllAccountQuery = "SELECT * FROM TAI_KHOAN";
         public static string overviewUsername = "";
 
         public bool checkAccount(SqlConnection sqlConn, string username, string password, string role)

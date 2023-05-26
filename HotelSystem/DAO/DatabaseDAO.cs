@@ -9,9 +9,11 @@ namespace HotelSystem.DAO
 {
     public class DatabaseDAO
     {
-        public SqlConnection getConnectDB(string connectStr)
+        public static string dbConnectStr = "Data Source=DESKTOP-DMLAI4E\\SQLEXPRESS;Initial Catalog=QUANLYKHACHSAN;Integrated Security=True";
+
+        public static SqlConnection getConnectDB()
         {
-            SqlConnection sqlConn = new SqlConnection(connectStr);
+            SqlConnection sqlConn = new SqlConnection(dbConnectStr);
             sqlConn.Open();
             return sqlConn;
         }
