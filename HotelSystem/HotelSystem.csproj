@@ -57,6 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\AccountBUS.cs" />
+    <Compile Include="CLASS\Account.cs" />
+    <Compile Include="DAO\RoomDAO.cs" />
     <Compile Include="LeTan_Tour.cs">
       <SubType>UserControl</SubType>
     </Compile>
