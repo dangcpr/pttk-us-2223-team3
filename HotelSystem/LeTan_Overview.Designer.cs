@@ -335,7 +335,7 @@ namespace HotelSystem
             this.hello.BackColor = System.Drawing.Color.Transparent;
             this.hello.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hello.ForeColor = System.Drawing.Color.DeepPink;
-            this.hello.Location = new System.Drawing.Point(81, 115);
+            this.hello.Location = new System.Drawing.Point(82, 115);
             this.hello.Name = "hello";
             this.hello.Size = new System.Drawing.Size(84, 23);
             this.hello.TabIndex = 7;
