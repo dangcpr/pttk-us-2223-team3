@@ -42,5 +42,15 @@ namespace HotelSystem
         {
             
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LeTanRoomListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

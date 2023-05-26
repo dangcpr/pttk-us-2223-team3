@@ -23,45 +23,60 @@ namespace HotelSystem.DAO
         {
             LeTanRoomListView.BringToFront();
             LeTanRoomListView.Items.Clear(); // Clear all list view data
+            LeTanRoomListView.Columns.Clear();
             LeTanRoomListView.View = View.Details; // To see add columns
 
             // Get connect to database
             sqlConn = DatabaseDAO.getConnectDB();
 
             // Call Room DAO method to get all room
-            SqlDataReader reader = RoomDAO.getAllRoom(sqlConn);
+            SqlDataReader reader = RoomDAO.getAllRoom(SignInForm.sqlConn);
+
+            const int width = 100;
+
+            LeTanRoomListView.Columns.Add("Mã phòng", width);
+            LeTanRoomListView.Columns.Add("Loại phòng", width);
+            LeTanRoomListView.Columns.Add("Giá tiền", width);
+            LeTanRoomListView.Columns.Add("Ngày thuê", width);
+            LeTanRoomListView.Columns.Add("Ngày trả", width);
+            LeTanRoomListView.Columns.Add("Tình trạng", width);
+            LeTanRoomListView.Columns.Add("Dọn dẹp", width);
 
             int index = 0;
             while (reader.Read())
             {
-                LeTanRoomListView.Items.Add(reader[0].ToString());
+                ListViewItem item = new ListViewItem(reader[0].ToString());
+                item.SubItems.Add(reader[1].ToString());
+                item.SubItems.Add(reader[2].ToString());
 
                 // Check if NGAYTHUE = NULL
-                if (reader[1].ToString() == "")
+                if (reader[3] == DBNull.Value)
                 {
-                    LeTanRoomListView.Items[index].SubItems.Add("Chưa có");
+                    item.SubItems.Add("Chưa có");
                 }
                 else
                 {
-                    LeTanRoomListView.Items[index].SubItems.Add(reader[1].ToString());
+                    item.SubItems.Add(reader[3].ToString());
                 }
 
                 // Check if NGAYTRA = NULL
-                if (reader[2].ToString() == "")
+                if (reader[4] == DBNull.Value)
                 {
-                    LeTanRoomListView.Items[index].SubItems.Add("Chưa có");
+                    item.SubItems.Add("Chưa có");
                 }
                 else
                 {
-                    LeTanRoomListView.Items[index].SubItems.Add(reader[2].ToString());
+                    item.SubItems.Add(reader[4].ToString());
                 }
 
-                LeTanRoomListView.Items[index].SubItems.Add(reader[3].ToString());
-                LeTanRoomListView.Items[index].SubItems.Add(reader[4].ToString());
+                item.SubItems.Add(reader[5].ToString());
+                item.SubItems.Add(reader[6].ToString());
+
+                LeTanRoomListView.Items.Add(item);
                 index++;
             }
-
-            sqlConn.Close();
+            reader.Close();
+            //sqlConn.Close();
         }
     }
 }

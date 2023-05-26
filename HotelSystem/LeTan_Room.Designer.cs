@@ -37,8 +37,8 @@ namespace HotelSystem
             this.NGAYTRA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TINHTRANG = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LOAI = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // HomeLabel
@@ -47,9 +47,10 @@ namespace HotelSystem
             this.HomeLabel.BackColor = System.Drawing.Color.Transparent;
             this.HomeLabel.Font = new System.Drawing.Font("Google Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeLabel.ForeColor = System.Drawing.Color.DeepPink;
-            this.HomeLabel.Location = new System.Drawing.Point(0, 28);
+            this.HomeLabel.Location = new System.Drawing.Point(0, 34);
+            this.HomeLabel.Margin = new System.Windows.Forms.Padding(4);
             this.HomeLabel.Name = "HomeLabel";
-            this.HomeLabel.Size = new System.Drawing.Size(914, 47);
+            this.HomeLabel.Size = new System.Drawing.Size(1219, 58);
             this.HomeLabel.TabIndex = 0;
             this.HomeLabel.Text = "THÔNG TIN ĐẶT PHÒNG KHÁCH SẠN";
             this.HomeLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -64,9 +65,10 @@ namespace HotelSystem
             this.viewRoomBtn.FillColor = System.Drawing.Color.DeepPink;
             this.viewRoomBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.viewRoomBtn.ForeColor = System.Drawing.Color.White;
-            this.viewRoomBtn.Location = new System.Drawing.Point(95, 109);
+            this.viewRoomBtn.Location = new System.Drawing.Point(127, 134);
+            this.viewRoomBtn.Margin = new System.Windows.Forms.Padding(4);
             this.viewRoomBtn.Name = "viewRoomBtn";
-            this.viewRoomBtn.Size = new System.Drawing.Size(180, 45);
+            this.viewRoomBtn.Size = new System.Drawing.Size(240, 55);
             this.viewRoomBtn.TabIndex = 1;
             this.viewRoomBtn.Text = "Xem danh sách phòng";
             this.viewRoomBtn.Click += new System.EventHandler(this.viewRoomBtn_Click);
@@ -81,11 +83,13 @@ namespace HotelSystem
             this.TINHTRANG,
             this.LOAI});
             this.LeTanRoomListView.HideSelection = false;
-            this.LeTanRoomListView.Location = new System.Drawing.Point(95, 496);
+            this.LeTanRoomListView.Location = new System.Drawing.Point(127, 610);
+            this.LeTanRoomListView.Margin = new System.Windows.Forms.Padding(4);
             this.LeTanRoomListView.Name = "LeTanRoomListView";
-            this.LeTanRoomListView.Size = new System.Drawing.Size(734, 215);
+            this.LeTanRoomListView.Size = new System.Drawing.Size(977, 264);
             this.LeTanRoomListView.TabIndex = 2;
             this.LeTanRoomListView.UseCompatibleStateImageBehavior = false;
+            this.LeTanRoomListView.SelectedIndexChanged += new System.EventHandler(this.LeTanRoomListView_SelectedIndexChanged);
             // 
             // MAPHONG
             // 
@@ -112,6 +116,17 @@ namespace HotelSystem
             this.LOAI.Text = "Loại";
             this.LOAI.Width = 100;
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(127, 610);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(977, 264);
+            this.listView1.TabIndex = 4;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
             // guna2Button1
             // 
             this.guna2Button1.BorderRadius = 5;
@@ -122,24 +137,16 @@ namespace HotelSystem
             this.guna2Button1.FillColor = System.Drawing.Color.DeepPink;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(344, 109);
+            this.guna2Button1.Location = new System.Drawing.Point(459, 134);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button1.Size = new System.Drawing.Size(240, 55);
             this.guna2Button1.TabIndex = 3;
             this.guna2Button1.Text = "Xem danh sách khách hàng";
             // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(95, 496);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(734, 215);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // LeTan_Room
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Controls.Add(this.listView1);
@@ -147,8 +154,9 @@ namespace HotelSystem
             this.Controls.Add(this.LeTanRoomListView);
             this.Controls.Add(this.viewRoomBtn);
             this.Controls.Add(this.HomeLabel);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LeTan_Room";
-            this.Size = new System.Drawing.Size(914, 750);
+            this.Size = new System.Drawing.Size(1219, 923);
             this.Load += new System.EventHandler(this.LeTan_Room_Load);
             this.ResumeLayout(false);
 
@@ -164,7 +172,7 @@ namespace HotelSystem
         private System.Windows.Forms.ColumnHeader NGAYTRA;
         private System.Windows.Forms.ColumnHeader TINHTRANG;
         private System.Windows.Forms.ColumnHeader LOAI;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.ListView listView1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

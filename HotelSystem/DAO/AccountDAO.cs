@@ -22,7 +22,7 @@ namespace HotelSystem.DAO
             bool checkAccount = false;
             while (reader.Read())
             {
-                if (reader.GetString(1) == username && reader.GetString(2) == password && reader.GetString(3) == role)
+                if (reader.GetString(0) == username && reader.GetString(1) == password && reader.GetString(2) == role)
                 {
                     overviewUsername = username;
                     checkAccount = true;
