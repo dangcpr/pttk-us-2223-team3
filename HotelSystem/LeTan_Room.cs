@@ -15,7 +15,7 @@ namespace HotelSystem
 {
     public partial class LeTan_Room : UserControl
     {
-        private SqlConnection sqlConn = null;
+        //private SqlConnection sqlConn = null;
 
         public LeTan_Room()
         {
@@ -27,20 +27,21 @@ namespace HotelSystem
             LeTanRoomListView.Hide();
             LeTanKHListView.Hide();
             LeTanRuleListView.Hide();
+            LeTanRoomBooking.Hide();
         }
 
         private void viewRoomBtn_Click(object sender, EventArgs e)
         {
             LeTanRoomListView.Show();
             LeTanRoomListView.BringToFront();
-            RoomDAO.viewAllRoom(LeTanRoomListView, sqlConn);
+            RoomDAO.viewAllRoom(LeTanRoomListView);
         }
 
         private void viewKhachHangBtn_Click(object sender, EventArgs e)
         {
             LeTanKHListView.Show();
             LeTanKHListView.BringToFront();
-            CustomerDAO.viewAllCustomer(LeTanKHListView, sqlConn);
+            CustomerDAO.viewAllCustomer(LeTanKHListView);
         }
 
         private void viewRuleBtn_Click(object sender, EventArgs e)
@@ -51,6 +52,12 @@ namespace HotelSystem
             HotelRule hotelRule = new HotelRule();
             List<HotelRule> ruleList = hotelRule.getRulesList();
             RuleDAO.viewAllRule(LeTanRuleListView, ruleList);
+        }
+
+        private void addRoomBookingBtn_Click(object sender, EventArgs e)
+        {
+            LeTanRoomBooking.Show();
+            LeTanRoomBooking.BringToFront();
         }
 
         private void LeTanGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -69,6 +76,11 @@ namespace HotelSystem
         }
 
         private void LeTanRoomListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
         {
 
         }
