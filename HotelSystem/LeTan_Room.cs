@@ -1,4 +1,5 @@
 ﻿using HotelSystem.DAO;
+using HotelSystem.CLASS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,8 @@ namespace HotelSystem
         private void LeTan_Room_Load(object sender, EventArgs e)
         {
             LeTanRoomListView.Hide();
+            LeTanKHListView.Hide();
+            LeTanRuleListView.Hide();
         }
 
         private void viewRoomBtn_Click(object sender, EventArgs e)
@@ -31,6 +34,23 @@ namespace HotelSystem
             LeTanRoomListView.Show();
             LeTanRoomListView.BringToFront();
             RoomDAO.viewAllRoom(LeTanRoomListView, sqlConn);
+        }
+
+        private void viewKhachHangBtn_Click(object sender, EventArgs e)
+        {
+            LeTanKHListView.Show();
+            LeTanKHListView.BringToFront();
+            CustomerDAO.viewAllCustomer(LeTanKHListView, sqlConn);
+        }
+
+        private void viewRuleBtn_Click(object sender, EventArgs e)
+        {
+            LeTanRuleListView.Show();
+            LeTanRuleListView.BringToFront();
+
+            HotelRule hotelRule = new HotelRule();
+            List<HotelRule> ruleList = hotelRule.getRulesList();
+            RuleDAO.viewAllRule(LeTanRuleListView, ruleList);
         }
 
         private void LeTanGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

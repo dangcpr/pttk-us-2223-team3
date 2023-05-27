@@ -59,7 +59,10 @@
   <ItemGroup>
     <Compile Include="BUS\AccountBUS.cs" />
     <Compile Include="CLASS\Account.cs" />
+    <Compile Include="CLASS\HotelRule.cs" />
+    <Compile Include="DAO\CustomerDAO.cs" />
     <Compile Include="DAO\RoomDAO.cs" />
+    <Compile Include="DAO\RuleDAO.cs" />
     <Compile Include="LeTan_Tour.cs">
       <SubType>UserControl</SubType>
     </Compile>
