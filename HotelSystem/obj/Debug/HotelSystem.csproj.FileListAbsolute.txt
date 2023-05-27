@@ -49,3 +49,4 @@ E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Service.resources
 E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_HomePage.resources
 E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Overview.resources
 D:\VS_project\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Room_Booking.resources
+E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Room_Booking.resources

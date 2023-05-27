@@ -84,5 +84,10 @@ namespace HotelSystem
         {
 
         }
+
+        private void LeTanRoomBooking_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

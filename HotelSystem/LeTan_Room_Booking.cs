@@ -29,7 +29,7 @@ namespace HotelSystem
         {
             customerId.Text = "";
             roomId.Text = "";
-            bookingDate.Text = "";
+            bookingDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
             roomType.Text = "";
             checkinDate.Text = "";
             checkoutDate.Text = "";
@@ -82,6 +82,21 @@ namespace HotelSystem
         private void guna2HtmlLabel6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void LeTan_Room_Booking_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roomId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roomType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RoomDAO.viewRoomType(roomId, roomType.Text);
         }
     }
 }

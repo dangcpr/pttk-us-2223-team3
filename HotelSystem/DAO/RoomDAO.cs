@@ -79,6 +79,30 @@ namespace HotelSystem.DAO
             //sqlConn.Close();
         }
 
+        public static void viewRoomType(ComboBox LeTanRoomComboBox, String TypeRoom)
+        {
+            LeTanRoomComboBox.BringToFront();
+            LeTanRoomComboBox.Items.Clear(); // Clear all list view data
+
+            // Get connect to database
+            //sqlConn = DatabaseDAO.getConnectDB();
+
+            // Call Room DAO method to get all room
+            SqlDataReader reader = RoomDAO.getAllRoom(DatabaseDAO.sqlConn);
+
+            while (reader.Read())
+            {
+
+                if (reader.GetString(1) == TypeRoom && reader.GetString(5) == "Trống")
+                {
+                    LeTanRoomComboBox.Items.Add(reader.GetInt32(0));
+                }
+
+            }
+            reader.Close();
+            //sqlConn.Close();
+        }
+
         public static void addNewRoomBooking(string customerId, string roomId, string bookingDate, string roomType, string checkinDate, string checkoutDate, string specialRequest)
         {
             string addRoomBookingStr = "INSERT INTO THONG_TIN_DAT_PHONG (MA_KHACH_HANG, NGAY_DAT, LOAI_PHONG, NGAY_CHECKIN, NGAY_CHECKOUT)";
@@ -95,10 +119,17 @@ namespace HotelSystem.DAO
 
             addRoomBookingStr += "(@MA_DP," + int.Parse(roomId) + "," + "'" + customerId + "','" + AccountDAO.overviewUsername + "');";
 
+            string updateStateRoom = "UPDATE THONG_TIN_PHONG_KHACH_SAN SET TINH_TRANG = ";
+            updateStateRoom += "N'Hết' WHERE MA_PHONG = ";
+            updateStateRoom += int.Parse(roomId);
+
             try
             {
                 SqlCommand sqlCmd = new SqlCommand(addRoomBookingStr, DatabaseDAO.sqlConn);
                 sqlCmd.ExecuteNonQuery();
+
+                SqlCommand sqlCmd2 = new SqlCommand(updateStateRoom, DatabaseDAO.sqlConn);
+                sqlCmd2.ExecuteNonQuery();
             }
             catch
             {
