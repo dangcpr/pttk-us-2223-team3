@@ -56,6 +56,7 @@ namespace HotelSystem
 
         private void BellmanCancel_Click(object sender, EventArgs e)
         {
+            DAO.DatabaseDAO.sqlConn.Close();
             this.Close();
             Application.Exit();
         }        

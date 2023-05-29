@@ -9,7 +9,7 @@ namespace HotelSystem
 {
     public partial class SignInForm : Form
     {
-        static public SqlConnection sqlConn = null;
+        //static public SqlConnection sqlConn = null;
 
         public SignInForm()
         {
@@ -21,7 +21,7 @@ namespace HotelSystem
             Console.WriteLine("Sign in form loaded");
 
             // Get connect to database 
-            sqlConn = DatabaseDAO.getConnectDB();
+            DatabaseDAO.sqlConn = DatabaseDAO.getConnectDB();
 
             this.CenterToScreen();
         }
@@ -45,7 +45,7 @@ namespace HotelSystem
             {
                 // Check account from database
                 AccountDAO accountDAO = new AccountDAO();
-                bool checkAccount = accountDAO.checkAccount(sqlConn, username.Text, password.Text, role.Text);
+                bool checkAccount = accountDAO.checkAccount(DatabaseDAO.sqlConn, username.Text, password.Text, role.Text);
 
                 // Open Bellman account
                 if (checkAccount && role.Text == "Bellman")
@@ -74,7 +74,7 @@ namespace HotelSystem
 
         private void SignInFormCancel_Click(object sender, EventArgs e)
         {
-            sqlConn.Close();
+            DatabaseDAO.sqlConn.Close();
             this.Close();
             Application.Exit();
         }
@@ -85,6 +85,11 @@ namespace HotelSystem
         }
 
         private void forgotPass_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void role_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
