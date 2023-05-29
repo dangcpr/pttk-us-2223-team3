@@ -40,12 +40,12 @@ namespace HotelSystem
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.specialRequest = new Guna.UI2.WinForms.Guna2TextBox();
             this.addRoomBookingBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.roomType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.checkoutDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.bookingDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.checkinDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.roomId = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.roomType = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.bookingDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.SuspendLayout();
             // 
             // HomeLabel
@@ -55,7 +55,7 @@ namespace HotelSystem
             this.HomeLabel.Font = new System.Drawing.Font("Google Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeLabel.ForeColor = System.Drawing.Color.DeepPink;
             this.HomeLabel.Location = new System.Drawing.Point(0, 34);
-            this.HomeLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HomeLabel.Margin = new System.Windows.Forms.Padding(4);
             this.HomeLabel.Name = "HomeLabel";
             this.HomeLabel.Size = new System.Drawing.Size(1219, 58);
             this.HomeLabel.TabIndex = 0;
@@ -73,7 +73,7 @@ namespace HotelSystem
             this.quitBookingBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.quitBookingBtn.ForeColor = System.Drawing.Color.White;
             this.quitBookingBtn.Location = new System.Drawing.Point(991, 111);
-            this.quitBookingBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.quitBookingBtn.Margin = new System.Windows.Forms.Padding(4);
             this.quitBookingBtn.Name = "quitBookingBtn";
             this.quitBookingBtn.Size = new System.Drawing.Size(143, 55);
             this.quitBookingBtn.TabIndex = 1;
@@ -85,7 +85,7 @@ namespace HotelSystem
             this.roomBookingLabel.BackColor = System.Drawing.Color.Transparent;
             this.roomBookingLabel.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roomBookingLabel.Location = new System.Drawing.Point(55, 212);
-            this.roomBookingLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roomBookingLabel.Margin = new System.Windows.Forms.Padding(4);
             this.roomBookingLabel.Name = "roomBookingLabel";
             this.roomBookingLabel.Size = new System.Drawing.Size(146, 28);
             this.roomBookingLabel.TabIndex = 2;
@@ -117,7 +117,7 @@ namespace HotelSystem
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(879, 370);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(237, 28);
             this.guna2HtmlLabel1.TabIndex = 4;
@@ -128,7 +128,7 @@ namespace HotelSystem
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(480, 212);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(108, 28);
             this.guna2HtmlLabel2.TabIndex = 6;
@@ -139,7 +139,7 @@ namespace HotelSystem
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(55, 370);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(228, 28);
             this.guna2HtmlLabel3.TabIndex = 8;
@@ -151,7 +151,7 @@ namespace HotelSystem
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(480, 370);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(243, 28);
             this.guna2HtmlLabel4.TabIndex = 10;
@@ -162,7 +162,7 @@ namespace HotelSystem
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(55, 511);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(162, 28);
             this.guna2HtmlLabel5.TabIndex = 12;
@@ -199,40 +199,19 @@ namespace HotelSystem
             this.addRoomBookingBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.addRoomBookingBtn.ForeColor = System.Drawing.Color.White;
             this.addRoomBookingBtn.Location = new System.Drawing.Point(991, 783);
-            this.addRoomBookingBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addRoomBookingBtn.Margin = new System.Windows.Forms.Padding(4);
             this.addRoomBookingBtn.Name = "addRoomBookingBtn";
             this.addRoomBookingBtn.Size = new System.Drawing.Size(143, 55);
             this.addRoomBookingBtn.TabIndex = 14;
             this.addRoomBookingBtn.Text = "Thêm";
             this.addRoomBookingBtn.Click += new System.EventHandler(this.addRoomBookingBtn_Click);
             // 
-            // roomType
-            // 
-            this.roomType.BackColor = System.Drawing.Color.Transparent;
-            this.roomType.BorderRadius = 4;
-            this.roomType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.roomType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.roomType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.roomType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.roomType.Font = new System.Drawing.Font("Google Sans", 10.8F);
-            this.roomType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.roomType.ItemHeight = 30;
-            this.roomType.Items.AddRange(new object[] {
-            "Thường",
-            "Vip"});
-            this.roomType.Location = new System.Drawing.Point(480, 247);
-            this.roomType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.roomType.Name = "roomType";
-            this.roomType.Size = new System.Drawing.Size(253, 36);
-            this.roomType.TabIndex = 15;
-            this.roomType.SelectedIndexChanged += new System.EventHandler(this.roomType_SelectedIndexChanged);
-            // 
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(882, 212);
-            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(98, 28);
             this.guna2HtmlLabel6.TabIndex = 16;
@@ -254,23 +233,6 @@ namespace HotelSystem
             this.checkoutDate.Size = new System.Drawing.Size(250, 45);
             this.checkoutDate.TabIndex = 19;
             this.checkoutDate.Value = new System.DateTime(2023, 5, 28, 0, 23, 11, 398);
-            // 
-            // bookingDate
-            // 
-            this.bookingDate.BorderRadius = 4;
-            this.bookingDate.Checked = true;
-            this.bookingDate.CustomFormat = "yyyy-MM-dd";
-            this.bookingDate.Enabled = false;
-            this.bookingDate.FillColor = System.Drawing.Color.White;
-            this.bookingDate.Font = new System.Drawing.Font("Google Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.bookingDate.Location = new System.Drawing.Point(882, 405);
-            this.bookingDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.bookingDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.bookingDate.Name = "bookingDate";
-            this.bookingDate.Size = new System.Drawing.Size(250, 45);
-            this.bookingDate.TabIndex = 20;
-            this.bookingDate.Value = new System.DateTime(2023, 5, 28, 0, 23, 11, 398);
             // 
             // checkinDate
             // 
@@ -304,6 +266,44 @@ namespace HotelSystem
             this.roomId.TabIndex = 22;
             this.roomId.SelectedIndexChanged += new System.EventHandler(this.roomId_SelectedIndexChanged);
             // 
+            // roomType
+            // 
+            this.roomType.BackColor = System.Drawing.Color.Transparent;
+            this.roomType.BorderRadius = 4;
+            this.roomType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.roomType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.roomType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.roomType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.roomType.Font = new System.Drawing.Font("Google Sans", 10.8F);
+            this.roomType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.roomType.ItemHeight = 30;
+            this.roomType.Items.AddRange(new object[] {
+            "Thường",
+            "Vip"});
+            this.roomType.Location = new System.Drawing.Point(480, 247);
+            this.roomType.Margin = new System.Windows.Forms.Padding(4);
+            this.roomType.Name = "roomType";
+            this.roomType.Size = new System.Drawing.Size(253, 36);
+            this.roomType.TabIndex = 15;
+            this.roomType.SelectedIndexChanged += new System.EventHandler(this.roomType_SelectedIndexChanged);
+            // 
+            // bookingDate
+            // 
+            this.bookingDate.BorderRadius = 4;
+            this.bookingDate.Checked = true;
+            this.bookingDate.CustomFormat = "yyyy-MM-dd";
+            this.bookingDate.Enabled = false;
+            this.bookingDate.FillColor = System.Drawing.Color.White;
+            this.bookingDate.Font = new System.Drawing.Font("Google Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.bookingDate.Location = new System.Drawing.Point(882, 405);
+            this.bookingDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.bookingDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.bookingDate.Name = "bookingDate";
+            this.bookingDate.Size = new System.Drawing.Size(250, 45);
+            this.bookingDate.TabIndex = 20;
+            this.bookingDate.Value = new System.DateTime(2023, 5, 1, 0, 0, 0, 0);
+            // 
             // LeTan_Room_Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -326,7 +326,7 @@ namespace HotelSystem
             this.Controls.Add(this.roomBookingLabel);
             this.Controls.Add(this.quitBookingBtn);
             this.Controls.Add(this.HomeLabel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LeTan_Room_Booking";
             this.Size = new System.Drawing.Size(1219, 923);
             this.Load += new System.EventHandler(this.LeTan_Room_Booking_Load);
@@ -348,11 +348,11 @@ namespace HotelSystem
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2TextBox specialRequest;
         private Guna.UI2.WinForms.Guna2Button addRoomBookingBtn;
-        private Guna.UI2.WinForms.Guna2ComboBox roomType;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2DateTimePicker checkoutDate;
-        private Guna.UI2.WinForms.Guna2DateTimePicker bookingDate;
         private Guna.UI2.WinForms.Guna2DateTimePicker checkinDate;
         private Guna.UI2.WinForms.Guna2ComboBox roomId;
+        private Guna.UI2.WinForms.Guna2ComboBox roomType;
+        private Guna.UI2.WinForms.Guna2DateTimePicker bookingDate;
     }
 }

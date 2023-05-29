@@ -56,6 +56,7 @@ namespace HotelSystem
 
         private void addRoomBookingBtn_Click(object sender, EventArgs e)
         {
+            
             LeTanRoomBooking.Show();
             LeTanRoomBooking.BringToFront();
         }

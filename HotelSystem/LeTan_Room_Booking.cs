@@ -18,6 +18,7 @@ namespace HotelSystem
         public LeTan_Room_Booking()
         {
             InitializeComponent();
+            resetAddBookingInput();
         }
 
         private void quitBookingBtn_Click(object sender, EventArgs e)
@@ -28,11 +29,11 @@ namespace HotelSystem
         private void resetAddBookingInput()
         {
             customerId.Text = "";
-            roomId.Text = "";
+            roomId.SelectedIndex = -1;
             bookingDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
-            roomType.Text = "";
-            checkinDate.Text = "";
-            checkoutDate.Text = "";
+            roomType.SelectedIndex = -1;
+            checkinDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
+            checkoutDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
             specialRequest.Text = "";
         }
 
@@ -96,6 +97,7 @@ namespace HotelSystem
 
         private void roomType_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             RoomDAO.viewRoomType(roomId, roomType.Text);
         }
     }
