@@ -85,7 +85,57 @@ namespace HotelSystem.BUS
             }
 
             return true;
-        }       
+        }
+        
+        public static Boolean checkRoomBookingInput(string value, ListView LeTanRoomBookingListView)
+        {
+            if (value == "")
+            {
+                MessageBox.Show("Nhập mã phòng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
+            Boolean checkFindRoomBooking = RoomDAO.viewRoomBookingById(value, LeTanRoomBookingListView);
+
+            if (!checkFindRoomBooking)
+            {
+                MessageBox.Show("Không tìm thấy.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
+            return true;
+        }
+
+        public static Boolean checkRoomListInput(string value, ListView LeTanRoomListListView)
+        {
+            if (value == "")
+            {
+                MessageBox.Show("Nhập mã phòng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            else if (value == "Thường" || value == "Vip")
+            {
+                Boolean checkFindRoomList = RoomDAO.viewRoomListByType(value, LeTanRoomListListView);
+
+                if (!checkFindRoomList)
+                {
+                    MessageBox.Show("Không tìm thấy danh sách phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+            }
+            else
+            {
+                Boolean checkFindRoomList = RoomDAO.viewRoomListById(value, LeTanRoomListListView);
+
+                if (!checkFindRoomList)
+                {
+                    MessageBox.Show("Không tìm thấy danh sách phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+
+            }
+            return true;
+        }
 
     }
 }
