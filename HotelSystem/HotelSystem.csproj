@@ -65,6 +65,12 @@
     <Compile Include="DAO\CustomerDAO.cs" />
     <Compile Include="DAO\RoomDAO.cs" />
     <Compile Include="DAO\RuleDAO.cs" />
+    <Compile Include="LeTan_Room_Searching.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Room_Searching.Designer.cs">
+      <DependentUpon>LeTan_Room_Searching.cs</DependentUpon>
+    </Compile>
     <Compile Include="LeTan_Room_Booking.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LeTan_Room_Searching.resx">
+      <DependentUpon>LeTan_Room_Searching.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LeTan_Room_Booking.resx">
       <DependentUpon>LeTan_Room_Booking.cs</DependentUpon>
     </EmbeddedResource>

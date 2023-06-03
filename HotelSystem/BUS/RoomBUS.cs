@@ -1,8 +1,10 @@
-﻿using System;
+﻿using HotelSystem.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HotelSystem.BUS
 {
@@ -37,5 +39,19 @@ namespace HotelSystem.BUS
 
             return 0;
         }
+
+        public static Boolean checkRoomInfoInput(string value, ListView LeTanRoomInfoListView)
+        {
+            if (value == "")
+            {
+                MessageBox.Show("Nhập mã đặt phòng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
+            RoomDAO.viewRoomInfoById(value, LeTanRoomInfoListView);
+
+            return true;
+        }
+
     }
 }

@@ -28,20 +28,33 @@ namespace HotelSystem
             LeTanKHListView.Hide();
             LeTanRuleListView.Hide();
             LeTanRoomBooking.Hide();
+            LeTan_Room_Searching.Hide();
+        }
+
+        private void LeTanRoomSearchingDropbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine(LeTanRoomSearchingDropbox.Text);
+
+            if(LeTanRoomSearchingDropbox.Text == "Tra cứu thông tin đặt phòng")
+            {
+                LeTan_Room_Searching.Show();
+                LeTan_Room_Searching.BringToFront();
+            }
+
         }
 
         private void viewRoomBtn_Click(object sender, EventArgs e)
         {
             LeTanRoomListView.Show();
             LeTanRoomListView.BringToFront();
-            RoomDAO.viewAllRoom(LeTanRoomListView);
+            //RoomDAO.viewAllRoom(LeTanRoomListView);
         }
 
         private void viewKhachHangBtn_Click(object sender, EventArgs e)
         {
             LeTanKHListView.Show();
             LeTanKHListView.BringToFront();
-            CustomerDAO.viewAllCustomer(LeTanKHListView);
+            //CustomerDAO.viewAllCustomer(LeTanKHListView);
         }
 
         private void viewRuleBtn_Click(object sender, EventArgs e)
@@ -51,7 +64,7 @@ namespace HotelSystem
 
             HotelRule hotelRule = new HotelRule();
             List<HotelRule> ruleList = hotelRule.getRulesList();
-            RuleDAO.viewAllRule(LeTanRuleListView, ruleList);
+            //RuleDAO.viewAllRule(LeTanRuleListView, ruleList);
         }
 
         private void addRoomBookingBtn_Click(object sender, EventArgs e)

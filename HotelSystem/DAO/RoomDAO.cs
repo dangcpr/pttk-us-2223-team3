@@ -13,8 +13,8 @@ namespace HotelSystem.DAO
     {
         public static string roomQueryStr = "SELECT * FROM THONG_TIN_PHONG_KHACH_SAN";
 
-        public static SqlDataReader getAllRoom (SqlConnection sqlConn) {
-            SqlCommand sqlCmd = new SqlCommand(roomQueryStr, sqlConn);
+        public static SqlDataReader getQueryStr (SqlConnection sqlConn, string queryStr) {
+            SqlCommand sqlCmd = new SqlCommand(queryStr, sqlConn);
             SqlDataReader reader = sqlCmd.ExecuteReader();
             return reader;
         }
@@ -30,7 +30,7 @@ namespace HotelSystem.DAO
             //sqlConn = DatabaseDAO.getConnectDB();
 
             // Call Room DAO method to get all room
-            SqlDataReader reader = RoomDAO.getAllRoom(DatabaseDAO.sqlConn);
+            SqlDataReader reader = RoomDAO.getQueryStr(DatabaseDAO.sqlConn, roomQueryStr);
 
             const int width = 100;
 
@@ -88,7 +88,7 @@ namespace HotelSystem.DAO
             //sqlConn = DatabaseDAO.getConnectDB();
 
             // Call Room DAO method to get all room
-            SqlDataReader reader = RoomDAO.getAllRoom(DatabaseDAO.sqlConn);
+            SqlDataReader reader = RoomDAO.getQueryStr(DatabaseDAO.sqlConn, roomQueryStr);
 
             while (reader.Read())
             {
@@ -139,6 +139,32 @@ namespace HotelSystem.DAO
             {
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        public static void viewRoomInfoById(string roomBookingID, ListView LeTanRoomInfoListView)
+        {
+            string roomInfoQueryStr = $"SELECT TTDP.*, CTDP.YEU_CAU, CTDP.NGAY_GHI_NHAN FROM THONG_TIN_DAT_PHONG TTDP JOIN CHI_TIET_DAT_PHONG CTDP ON CTDP.MA_DP = TTDP.MA_DP WHERE CTDP.MA_DP = {roomBookingID};";
+            Console.WriteLine(roomInfoQueryStr);
+
+            // Call Room DAO method to get all room
+            SqlDataReader reader = RoomDAO.getQueryStr(DatabaseDAO.sqlConn, roomInfoQueryStr);
+
+            int index = 0;
+            while (reader.Read())
+            {
+                ListViewItem item = new ListViewItem(reader[0].ToString());
+                item.SubItems.Add(reader[1].ToString());
+                item.SubItems.Add(reader[2].ToString());
+                item.SubItems.Add(reader[3].ToString());
+                item.SubItems.Add(reader[4].ToString());
+                item.SubItems.Add(reader[5].ToString());
+                item.SubItems.Add(reader[6].ToString());
+                item.SubItems.Add(reader[7].ToString());
+
+                LeTanRoomInfoListView.Items.Add(item);
+                index++;
+            }
+            reader.Close();
         }
     }
 }
