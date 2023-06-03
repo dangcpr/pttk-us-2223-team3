@@ -51,3 +51,4 @@ D:\VS_project\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.csproj.CopyCo
 D:\VS_project\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.exe
 D:\VS_project\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.pdb
 D:\VS_project\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Room_Searching.resources
+D:\VS_project\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Customer_Searching.resources

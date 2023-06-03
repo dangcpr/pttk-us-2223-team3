@@ -1,4 +1,5 @@
-﻿using HotelSystem.DAO;
+﻿using HotelSystem.BUS;
+using HotelSystem.DAO;
 using HotelSystem.CLASS;
 using System;
 using System.Collections.Generic;
@@ -29,47 +30,57 @@ namespace HotelSystem
             LeTanRuleListView.Hide();
             LeTanRoomBooking.Hide();
             LeTan_Room_Searching.Hide();
+            LeTan_Customer_Searching.Hide();
         }
 
         private void LeTanRoomSearchingDropbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Console.WriteLine(LeTanRoomSearchingDropbox.Text);
+            //Console.WriteLine(LeTanRoomSearchingDropbox.Text);
 
             if(LeTanRoomSearchingDropbox.Text == "Tra cứu thông tin đặt phòng")
             {
                 LeTan_Room_Searching.Show();
                 LeTan_Room_Searching.BringToFront();
             }
+            if (LeTanRoomSearchingDropbox.Text == "Tra cứu yêu cầu đặt phòng (mã)")
+            {
+                LeTanKHListView.Show();
+                LeTanKHListView.BringToFront();
 
+                // List view setting
+                const int width = 100;
+
+                LeTanKHListView.Items.Clear(); // Clear all list view data
+                LeTanKHListView.Columns.Clear();
+                LeTanKHListView.View = View.Details; // To see add columns
+
+                LeTanKHListView.Columns.Add("Mã yêu cầu", 100);
+                LeTanKHListView.Columns.Add("Mã khách hàng", width);
+                LeTanKHListView.Columns.Add("Ngày đến", 150);
+                LeTanKHListView.Columns.Add("Số đêm lưu trú", width);
+                LeTanKHListView.Columns.Add("Loại yêu cầu", width);
+                LeTanKHListView.Columns.Add("Ngày yêu cầu", 150);
+                LeTanKHListView.Columns.Add("Ngày ghi nhận", 150);           
+            }
+            if (LeTanRoomSearchingDropbox.Text == "Tra cứu danh sách khách hàng")
+            {
+                LeTan_Customer_Searching.Show();
+                LeTan_Customer_Searching.BringToFront();
+            }
         }
 
-        private void viewRoomBtn_Click(object sender, EventArgs e)
+        private void LeTanSearchBtn_Click(object sender, EventArgs e)
         {
-            LeTanRoomListView.Show();
-            LeTanRoomListView.BringToFront();
-            //RoomDAO.viewAllRoom(LeTanRoomListView);
-        }
-
-        private void viewKhachHangBtn_Click(object sender, EventArgs e)
-        {
-            LeTanKHListView.Show();
-            LeTanKHListView.BringToFront();
-            //CustomerDAO.viewAllCustomer(LeTanKHListView);
-        }
-
-        private void viewRuleBtn_Click(object sender, EventArgs e)
-        {
-            LeTanRuleListView.Show();
-            LeTanRuleListView.BringToFront();
-
-            HotelRule hotelRule = new HotelRule();
-            List<HotelRule> ruleList = hotelRule.getRulesList();
-            //RuleDAO.viewAllRule(LeTanRuleListView, ruleList);
+            if (LeTanRoomSearchingDropbox.Text == "Tra cứu yêu cầu đặt phòng (mã)")
+            {
+                RoomBUS.checkRoomRequestInput(LeTanSearchInput.Text, LeTanKHListView);
+            }
+                
+            LeTanSearchInput.Text = "";
         }
 
         private void addRoomBookingBtn_Click(object sender, EventArgs e)
         {
-            
             LeTanRoomBooking.Show();
             LeTanRoomBooking.BringToFront();
         }
@@ -102,6 +113,28 @@ namespace HotelSystem
         private void LeTanRoomBooking_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void viewRoomBtn_Click(object sender, EventArgs e)
+        {
+            LeTanRoomListView.Show();
+            LeTanRoomListView.BringToFront();
+        }
+
+        private void viewKhachHangBtn_Click(object sender, EventArgs e)
+        {
+            LeTanKHListView.Show();
+            LeTanKHListView.BringToFront();
+        }
+
+        private void viewRuleBtn_Click(object sender, EventArgs e)
+        {
+            LeTanRuleListView.Show();
+            LeTanRuleListView.BringToFront();
+
+            HotelRule hotelRule = new HotelRule();
+            List<HotelRule> ruleList = hotelRule.getRulesList();
+            //RuleDAO.viewAllRule(LeTanRuleListView, ruleList);
         }
     }
 }

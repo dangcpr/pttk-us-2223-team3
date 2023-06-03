@@ -36,6 +36,8 @@ namespace HotelSystem
             this.LeTanRoomInfoInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.LeTanRoomInfoListView = new System.Windows.Forms.ListView();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LeTanFormBookingListView = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // HomeLabel
@@ -119,7 +121,7 @@ namespace HotelSystem
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(68, 248);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(68, 261);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(161, 23);
             this.guna2HtmlLabel2.TabIndex = 5;
@@ -128,17 +130,38 @@ namespace HotelSystem
             // LeTanRoomInfoListView
             // 
             this.LeTanRoomInfoListView.HideSelection = false;
-            this.LeTanRoomInfoListView.Location = new System.Drawing.Point(68, 287);
+            this.LeTanRoomInfoListView.Location = new System.Drawing.Point(64, 290);
             this.LeTanRoomInfoListView.Name = "LeTanRoomInfoListView";
             this.LeTanRoomInfoListView.Size = new System.Drawing.Size(786, 134);
             this.LeTanRoomInfoListView.TabIndex = 6;
             this.LeTanRoomInfoListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(68, 487);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(206, 23);
+            this.guna2HtmlLabel3.TabIndex = 7;
+            this.guna2HtmlLabel3.Text = "Phiếu thông tin đặt phòng";
+            // 
+            // LeTanFormBookingListView
+            // 
+            this.LeTanFormBookingListView.HideSelection = false;
+            this.LeTanFormBookingListView.Location = new System.Drawing.Point(68, 516);
+            this.LeTanFormBookingListView.Name = "LeTanFormBookingListView";
+            this.LeTanFormBookingListView.Size = new System.Drawing.Size(785, 134);
+            this.LeTanFormBookingListView.TabIndex = 8;
+            this.LeTanFormBookingListView.UseCompatibleStateImageBehavior = false;
             // 
             // LeTan_Room_Searching
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Controls.Add(this.LeTanFormBookingListView);
+            this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.LeTanRoomInfoListView);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.LeTanRoomInfoInput);
@@ -163,5 +186,7 @@ namespace HotelSystem
         private Guna.UI2.WinForms.Guna2TextBox LeTanRoomInfoInput;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private System.Windows.Forms.ListView LeTanRoomInfoListView;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private System.Windows.Forms.ListView LeTanFormBookingListView;
     }
 }

@@ -44,6 +44,7 @@ namespace HotelSystem
             this.LeTanSearchBtn = new Guna.UI2.WinForms.Guna2Button();
             this.LeTanSearchInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.LeTanRoomSearchingDropbox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.LeTan_Customer_Searching = new HotelSystem.LeTan_Customer_Searching();
             this.LeTanRoomBooking = new HotelSystem.LeTan_Room_Booking();
             this.LeTan_Room_Searching = new HotelSystem.LeTan_Room_Searching();
             this.SuspendLayout();
@@ -177,6 +178,7 @@ namespace HotelSystem
             this.LeTanSearchBtn.Size = new System.Drawing.Size(180, 45);
             this.LeTanSearchBtn.TabIndex = 13;
             this.LeTanSearchBtn.Text = "Tra cứu";
+            this.LeTanSearchBtn.Click += new System.EventHandler(this.LeTanSearchBtn_Click);
             // 
             // LeTanSearchInput
             // 
@@ -209,7 +211,7 @@ namespace HotelSystem
             this.LeTanRoomSearchingDropbox.ItemHeight = 30;
             this.LeTanRoomSearchingDropbox.Items.AddRange(new object[] {
             "Tra cứu thông tin đặt phòng",
-            "Tra cứu yêu cầu đặt phòng",
+            "Tra cứu yêu cầu đặt phòng (mã)",
             "Tra cứu danh sách khách hàng",
             "Tra cứu quy định khách sạn",
             "Tra cứu danh sách đặt phòng"});
@@ -218,6 +220,14 @@ namespace HotelSystem
             this.LeTanRoomSearchingDropbox.Size = new System.Drawing.Size(308, 36);
             this.LeTanRoomSearchingDropbox.TabIndex = 15;
             this.LeTanRoomSearchingDropbox.SelectedIndexChanged += new System.EventHandler(this.LeTanRoomSearchingDropbox_SelectedIndexChanged);
+            // 
+            // LeTan_Customer_Searching
+            // 
+            this.LeTan_Customer_Searching.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.LeTan_Customer_Searching.Location = new System.Drawing.Point(0, 0);
+            this.LeTan_Customer_Searching.Name = "LeTan_Customer_Searching";
+            this.LeTan_Customer_Searching.Size = new System.Drawing.Size(914, 750);
+            this.LeTan_Customer_Searching.TabIndex = 17;
             // 
             // LeTanRoomBooking
             // 
@@ -253,6 +263,7 @@ namespace HotelSystem
             this.Controls.Add(this.HomeLabel);
             this.Controls.Add(this.LeTanRoomBooking);
             this.Controls.Add(this.LeTan_Room_Searching);
+            this.Controls.Add(this.LeTan_Customer_Searching);
             this.Name = "LeTan_Room";
             this.Size = new System.Drawing.Size(914, 750);
             this.Load += new System.EventHandler(this.LeTan_Room_Load);
@@ -280,5 +291,6 @@ namespace HotelSystem
         private Guna.UI2.WinForms.Guna2TextBox LeTanSearchInput;
         private Guna.UI2.WinForms.Guna2ComboBox LeTanRoomSearchingDropbox;
         private LeTan_Room_Searching LeTan_Room_Searching;
+        private LeTan_Customer_Searching LeTan_Customer_Searching;
     }
 }

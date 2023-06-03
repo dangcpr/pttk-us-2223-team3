@@ -40,18 +40,52 @@ namespace HotelSystem.BUS
             return 0;
         }
 
-        public static Boolean checkRoomInfoInput(string value, ListView LeTanRoomInfoListView)
+        public static Boolean checkRoomInfoInput(string value, ListView LeTanRoomInfoListView, ListView LeTanFormBookingListView)
         {
+            int n;
+            bool isNumeric = int.TryParse(value, out n);
+
             if (value == "")
             {
                 MessageBox.Show("Nhập mã đặt phòng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
 
-            RoomDAO.viewRoomInfoById(value, LeTanRoomInfoListView);
+            if (!isNumeric)
+            {
+                MessageBox.Show("Mã phòng phải là số.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
+            Boolean checkFindRoomInfo = RoomDAO.viewRoomInfoById(value, LeTanRoomInfoListView, LeTanFormBookingListView);
+
+            if(!checkFindRoomInfo)
+            {
+                MessageBox.Show("Không tìm thấy mã phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
 
             return true;
         }
+
+        public static Boolean checkRoomRequestInput(string value, ListView LeTanKHListView)
+        {
+            if (value == "")
+            {
+                MessageBox.Show("Nhập mã yêu cầu đặt phòng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
+            Boolean checkFindRoomRequest = RoomDAO.viewRoomRequestById(value, LeTanKHListView);
+
+            if (!checkFindRoomRequest)
+            {
+                MessageBox.Show("Không tìm thấy yêu cầu đặt phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
+            return true;
+        }       
 
     }
 }
