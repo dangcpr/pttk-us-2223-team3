@@ -40,7 +40,11 @@ namespace HotelSystem
             this.LeTanRuleListView = new System.Windows.Forms.ListView();
             this.resultLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.addRoomBookingBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LeTanSearchBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.LeTanSearchInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.LeTanRoomBooking = new HotelSystem.LeTan_Room_Booking();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // HomeLabel
@@ -147,20 +151,84 @@ namespace HotelSystem
             this.addRoomBookingBtn.Text = "Thêm thông tin đặt phòng";
             this.addRoomBookingBtn.Click += new System.EventHandler(this.addRoomBookingBtn_Click);
             // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(95, 111);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(142, 23);
+            this.guna2HtmlLabel1.TabIndex = 12;
+            this.guna2HtmlLabel1.Text = "Tra cứu thông tin:";
+            // 
+            // LeTanSearchBtn
+            // 
+            this.LeTanSearchBtn.BorderRadius = 5;
+            this.LeTanSearchBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.LeTanSearchBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.LeTanSearchBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LeTanSearchBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.LeTanSearchBtn.FillColor = System.Drawing.Color.DeepPink;
+            this.LeTanSearchBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.LeTanSearchBtn.ForeColor = System.Drawing.Color.White;
+            this.LeTanSearchBtn.Location = new System.Drawing.Point(95, 216);
+            this.LeTanSearchBtn.Name = "LeTanSearchBtn";
+            this.LeTanSearchBtn.Size = new System.Drawing.Size(180, 45);
+            this.LeTanSearchBtn.TabIndex = 13;
+            this.LeTanSearchBtn.Text = "Tra cứu";
+            // 
+            // LeTanSearchInput
+            // 
+            this.LeTanSearchInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.LeTanSearchInput.DefaultText = "";
+            this.LeTanSearchInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.LeTanSearchInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.LeTanSearchInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.LeTanSearchInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.LeTanSearchInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.LeTanSearchInput.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.LeTanSearchInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.LeTanSearchInput.Location = new System.Drawing.Point(305, 216);
+            this.LeTanSearchInput.Name = "LeTanSearchInput";
+            this.LeTanSearchInput.PasswordChar = '\0';
+            this.LeTanSearchInput.PlaceholderText = "";
+            this.LeTanSearchInput.SelectedText = "";
+            this.LeTanSearchInput.Size = new System.Drawing.Size(506, 45);
+            this.LeTanSearchInput.TabIndex = 14;
+            // 
             // LeTanRoomBooking
             // 
             this.LeTanRoomBooking.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.LeTanRoomBooking.Location = new System.Drawing.Point(0, 0);
-            this.LeTanRoomBooking.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LeTanRoomBooking.Margin = new System.Windows.Forms.Padding(4);
             this.LeTanRoomBooking.Name = "LeTanRoomBooking";
             this.LeTanRoomBooking.Size = new System.Drawing.Size(914, 750);
             this.LeTanRoomBooking.TabIndex = 11;
+            // 
+            // guna2ComboBox1
+            // 
+            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Location = new System.Drawing.Point(95, 155);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.Size = new System.Drawing.Size(308, 36);
+            this.guna2ComboBox1.TabIndex = 15;
             // 
             // LeTan_Room
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Controls.Add(this.guna2ComboBox1);
+            this.Controls.Add(this.LeTanSearchInput);
+            this.Controls.Add(this.LeTanSearchBtn);
+            this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.addRoomBookingBtn);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.LeTanRuleListView);
@@ -172,6 +240,7 @@ namespace HotelSystem
             this.Size = new System.Drawing.Size(914, 750);
             this.Load += new System.EventHandler(this.LeTan_Room_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -189,5 +258,9 @@ namespace HotelSystem
         private Guna.UI2.WinForms.Guna2HtmlLabel resultLabel;
         private Guna.UI2.WinForms.Guna2Button addRoomBookingBtn;
         private LeTan_Room_Booking LeTanRoomBooking;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Button LeTanSearchBtn;
+        private Guna.UI2.WinForms.Guna2TextBox LeTanSearchInput;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
     }
 }
