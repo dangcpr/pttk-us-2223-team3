@@ -150,6 +150,9 @@ namespace HotelSystem.DAO
 
             while (reader.Read())
             {
+                // Check found room request
+                if (reader[0].ToString() != "") isFound = true;
+
                 ListViewItem item = new ListViewItem(reader[0].ToString());
 
                 item.SubItems.Add(reader[1].ToString());
@@ -157,6 +160,7 @@ namespace HotelSystem.DAO
                 item.SubItems.Add(reader[3].ToString());
                 item.SubItems.Add(reader[4].ToString());
                 item.SubItems.Add(reader[5].ToString());
+                item.SubItems.Add(reader[6].ToString());
 
                 LeTanKHListView.Items.Add(item);
                 index++;

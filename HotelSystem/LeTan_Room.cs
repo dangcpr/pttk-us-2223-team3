@@ -67,15 +67,79 @@ namespace HotelSystem
                 LeTan_Customer_Searching.Show();
                 LeTan_Customer_Searching.BringToFront();
             }
+            if (LeTanRoomSearchingDropbox.Text == "Tra cứu quy định khách sạn")
+            {
+                LeTanRuleListView.Show();
+                LeTanRuleListView.BringToFront();
+
+                // List view setting
+                const int width = 100;
+
+                LeTanRuleListView.Items.Clear(); // Clear all list view data
+                LeTanRuleListView.Columns.Clear();
+                LeTanRuleListView.View = View.Details; // To see add columns
+
+                LeTanRuleListView.Columns.Add("Mã quy định", width);
+                LeTanRuleListView.Columns.Add("Nội dung", 200);
+            }
         }
 
         private void LeTanSearchBtn_Click(object sender, EventArgs e)
         {
             if (LeTanRoomSearchingDropbox.Text == "Tra cứu yêu cầu đặt phòng (mã)")
             {
-                RoomBUS.checkRoomRequestInput(LeTanSearchInput.Text, LeTanKHListView);
+                if(LeTanKHListView.Items.Count == 0)
+                {
+                    RoomBUS.checkRoomRequestInput(LeTanSearchInput.Text, LeTanKHListView);
+                }
+                else
+                {
+                    // List view setting
+                    const int width = 100;
+
+                    LeTanKHListView.Items.Clear(); // Clear all list view data
+                    LeTanKHListView.Columns.Clear();
+                    LeTanKHListView.View = View.Details; // To see add columns
+
+                    LeTanKHListView.Columns.Add("Mã yêu cầu", 100);
+                    LeTanKHListView.Columns.Add("Mã khách hàng", width);
+                    LeTanKHListView.Columns.Add("Ngày đến", 150);
+                    LeTanKHListView.Columns.Add("Số đêm lưu trú", width);
+                    LeTanKHListView.Columns.Add("Loại yêu cầu", width);
+                    LeTanKHListView.Columns.Add("Ngày yêu cầu", 150);
+                    LeTanKHListView.Columns.Add("Ngày ghi nhận", 150);
+
+                    RoomBUS.checkRoomRequestInput(LeTanSearchInput.Text, LeTanKHListView);
+                }
+
             }
-                
+
+            if (LeTanRoomSearchingDropbox.Text == "Tra cứu quy định khách sạn")
+            {
+                if (LeTanRuleListView.Items.Count == 0)
+                {
+                    RuleBUS.checkRuleInput(LeTanRuleListView);
+                }
+                else
+                {
+                    LeTanRuleListView.Show();
+                    LeTanRuleListView.BringToFront();
+
+                    // List view setting
+                    const int width = 100;
+
+                    LeTanRuleListView.Items.Clear(); // Clear all list view data
+                    LeTanRuleListView.Columns.Clear();
+                    LeTanRuleListView.View = View.Details; // To see add columns
+
+                    LeTanRuleListView.Columns.Add("Mã quy định", width);
+                    LeTanRuleListView.Columns.Add("Nội dung", 200);
+
+                    RuleBUS.checkRuleInput(LeTanRuleListView);
+                }
+                    
+            }
+
             LeTanSearchInput.Text = "";
         }
 

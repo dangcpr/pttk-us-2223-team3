@@ -60,6 +60,7 @@
     <Compile Include="BUS\AccountBUS.cs" />
     <Compile Include="BUS\CustomerBUS.cs" />
     <Compile Include="BUS\RoomBUS.cs" />
+    <Compile Include="BUS\RuleBUS.cs" />
     <Compile Include="CLASS\Account.cs" />
     <Compile Include="CLASS\HotelRule.cs" />
     <Compile Include="DAO\CustomerDAO.cs" />
