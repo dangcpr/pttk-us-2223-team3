@@ -32,6 +32,7 @@ namespace HotelSystem
             LeTanRoomBooking.Hide();
             LeTan_Room_Searching.Hide();
             LeTan_Customer_Searching.Hide();
+            leTanRoomRequest.Hide();
         }
 
         private void LeTanRoomSearchingDropbox_SelectedIndexChanged(object sender, EventArgs e)
@@ -252,6 +253,12 @@ namespace HotelSystem
             LeTanRoomBooking.BringToFront();
         }
 
+        private void LeTanRoomRequestBtn_Click(object sender, EventArgs e)
+        {
+            leTanRoomRequest.Show();
+            leTanRoomRequest.BringToFront();
+        }
+
         private void LeTanGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -295,6 +302,6 @@ namespace HotelSystem
         private void viewRuleBtn_Click(object sender, EventArgs e)
         {
 
-        }
+        }      
     }
 }

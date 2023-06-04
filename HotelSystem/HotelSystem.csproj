@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LeTan_Room_Request.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Room_Request.Designer.cs">
+      <DependentUpon>LeTan_Room_Request.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\AccountBUS.cs" />
     <Compile Include="BUS\CustomerBUS.cs" />
     <Compile Include="BUS\RoomBUS.cs" />
@@ -166,6 +172,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LeTan_Room_Request.resx">
+      <DependentUpon>LeTan_Room_Request.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LeTan_Customer_Searching.resx">
       <DependentUpon>LeTan_Customer_Searching.cs</DependentUpon>
     </EmbeddedResource>
