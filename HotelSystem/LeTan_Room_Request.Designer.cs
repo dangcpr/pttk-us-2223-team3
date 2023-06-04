@@ -31,7 +31,7 @@ namespace HotelSystem
         {
             this.HomeLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.LeTanRequestUsernameINput = new Guna.UI2.WinForms.Guna2TextBox();
+            this.LeTanRequestUsernameInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.LeTanRequestPasswordInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.quitRequestBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -51,6 +51,7 @@ namespace HotelSystem
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.LeTanRequestDesInput = new Guna.UI2.WinForms.Guna2TextBox();
+            this.LeTanAddRequestBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // HomeLabel
@@ -76,30 +77,30 @@ namespace HotelSystem
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "Username";
             // 
-            // LeTanRequestUsernameINput
+            // LeTanRequestUsernameInput
             // 
-            this.LeTanRequestUsernameINput.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.LeTanRequestUsernameINput.DefaultText = "";
-            this.LeTanRequestUsernameINput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.LeTanRequestUsernameINput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.LeTanRequestUsernameINput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.LeTanRequestUsernameINput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.LeTanRequestUsernameINput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LeTanRequestUsernameINput.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.LeTanRequestUsernameINput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LeTanRequestUsernameINput.Location = new System.Drawing.Point(53, 199);
-            this.LeTanRequestUsernameINput.Name = "LeTanRequestUsernameINput";
-            this.LeTanRequestUsernameINput.PasswordChar = '\0';
-            this.LeTanRequestUsernameINput.PlaceholderText = "";
-            this.LeTanRequestUsernameINput.SelectedText = "";
-            this.LeTanRequestUsernameINput.Size = new System.Drawing.Size(187, 46);
-            this.LeTanRequestUsernameINput.TabIndex = 2;
+            this.LeTanRequestUsernameInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.LeTanRequestUsernameInput.DefaultText = "";
+            this.LeTanRequestUsernameInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.LeTanRequestUsernameInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.LeTanRequestUsernameInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.LeTanRequestUsernameInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.LeTanRequestUsernameInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.LeTanRequestUsernameInput.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.LeTanRequestUsernameInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.LeTanRequestUsernameInput.Location = new System.Drawing.Point(53, 199);
+            this.LeTanRequestUsernameInput.Name = "LeTanRequestUsernameInput";
+            this.LeTanRequestUsernameInput.PasswordChar = '\0';
+            this.LeTanRequestUsernameInput.PlaceholderText = "";
+            this.LeTanRequestUsernameInput.SelectedText = "";
+            this.LeTanRequestUsernameInput.Size = new System.Drawing.Size(187, 46);
+            this.LeTanRequestUsernameInput.TabIndex = 2;
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(342, 170);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(365, 170);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(78, 23);
             this.guna2HtmlLabel2.TabIndex = 3;
@@ -116,7 +117,7 @@ namespace HotelSystem
             this.LeTanRequestPasswordInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LeTanRequestPasswordInput.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LeTanRequestPasswordInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LeTanRequestPasswordInput.Location = new System.Drawing.Point(342, 199);
+            this.LeTanRequestPasswordInput.Location = new System.Drawing.Point(365, 199);
             this.LeTanRequestPasswordInput.Name = "LeTanRequestPasswordInput";
             this.LeTanRequestPasswordInput.PasswordChar = '*';
             this.LeTanRequestPasswordInput.PlaceholderText = "";
@@ -126,6 +127,7 @@ namespace HotelSystem
             // 
             // quitRequestBtn
             // 
+            this.quitRequestBtn.BorderRadius = 5;
             this.quitRequestBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.quitRequestBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.quitRequestBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -144,7 +146,7 @@ namespace HotelSystem
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(616, 170);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(664, 170);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(149, 23);
             this.guna2HtmlLabel3.TabIndex = 6;
@@ -161,9 +163,9 @@ namespace HotelSystem
             this.LeTanRequestNameInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LeTanRequestNameInput.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LeTanRequestNameInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LeTanRequestNameInput.Location = new System.Drawing.Point(616, 199);
+            this.LeTanRequestNameInput.Location = new System.Drawing.Point(664, 199);
             this.LeTanRequestNameInput.Name = "LeTanRequestNameInput";
-            this.LeTanRequestNameInput.PasswordChar = '*';
+            this.LeTanRequestNameInput.PasswordChar = '\0';
             this.LeTanRequestNameInput.PlaceholderText = "";
             this.LeTanRequestNameInput.SelectedText = "";
             this.LeTanRequestNameInput.Size = new System.Drawing.Size(187, 46);
@@ -173,7 +175,7 @@ namespace HotelSystem
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(53, 295);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(53, 272);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(55, 23);
             this.guna2HtmlLabel4.TabIndex = 8;
@@ -190,7 +192,7 @@ namespace HotelSystem
             this.LeTanRequestAddressInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LeTanRequestAddressInput.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LeTanRequestAddressInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LeTanRequestAddressInput.Location = new System.Drawing.Point(53, 324);
+            this.LeTanRequestAddressInput.Location = new System.Drawing.Point(53, 301);
             this.LeTanRequestAddressInput.Name = "LeTanRequestAddressInput";
             this.LeTanRequestAddressInput.PasswordChar = '\0';
             this.LeTanRequestAddressInput.PlaceholderText = "";
@@ -202,7 +204,7 @@ namespace HotelSystem
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(342, 295);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(365, 272);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(51, 23);
             this.guna2HtmlLabel5.TabIndex = 10;
@@ -219,7 +221,7 @@ namespace HotelSystem
             this.LeTanRequestCCCDInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LeTanRequestCCCDInput.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LeTanRequestCCCDInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LeTanRequestCCCDInput.Location = new System.Drawing.Point(342, 324);
+            this.LeTanRequestCCCDInput.Location = new System.Drawing.Point(365, 301);
             this.LeTanRequestCCCDInput.Name = "LeTanRequestCCCDInput";
             this.LeTanRequestCCCDInput.PasswordChar = '\0';
             this.LeTanRequestCCCDInput.PlaceholderText = "";
@@ -231,7 +233,7 @@ namespace HotelSystem
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(616, 295);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(664, 272);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(103, 23);
             this.guna2HtmlLabel6.TabIndex = 12;
@@ -248,7 +250,7 @@ namespace HotelSystem
             this.LeTanRequestPhoneInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LeTanRequestPhoneInput.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LeTanRequestPhoneInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LeTanRequestPhoneInput.Location = new System.Drawing.Point(616, 324);
+            this.LeTanRequestPhoneInput.Location = new System.Drawing.Point(664, 301);
             this.LeTanRequestPhoneInput.Name = "LeTanRequestPhoneInput";
             this.LeTanRequestPhoneInput.PasswordChar = '\0';
             this.LeTanRequestPhoneInput.PlaceholderText = "";
@@ -260,7 +262,7 @@ namespace HotelSystem
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(53, 410);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(53, 379);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(76, 23);
             this.guna2HtmlLabel7.TabIndex = 14;
@@ -273,7 +275,7 @@ namespace HotelSystem
             this.LeTanRequestDateStartInput.FillColor = System.Drawing.Color.WhiteSmoke;
             this.LeTanRequestDateStartInput.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LeTanRequestDateStartInput.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.LeTanRequestDateStartInput.Location = new System.Drawing.Point(53, 439);
+            this.LeTanRequestDateStartInput.Location = new System.Drawing.Point(53, 408);
             this.LeTanRequestDateStartInput.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.LeTanRequestDateStartInput.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.LeTanRequestDateStartInput.Name = "LeTanRequestDateStartInput";
@@ -285,7 +287,7 @@ namespace HotelSystem
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(342, 410);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(365, 379);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(107, 23);
             this.guna2HtmlLabel8.TabIndex = 16;
@@ -298,7 +300,7 @@ namespace HotelSystem
             this.LeTanRequestDateRequestInput.FillColor = System.Drawing.Color.WhiteSmoke;
             this.LeTanRequestDateRequestInput.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LeTanRequestDateRequestInput.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.LeTanRequestDateRequestInput.Location = new System.Drawing.Point(342, 439);
+            this.LeTanRequestDateRequestInput.Location = new System.Drawing.Point(365, 408);
             this.LeTanRequestDateRequestInput.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.LeTanRequestDateRequestInput.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.LeTanRequestDateRequestInput.Name = "LeTanRequestDateRequestInput";
@@ -317,7 +319,7 @@ namespace HotelSystem
             this.LeTanRequestCountInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LeTanRequestCountInput.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LeTanRequestCountInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LeTanRequestCountInput.Location = new System.Drawing.Point(616, 429);
+            this.LeTanRequestCountInput.Location = new System.Drawing.Point(664, 398);
             this.LeTanRequestCountInput.Name = "LeTanRequestCountInput";
             this.LeTanRequestCountInput.PasswordChar = '\0';
             this.LeTanRequestCountInput.PlaceholderText = "";
@@ -329,7 +331,7 @@ namespace HotelSystem
             // 
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(616, 400);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(664, 369);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(116, 23);
             this.guna2HtmlLabel9.TabIndex = 18;
@@ -339,7 +341,7 @@ namespace HotelSystem
             // 
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(53, 523);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(53, 482);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(99, 23);
             this.guna2HtmlLabel10.TabIndex = 20;
@@ -356,19 +358,36 @@ namespace HotelSystem
             this.LeTanRequestDesInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LeTanRequestDesInput.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LeTanRequestDesInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LeTanRequestDesInput.Location = new System.Drawing.Point(53, 552);
+            this.LeTanRequestDesInput.Location = new System.Drawing.Point(53, 511);
             this.LeTanRequestDesInput.Name = "LeTanRequestDesInput";
             this.LeTanRequestDesInput.PasswordChar = '\0';
             this.LeTanRequestDesInput.PlaceholderText = "";
             this.LeTanRequestDesInput.SelectedText = "";
-            this.LeTanRequestDesInput.Size = new System.Drawing.Size(750, 46);
+            this.LeTanRequestDesInput.Size = new System.Drawing.Size(798, 46);
             this.LeTanRequestDesInput.TabIndex = 21;
+            // 
+            // LeTanAddRequestBtn
+            // 
+            this.LeTanAddRequestBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.LeTanAddRequestBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.LeTanAddRequestBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LeTanAddRequestBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.LeTanAddRequestBtn.FillColor = System.Drawing.Color.DeepPink;
+            this.LeTanAddRequestBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.LeTanAddRequestBtn.ForeColor = System.Drawing.Color.White;
+            this.LeTanAddRequestBtn.Location = new System.Drawing.Point(744, 597);
+            this.LeTanAddRequestBtn.Name = "LeTanAddRequestBtn";
+            this.LeTanAddRequestBtn.Size = new System.Drawing.Size(107, 45);
+            this.LeTanAddRequestBtn.TabIndex = 22;
+            this.LeTanAddRequestBtn.Text = "Thêm";
+            this.LeTanAddRequestBtn.Click += new System.EventHandler(this.LeTanAddRequestBtn_Click);
             // 
             // LeTan_Room_Request
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Controls.Add(this.LeTanAddRequestBtn);
             this.Controls.Add(this.LeTanRequestDesInput);
             this.Controls.Add(this.guna2HtmlLabel10);
             this.Controls.Add(this.LeTanRequestCountInput);
@@ -388,7 +407,7 @@ namespace HotelSystem
             this.Controls.Add(this.quitRequestBtn);
             this.Controls.Add(this.LeTanRequestPasswordInput);
             this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.LeTanRequestUsernameINput);
+            this.Controls.Add(this.LeTanRequestUsernameInput);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.HomeLabel);
             this.Name = "LeTan_Room_Request";
@@ -402,7 +421,7 @@ namespace HotelSystem
 
         private Guna.UI2.WinForms.Guna2HtmlLabel HomeLabel;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2TextBox LeTanRequestUsernameINput;
+        private Guna.UI2.WinForms.Guna2TextBox LeTanRequestUsernameInput;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2TextBox LeTanRequestPasswordInput;
         private Guna.UI2.WinForms.Guna2Button quitRequestBtn;
@@ -422,5 +441,6 @@ namespace HotelSystem
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2TextBox LeTanRequestDesInput;
+        private Guna.UI2.WinForms.Guna2Button LeTanAddRequestBtn;
     }
 }

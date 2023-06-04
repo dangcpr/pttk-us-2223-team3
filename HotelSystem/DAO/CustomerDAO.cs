@@ -28,6 +28,25 @@ namespace HotelSystem.DAO
             return reader;
         }
 
+        public static Boolean checkInitCustomerUsername(string customerUsername)
+        {
+            string customerQueryStr = $"SELECT * FROM THONG_TIN_KHACH_HANG WHERE MA_KHACH_HANG = '{customerUsername}';";
+
+            // Call Customer DAO method to get customer by username
+            SqlDataReader reader = CustomerDAO.getQueryStr(DatabaseDAO.sqlConn, customerQueryStr);
+
+            if (reader.Read())
+            {
+                reader.Close();
+                return true;
+            }
+            else
+            {
+                reader.Close();
+                return false;
+            }
+        }
+
         public static Boolean viewCustomerById(string customerID, ListView LeTanCustomerListView)
         {
             Boolean isFound = false;

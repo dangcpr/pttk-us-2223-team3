@@ -43,33 +43,8 @@ namespace HotelSystem
 
             if (confirmAddRoomBooking == DialogResult.Yes)
             {
-                int checkInput = RoomBUS.checkRoomBookingInput(customerId.Text, roomId.Text, bookingDate.Text, roomType.Text, checkinDate.Text, checkoutDate.Text, specialRequest.Text);
-
-                SqlConnection sqlConnn = DatabaseDAO.getConnectDB();
-
-                SqlDataReader reader = CustomerDAO.getCustomerById(DatabaseDAO.sqlConn, customerId.Text);
-
-                string checkCustomerInit = "";
-
-                if (reader.Read())
-                {
-                    checkCustomerInit = reader[0].ToString();
-                }
-                else
-                {
-                    checkCustomerInit = "None";
-                }
-
-                Console.WriteLine(checkCustomerInit + checkInput);
-
-                Boolean checkValid = CustomerBUS.checkCustomerInit(checkCustomerInit, checkInput);
-
-                reader.Close();
-
-                if (checkValid)
-                {
-                    RoomDAO.addNewRoomBooking(customerId.Text, roomId.Text, bookingDate.Text, roomType.Text, checkinDate.Text, checkoutDate.Text, specialRequest.Text);
-                }
+                Boolean checkInput = RoomBUS.checkRoomBookingInput(customerId.Text, roomId.Text, bookingDate.Text, roomType.Text, checkinDate.Text, checkoutDate.Text, specialRequest.Text);
+                Boolean addRoomBooking = RoomBUS.checkAddRoomBooking(checkInput, customerId.Text, roomId.Text, bookingDate.Text, roomType.Text, checkinDate.Text, checkoutDate.Text, specialRequest.Text);
 
                 resetAddBookingInput();
             }

@@ -328,5 +328,30 @@ namespace HotelSystem.DAO
             }                     
             return isFound;
         }
+
+        public static void addNewRoomRequest(string username, string password, string name, string address, string cccd, string phone, string dateStart, string dateRequest, string count, string requestDes)
+        {
+            string addRequestStr = $"INSERT INTO TAI_KHOAN (USERNAME, PASSWORD, ROLE) VALUES ('{username}', '{password}', N'Khách hàng');";
+            addRequestStr += $"INSERT INTO THONG_TIN_KHACH_HANG (MA_KHACH_HANG, HO_TEN, DIA_CHI, CCCD, SDT) VALUES ('{username}', N'{name}', N'{address}', '{cccd}', '{phone}');";
+            addRequestStr += $"INSERT INTO THONG_TIN_YEU_CAU_DAT_PHONG (MA_KHACH_HANG, NGAY_DEN, SO_DEM_LUU_TRU, LOAI_YEU_CAU, NGAY_YEU_CAU) VALUES ('{username}', '{dateStart}', {count}, N'{requestDes}', '{dateRequest}');";
+            addRequestStr += "DECLARE @MA_YEU_CAU INT; SET @MA_YEU_CAU = (SELECT MAX(MA_YEU_CAU) FROM THONG_TIN_YEU_CAU_DAT_PHONG);";
+            addRequestStr += "INSERT INTO CHI_TIET_YEU_CAU_DAT_PHONG (MA_YEU_CAU) VALUES (@MA_YEU_CAU);";
+
+            Console.WriteLine(addRequestStr);
+
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(addRequestStr, DatabaseDAO.sqlConn);
+                sqlCmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
