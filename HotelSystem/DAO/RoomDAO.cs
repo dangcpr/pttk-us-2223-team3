@@ -13,70 +13,10 @@ namespace HotelSystem.DAO
     {
         public static string roomQueryStr = "SELECT * FROM THONG_TIN_PHONG_KHACH_SAN";
 
-        public static SqlDataReader getAllRoom (SqlConnection sqlConn) {
-            SqlCommand sqlCmd = new SqlCommand(roomQueryStr, sqlConn);
+        public static SqlDataReader getQueryStr (SqlConnection sqlConn, string queryStr) {
+            SqlCommand sqlCmd = new SqlCommand(queryStr, sqlConn);
             SqlDataReader reader = sqlCmd.ExecuteReader();
             return reader;
-        }
-
-        public static void viewAllRoom(ListView LeTanRoomListView)
-        {
-            LeTanRoomListView.BringToFront();
-            LeTanRoomListView.Items.Clear(); // Clear all list view data
-            LeTanRoomListView.Columns.Clear();
-            LeTanRoomListView.View = View.Details; // To see add columns
-
-            // Get connect to database
-            //sqlConn = DatabaseDAO.getConnectDB();
-
-            // Call Room DAO method to get all room
-            SqlDataReader reader = RoomDAO.getAllRoom(DatabaseDAO.sqlConn);
-
-            const int width = 100;
-
-            LeTanRoomListView.Columns.Add("Mã phòng", width);
-            LeTanRoomListView.Columns.Add("Loại phòng", width);
-            LeTanRoomListView.Columns.Add("Giá tiền", width);
-            LeTanRoomListView.Columns.Add("Ngày thuê", width);
-            LeTanRoomListView.Columns.Add("Ngày trả", width);
-            LeTanRoomListView.Columns.Add("Tình trạng", width);
-            LeTanRoomListView.Columns.Add("Dọn dẹp", width);
-
-            int index = 0;
-            while (reader.Read())
-            {
-                ListViewItem item = new ListViewItem(reader[0].ToString());
-                item.SubItems.Add(reader[1].ToString());
-                item.SubItems.Add(reader[2].ToString());
-
-                // Check if NGAYTHUE = NULL
-                if (reader[3] == DBNull.Value)
-                {
-                    item.SubItems.Add("Chưa có");
-                }
-                else
-                {
-                    item.SubItems.Add(reader[3].ToString());
-                }
-
-                // Check if NGAYTRA = NULL
-                if (reader[4] == DBNull.Value)
-                {
-                    item.SubItems.Add("Chưa có");
-                }
-                else
-                {
-                    item.SubItems.Add(reader[4].ToString());
-                }
-
-                item.SubItems.Add(reader[5].ToString());
-                item.SubItems.Add(reader[6].ToString());
-
-                LeTanRoomListView.Items.Add(item);
-                index++;
-            }
-            reader.Close();
-            //sqlConn.Close();
         }
 
         public static void viewRoomType(ComboBox LeTanRoomComboBox, String TypeRoom)
@@ -88,7 +28,7 @@ namespace HotelSystem.DAO
             //sqlConn = DatabaseDAO.getConnectDB();
 
             // Call Room DAO method to get all room
-            SqlDataReader reader = RoomDAO.getAllRoom(DatabaseDAO.sqlConn);
+            SqlDataReader reader = RoomDAO.getQueryStr(DatabaseDAO.sqlConn, roomQueryStr);
 
             while (reader.Read())
             {
@@ -130,6 +70,279 @@ namespace HotelSystem.DAO
 
                 SqlCommand sqlCmd2 = new SqlCommand(updateStateRoom, DatabaseDAO.sqlConn);
                 sqlCmd2.ExecuteNonQuery();
+            }
+            catch
+            {
+                MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        public static Boolean viewRoomInfoById(string roomBookingID, ListView LeTanRoomInfoListView, ListView LeTanFormBookingListView)
+        {
+            Boolean isFound = false;
+            int n;
+            int index = 0;
+            string roomInfoQueryStr = $"SELECT TTDP.*, CTDP.YEU_CAU, CTDP.NGAY_GHI_NHAN FROM THONG_TIN_DAT_PHONG TTDP JOIN CHI_TIET_DAT_PHONG CTDP ON CTDP.MA_DP = TTDP.MA_DP WHERE CTDP.MA_DP = {roomBookingID};";
+            string roomBookingFormStr = $"SELECT * FROM PHIEU_THONG_TIN_DAT_PHONG WHERE MA_DP = {roomBookingID};";
+
+            // Call Room DAO method to get room booking info
+            SqlDataReader reader = RoomDAO.getQueryStr(DatabaseDAO.sqlConn, roomInfoQueryStr);              
+            
+            while (reader.Read())
+            {
+                // Check found room info
+                bool isNumeric = int.TryParse(reader[0].ToString(), out n);
+                if (isNumeric) isFound = true;
+                //if (reader[0].ToString() != "") isFound = true;
+
+                ListViewItem item = new ListViewItem(reader[0].ToString());
+
+                item.SubItems.Add(reader[1].ToString());
+                item.SubItems.Add(reader[2].ToString());
+                item.SubItems.Add(reader[3].ToString());
+                item.SubItems.Add(reader[4].ToString());
+                item.SubItems.Add(reader[5].ToString());
+                item.SubItems.Add(reader[6].ToString());
+                item.SubItems.Add(reader[7].ToString());
+
+                LeTanRoomInfoListView.Items.Add(item);
+                index++;
+            }
+
+            reader.Close();
+
+            // Call Room DAO method to get room booking form
+            reader = RoomDAO.getQueryStr(DatabaseDAO.sqlConn, roomBookingFormStr);
+
+            while (reader.Read())
+            {
+                ListViewItem item = new ListViewItem(reader[0].ToString());
+
+                item.SubItems.Add(reader[1].ToString());
+                item.SubItems.Add(reader[2].ToString());
+                item.SubItems.Add(reader[3].ToString());
+                item.SubItems.Add(reader[4].ToString());
+                item.SubItems.Add(reader[5].ToString());
+
+                LeTanFormBookingListView.Items.Add(item);
+                index++;
+            }
+
+            reader.Close();
+
+            return isFound;
+        }
+
+        public static Boolean viewRoomRequestById(string bookingRequestID, ListView LeTanKHListView)
+        {
+            Boolean isFound = false;
+            int index = 0;
+
+            string bookingRequestStr = $"SELECT TTYCDP.*, CTYCDP.NGAY_GHI_NHAN FROM THONG_TIN_YEU_CAU_DAT_PHONG TTYCDP JOIN CHI_TIET_YEU_CAU_DAT_PHONG CTYCDP ON CTYCDP.MA_YEU_CAU = TTYCDP.MA_YEU_CAU WHERE CTYCDP.MA_YEU_CAU = {bookingRequestID};";
+
+            // Call Room DAO method to get room booking form
+            SqlDataReader reader = RoomDAO.getQueryStr(DatabaseDAO.sqlConn, bookingRequestStr);
+
+            while (reader.Read())
+            {
+                // Check found room request
+                if (reader[0].ToString() != "") isFound = true;
+
+                ListViewItem item = new ListViewItem(reader[0].ToString());
+
+                item.SubItems.Add(reader[1].ToString());
+                item.SubItems.Add(reader[2].ToString());
+                item.SubItems.Add(reader[3].ToString());
+                item.SubItems.Add(reader[4].ToString());
+                item.SubItems.Add(reader[5].ToString());
+                item.SubItems.Add(reader[6].ToString());
+
+                LeTanKHListView.Items.Add(item);
+                index++;
+            }
+
+            reader.Close();
+            return isFound;
+        }
+
+        public static Boolean viewRoomBookingById(string bookingID, ListView LeTanRoomBookingListView)
+        {
+            Boolean isFound = false;
+            int n;
+            int index = 0;
+            string bookingRequestStr = $"SELECT TTDP.*, PTTDP.MA_PHONG FROM THONG_TIN_DAT_PHONG TTDP JOIN PHIEU_THONG_TIN_DAT_PHONG PTTDP ON TTDP.MA_DP = PTTDP.MA_DP WHERE PTTDP.MA_PHONG = {bookingID};";
+
+            bool isNumeric = int.TryParse(bookingID, out n);
+
+            if(isNumeric)
+            {
+                // Call Room DAO method to get room booking form
+                SqlDataReader reader = RoomDAO.getQueryStr(DatabaseDAO.sqlConn, bookingRequestStr);
+
+                while (reader.Read())
+                {
+                    // Check found room request
+                    if (reader[0].ToString() != "") isFound = true;
+
+                    ListViewItem item = new ListViewItem(reader[0].ToString());
+
+                    item.SubItems.Add(reader[1].ToString());
+                    item.SubItems.Add(reader[2].ToString());
+                    item.SubItems.Add(reader[3].ToString());
+                    item.SubItems.Add(reader[4].ToString());
+                    item.SubItems.Add(reader[5].ToString());
+                    item.SubItems.Add(reader[6].ToString());
+
+                    LeTanRoomBookingListView.Items.Add(item);
+                    index++;
+                }
+
+                reader.Close();
+            }            
+            return isFound;
+        }
+
+        public static Boolean viewRoomListByType(string roomType, ListView LeTanRoomBookingListView)
+        {
+            Boolean isFound = false;
+            int index = 0;
+            string roomTypeStr = $"SELECT * FROM THONG_TIN_PHONG_KHACH_SAN WHERE LOAI_PHONG = N'{roomType}'";
+
+            // Call Room DAO method to get room list
+            SqlDataReader reader = RoomDAO.getQueryStr(DatabaseDAO.sqlConn, roomTypeStr);
+
+            while (reader.Read())
+            {
+                // Check found room request
+                if (reader[0].ToString() != "") isFound = true;
+
+                ListViewItem item = new ListViewItem(reader[0].ToString());
+
+                item.SubItems.Add(reader[1].ToString());
+                item.SubItems.Add(reader[2].ToString());
+
+                // Check if NGAY_THUE = NULL
+                if (reader[3] == DBNull.Value)
+                {
+                    item.SubItems.Add("Không có");
+                }
+                else
+                {
+                    item.SubItems.Add(reader[3].ToString());
+                }
+
+                // Check if NGAY_TRA = NULL
+                if (reader[4] == DBNull.Value)
+                {
+                    item.SubItems.Add("Không có");
+                }
+                else
+                {
+                    item.SubItems.Add(reader[4].ToString());
+                }
+
+                item.SubItems.Add(reader[5].ToString());
+
+                // Check if DON_DEP = NULL
+                if (reader[6] == DBNull.Value)
+                {
+                    item.SubItems.Add("Chưa");
+                }
+                else
+                {
+                    item.SubItems.Add(reader[6].ToString());
+                }
+
+                LeTanRoomBookingListView.Items.Add(item);
+                index++;
+            }
+
+            reader.Close();
+            return isFound;
+        }
+
+        public static Boolean viewRoomListById(string roomId, ListView LeTanRoomBookingListView)
+        {
+            Boolean isFound = false;
+            int n;
+            int index = 0;
+            string roomIdStr = $"SELECT * FROM THONG_TIN_PHONG_KHACH_SAN WHERE MA_PHONG = '{roomId}';";
+
+            bool isNumeric = int.TryParse(roomId, out n);
+
+            if(isNumeric)
+            {
+                // Call Room DAO method to get room list
+                SqlDataReader reader = RoomDAO.getQueryStr(DatabaseDAO.sqlConn, roomIdStr);
+
+                while (reader.Read())
+                {
+                    // Check found room request
+                    if (reader[0].ToString() != "") isFound = true;
+
+                    ListViewItem item = new ListViewItem(reader[0].ToString());
+
+                    item.SubItems.Add(reader[1].ToString());
+                    item.SubItems.Add(reader[2].ToString());
+
+                    // Check if NGAY_THUE = NULL
+                    if (reader[3] == DBNull.Value)
+                    {
+                        item.SubItems.Add("Không có");
+                    }
+                    else
+                    {
+                        item.SubItems.Add(reader[3].ToString());
+                    }
+
+                    // Check if NGAY_TRA = NULL
+                    if (reader[4] == DBNull.Value)
+                    {
+                        item.SubItems.Add("Không có");
+                    }
+                    else
+                    {
+                        item.SubItems.Add(reader[4].ToString());
+                    }
+
+                    item.SubItems.Add(reader[5].ToString());
+
+                    // Check if DON_DEP = NULL
+                    if (reader[6] == DBNull.Value)
+                    {
+                        item.SubItems.Add("Chưa");
+                    }
+                    else
+                    {
+                        item.SubItems.Add(reader[6].ToString());
+                    }
+
+                    LeTanRoomBookingListView.Items.Add(item);
+                    index++;
+                }
+                reader.Close();
+            }                     
+            return isFound;
+        }
+
+        public static void addNewRoomRequest(string username, string password, string name, string address, string cccd, string phone, string dateStart, string dateRequest, string count, string requestDes)
+        {
+            string addRequestStr = $"INSERT INTO TAI_KHOAN (USERNAME, PASSWORD, ROLE) VALUES ('{username}', '{password}', N'Khách hàng');";
+            addRequestStr += $"INSERT INTO THONG_TIN_KHACH_HANG (MA_KHACH_HANG, HO_TEN, DIA_CHI, CCCD, SDT) VALUES ('{username}', N'{name}', N'{address}', '{cccd}', '{phone}');";
+            addRequestStr += $"INSERT INTO THONG_TIN_YEU_CAU_DAT_PHONG (MA_KHACH_HANG, NGAY_DEN, SO_DEM_LUU_TRU, LOAI_YEU_CAU, NGAY_YEU_CAU) VALUES ('{username}', '{dateStart}', {count}, N'{requestDes}', '{dateRequest}');";
+            addRequestStr += "DECLARE @MA_YEU_CAU INT; SET @MA_YEU_CAU = (SELECT MAX(MA_YEU_CAU) FROM THONG_TIN_YEU_CAU_DAT_PHONG);";
+            addRequestStr += "INSERT INTO CHI_TIET_YEU_CAU_DAT_PHONG (MA_YEU_CAU) VALUES (@MA_YEU_CAU);";
+
+            Console.WriteLine(addRequestStr);
+
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(addRequestStr, DatabaseDAO.sqlConn);
+                sqlCmd.ExecuteNonQuery();
             }
             catch
             {

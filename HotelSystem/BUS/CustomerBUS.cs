@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelSystem.DAO;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -9,26 +10,40 @@ using System.Windows.Forms;
 namespace HotelSystem.BUS
 {
     internal class CustomerBUS
-    {
-        public static Boolean checkCustomerInit(string checkCustomerInit, int checkInput)
+    {       
+        public static Boolean checkCustomerInfoInput(string value, ListView LeTanCustomerListView)
         {
-            if (checkCustomerInit == "None")
+            if (value == "")
             {
-                MessageBox.Show("Khách hàng không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Nhập mã khách hàng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
-            else
-            {
-                if (checkInput != 0)
-                {
-                    MessageBox.Show("Vui lòng nhập đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return false;
-                }
 
-                if (checkInput == 0 && checkCustomerInit != "None")
-                {
-                    return true;
-                }
+            Boolean checkFindCustomer = CustomerDAO.viewCustomerById(value, LeTanCustomerListView);
+
+            if (!checkFindCustomer)
+            {
+                MessageBox.Show("Không tìm thấy khách hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
+            return true;
+        }
+
+        public static Boolean checkCustomerGroupInfoInput(string value, ListView LeTanCustomerListView, ListView LeTanCustomerGroupListView)
+        {
+            if (value == "")
+            {
+                MessageBox.Show("Nhập mã khách hàng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
+            Boolean checkFindCustomer = CustomerDAO.viewCustomerGroupById(value, LeTanCustomerListView, LeTanCustomerGroupListView);
+
+            if (!checkFindCustomer)
+            {
+                MessageBox.Show("Không tìm thấy khách hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
             }
 
             return true;
