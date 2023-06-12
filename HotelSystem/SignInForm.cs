@@ -61,6 +61,12 @@ namespace HotelSystem
                     LeTan_Overview.Show();
                     this.Hide();
                 }
+                else if (checkAccount && role.Text == "Khách hàng")
+                {
+                    KhachHang_Overview KhachHang_Overview = new KhachHang_Overview();
+                    KhachHang_Overview.Show();
+                    this.Hide();
+                }
                 else
                 {
                     MessageBox.Show("Sai tài khoản hoặc mật khẩu hoặc vai trò", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
