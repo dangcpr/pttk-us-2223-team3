@@ -64,6 +64,12 @@
     <Compile Include="KhachHang_Overview.Designer.cs">
       <DependentUpon>KhachHang_Overview.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhachHang_SeeBooking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KhachHang_SeeBooking.Designer.cs">
+      <DependentUpon>KhachHang_SeeBooking.cs</DependentUpon>
+    </Compile>
     <Compile Include="LeTan_Room_Request.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="KhachHang_Overview.resx">
       <DependentUpon>KhachHang_Overview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang_SeeBooking.resx">
+      <DependentUpon>KhachHang_SeeBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LeTan_Room_Request.resx">
       <DependentUpon>LeTan_Room_Request.cs</DependentUpon>
