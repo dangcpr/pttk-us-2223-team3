@@ -190,5 +190,53 @@ namespace HotelSystem.BUS
             return true;
         }
 
+        //KhachHang tìm kiếm thông tin đặt phòng, hiện dữ liệu lên datagridview
+        public static Boolean KHcheckRoomRequestInput(string value, DataGridView KhachHangFormBookingDataGridView)
+        {
+            if (value == "")
+            {
+                MessageBox.Show("Nhập mã khách hàng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
+            Boolean checkFindRoomRequest = RoomDAO.KHviewRoomRequestListById(value, KhachHangFormBookingDataGridView);
+
+            if (!checkFindRoomRequest)
+            {
+                MessageBox.Show("Không tìm thấy thông tin đặt phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+
+            return true;
+        }
+
+
+        public static Boolean KHcheckBookingDetailInput(int value, DataGridView BookingDetail)
+        {
+            try
+            {
+                if (value.ToString() == "")
+                {
+                    MessageBox.Show("Nhập mã đặt phòng tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+
+                Boolean checkFindRoomRequest = RoomDAO.KHviewBookingDetail(value, BookingDetail);
+
+                if (!checkFindRoomRequest)
+                {
+                    MessageBox.Show("Không tìm thấy chi tiết thông tin đặt phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+
+                return true;
+            } 
+            catch
+            {
+                MessageBox.Show("Có lỗi xảy ra, vui lòng chọn dòng dữ liệu hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+        }
+
     }
 }

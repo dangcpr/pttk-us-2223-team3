@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelSystem.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace HotelSystem
 {
     public partial class KhachHang_Overview : Form
     {
+        public static string customerID = "";
         public KhachHang_Overview()
         {
             InitializeComponent();
@@ -21,30 +23,32 @@ namespace HotelSystem
         private void Bellman_Overview_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-            //bellman_HomePage1.BringToFront();
+            KhachHang_HomePage.BringToFront();
             BellmanCancel.BringToFront();
             name.Text = DAO.AccountDAO.overviewUsername;
+
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
             hoverPanel.Location = new Point(0, 213);
-            //bellman_HomePage1.BringToFront();
+            KhachHang_HomePage.BringToFront();
             BellmanCancel.BringToFront();
         }
 
         private void ServiceButton_Click(object sender, EventArgs e)
         {
             hoverPanel.Location = new Point(0, 264);
-            //bellman_Service1.BringToFront();
+            KhachHang_Feedback.BringToFront();
             BellmanCancel.BringToFront();
         }
 
         private void RoomButton_Click(object sender, EventArgs e)
         {
             hoverPanel.Location = new Point(0, 315);
-            //bellman_Room1.BringToFront();
+            KhachHang_SeeBooking.BringToFront();
             BellmanCancel.BringToFront();
+            
         }
 
         private void BellmanCancel_Click(object sender, EventArgs e)
@@ -71,6 +75,12 @@ namespace HotelSystem
             this.Hide();
         }
 
+        public void setCustomerID(string customerID1)
+        {
+            customerID = customerID1;
+            KhachHang_SeeBooking.setCustomerID(customerID);
+            KhachHang_Feedback.setCustomerID(customerID);
+        }
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,15 @@ namespace HotelSystem.DAO
             SqlCommand sqlCmd = new SqlCommand(queryStr, sqlConn);
             SqlDataReader reader = sqlCmd.ExecuteReader();
             return reader;
+        }
+
+        //Fill data in datagridview
+        public static DataTable fillData(SqlConnection sqlConn, string queryStr)
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter(queryStr, sqlConn);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            return dataTable;
         }
 
         public static void viewRoomType(ComboBox LeTanRoomComboBox, String TypeRoom)
@@ -352,6 +362,36 @@ namespace HotelSystem.DAO
             {
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+        //KhachHang tìm kiếm thông tin đặt phòng, hiện thông tin lên Datagridview
+        public static Boolean KHviewRoomRequestListById(string customerID, DataGridView KhachHangRoomBookingDataGridView)
+        {
+            string roomIdStr = $"SELECT * FROM THONG_TIN_DAT_PHONG WHERE MA_KHACH_HANG = '{customerID}'";
+
+            // Call Room DAO method to get room list
+            DataTable dataTable = fillData(DatabaseDAO.sqlConn, roomIdStr);
+            KhachHangRoomBookingDataGridView.DataSource = dataTable;
+
+            if (KhachHangRoomBookingDataGridView.RowCount == 0)
+            {
+                return false;
+            }
+            else return true;
+        }
+
+        public static Boolean KHviewBookingDetail(int requestID, DataGridView BookingDetail)
+        {
+            string requestIdStr = $"SELECT * FROM CHI_TIET_DAT_PHONG WHERE MA_DP = {requestID}";
+
+            // Call Room DAO method to get room list
+            DataTable dataTable = fillData(DatabaseDAO.sqlConn, requestIdStr);
+            BookingDetail.DataSource = dataTable;
+
+            if (BookingDetail.RowCount == 0)
+            {
+                return false;
+            }
+            else return true;
         }
     }
 }
