@@ -20,8 +20,8 @@ namespace HotelSystem
         {
             Console.WriteLine("Sign in form loaded");
 
-            // Get connect to database 
-            DatabaseDAO.sqlConn = DatabaseDAO.getConnectDB();
+            // Get connect to database
+            DatabaseBUS.checkDatabaseConnect();            
 
             this.CenterToScreen();
         }
@@ -44,8 +44,7 @@ namespace HotelSystem
             if(checkAcountBUS)
             {
                 // Check account from database
-                AccountDAO accountDAO = new AccountDAO();
-                bool checkAccount = accountDAO.checkAccount(DatabaseDAO.sqlConn, username.Text, password.Text, role.Text);
+                bool checkAccount =  AccountBUS.checkAccount(username.Text, password.Text, role.Text);               
 
                 // Open Bellman account
                 if (checkAccount && role.Text == "Bellman")
@@ -80,7 +79,7 @@ namespace HotelSystem
 
         private void SignInFormCancel_Click(object sender, EventArgs e)
         {
-            DatabaseDAO.sqlConn.Close();
+            DatabaseBUS.checkDatabaseDisconnect();
             this.Close();
             Application.Exit();
         }

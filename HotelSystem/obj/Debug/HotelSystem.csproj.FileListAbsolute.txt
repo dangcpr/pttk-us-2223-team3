@@ -57,3 +57,4 @@ E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Room_Request.resou
 E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Customer_Searching.resources
 E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Room_Searching.resources
 E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.KhachHang_Overview.resources
+D:\VS_project\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.KhachHang_Overview.resources

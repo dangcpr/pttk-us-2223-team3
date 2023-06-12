@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\DatabaseBUS.cs" />
     <Compile Include="KhachHang_Overview.cs">
       <SubType>Form</SubType>
     </Compile>

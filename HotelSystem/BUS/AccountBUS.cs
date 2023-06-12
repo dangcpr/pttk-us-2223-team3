@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelSystem.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,13 @@ namespace HotelSystem.BUS
             {
                 return true;
             }
+        }
+
+        public static Boolean checkAccount(string username, string password, string role)
+        {
+            AccountDAO accountDAO = new AccountDAO();
+            bool checkAccount = accountDAO.checkAccount(DatabaseDAO.sqlConn, username, password, role);
+            return checkAccount;
         }
     }
 }
