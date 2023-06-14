@@ -57,6 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\CheckinBUS.cs" />
+    <Compile Include="DAO\CheckinDAO.cs" />
     <Compile Include="KhachHang_Overview.cs">
       <SubType>Form</SubType>
     </Compile>
