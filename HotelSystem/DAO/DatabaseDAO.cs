@@ -10,7 +10,7 @@ namespace HotelSystem.DAO
     public class DatabaseDAO
     {
         public static SqlConnection sqlConn = null;
-        public static string dbConnectStr = "Data Source=LE-THANH-NAM\\SQLEXPRESS;Initial Catalog=QUANLYKHACHSAN;Integrated Security=True";
+        public static string dbConnectStr = "Data Source=localhost;Initial Catalog=QUANLYKHACHSAN;Integrated Security=True";
 
         public static SqlConnection getConnectDB()
         {
