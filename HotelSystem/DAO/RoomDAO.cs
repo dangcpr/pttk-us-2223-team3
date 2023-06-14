@@ -43,7 +43,7 @@ namespace HotelSystem.DAO
             //sqlConn.Close();
         }
 
-        public static void addNewRoomBooking(string customerId, string roomId, string bookingDate, string roomType, string checkinDate, string checkoutDate, string specialRequest)
+        public static int addNewRoomBooking(string customerId, string roomId, string bookingDate, string roomType, string checkinDate, string checkoutDate, string specialRequest)
         {
             string addRoomBookingStr = "INSERT INTO THONG_TIN_DAT_PHONG (MA_KHACH_HANG, NGAY_DAT, LOAI_PHONG, NGAY_CHECKIN, NGAY_CHECKOUT)";
             addRoomBookingStr += " VALUES(" + "'" + customerId + "'";
@@ -70,15 +70,12 @@ namespace HotelSystem.DAO
 
                 SqlCommand sqlCmd2 = new SqlCommand(updateStateRoom, DatabaseDAO.sqlConn);
                 sqlCmd2.ExecuteNonQuery();
+                return 0;
             }
             catch
-            {
-                MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            {              
+                return 2;
+            }          
         }
 
         public static Boolean viewRoomInfoById(string roomBookingID, ListView LeTanRoomInfoListView, ListView LeTanFormBookingListView)
@@ -329,7 +326,7 @@ namespace HotelSystem.DAO
             return isFound;
         }
 
-        public static void addNewRoomRequest(string username, string password, string name, string address, string cccd, string phone, string dateStart, string dateRequest, string count, string requestDes)
+        public static int addNewRoomRequest(string username, string password, string name, string address, string cccd, string phone, string dateStart, string dateRequest, string count, string requestDes)
         {
             string addRequestStr = $"INSERT INTO TAI_KHOAN (USERNAME, PASSWORD, ROLE) VALUES ('{username}', '{password}', N'Khách hàng');";
             addRequestStr += $"INSERT INTO THONG_TIN_KHACH_HANG (MA_KHACH_HANG, HO_TEN, DIA_CHI, CCCD, SDT) VALUES ('{username}', N'{name}', N'{address}', '{cccd}', '{phone}');";
@@ -343,14 +340,11 @@ namespace HotelSystem.DAO
             {
                 SqlCommand sqlCmd = new SqlCommand(addRequestStr, DatabaseDAO.sqlConn);
                 sqlCmd.ExecuteNonQuery();
+                return 0;
             }
             catch
             {
-                MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return 6;              
             }
         }
     }

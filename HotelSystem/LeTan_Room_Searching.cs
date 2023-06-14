@@ -55,7 +55,11 @@ namespace HotelSystem
             LeTanFormBookingListView.Columns.Add("Nhân viên ghi nhận", 120);
 
             // Business class calling
-            Boolean checkRoomInfoInput = RoomBUS.checkRoomInfoInput(LeTanRoomInfoInput.Text, LeTanRoomInfoListView, LeTanFormBookingListView);
+            int checkRoomInfoInput = RoomBUS.checkRoomInfoInput(LeTanRoomInfoInput.Text, LeTanRoomInfoListView, LeTanFormBookingListView);
+
+            if (checkRoomInfoInput == 1) MessageBox.Show("Nhập mã đặt phòng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (checkRoomInfoInput == 2) MessageBox.Show("Mã phòng phải là số.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (checkRoomInfoInput == 3) MessageBox.Show("Không tìm thấy mã phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Reset input
             LeTanRoomInfoInput.Text = "";

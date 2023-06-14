@@ -42,7 +42,10 @@ namespace HotelSystem
                 LeTanCustomerMainListView.Columns.Add("CCCD", 150);
                 LeTanCustomerMainListView.Columns.Add("SDT", 150);
 
-                Boolean checkCustomerGroupInfoInput = CustomerBUS.checkCustomerInfoInput(LeTanCustomerInfoInput.Text, LeTanCustomerMainListView);
+                int checkCustomerGroupInfoInput = CustomerBUS.checkCustomerInfoInput(LeTanCustomerInfoInput.Text, LeTanCustomerMainListView);
+
+                if (checkCustomerGroupInfoInput == 1) MessageBox.Show("Nhập mã khách hàng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (checkCustomerGroupInfoInput == 2) MessageBox.Show("Không tìm thấy khách hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             if (LeTancustomerTypeComboBox.Text == "Khách đoàn")
             {
@@ -67,7 +70,10 @@ namespace HotelSystem
                 LeTanCustomerMainListView.Columns.Add("CCCD", 150);
                 LeTanCustomerMainListView.Columns.Add("SDT", 150);
 
-                Boolean checkCustomerGroupInfoInput = CustomerBUS.checkCustomerGroupInfoInput(LeTanCustomerInfoInput.Text, LeTanCustomerGroupListView, LeTanCustomerMainListView);
+                int checkCustomerGroupInfoInput = CustomerBUS.checkCustomerGroupInfoInput(LeTanCustomerInfoInput.Text, LeTanCustomerGroupListView, LeTanCustomerMainListView);
+
+                if (checkCustomerGroupInfoInput == 1) MessageBox.Show("Nhập mã khách hàng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (checkCustomerGroupInfoInput == 2) MessageBox.Show("Không tìm thấy khách hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
             LeTanCustomerInfoInput.Text = "";
