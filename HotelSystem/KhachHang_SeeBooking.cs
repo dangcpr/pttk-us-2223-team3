@@ -31,7 +31,7 @@ namespace HotelSystem
 
         private void select_Click(object sender, EventArgs e)
         {
-            int checkInput = RoomBUS.KHcheckRoomRequestInput(customerID, infoBooking);
+            int checkInput = RoomBUS.KHcheckRoomRequestInput(customerID);
             if (checkInput == -1)
             {
                 MessageBox.Show("Nhập mã khách hàng tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -39,6 +39,11 @@ namespace HotelSystem
             else if (checkInput == -2)
             {
                 MessageBox.Show("Không tìm thấy thông tin đặt phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                DataTable result = RoomBUS.KHselectRoomRequest(customerID);
+                infoBooking.DataSource = result;
             }
         }
 
@@ -48,7 +53,7 @@ namespace HotelSystem
             {
                 DataGridViewRow row = this.infoBooking.Rows[e.RowIndex];
                 int requestID = Int32.Parse(row.Cells[0].Value.ToString());
-                int result = RoomBUS.KHcheckBookingDetailInput(requestID, infoBookingDetail);
+                int result = RoomBUS.KHcheckBookingDetailInput(requestID);
                 if (result == -2)
                 {
                     MessageBox.Show("Không tìm thấy chi tiết thông tin đặt phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -60,6 +65,11 @@ namespace HotelSystem
                 else if (result == -3)
                 {
                     MessageBox.Show("Có lỗi xảy ra, vui lòng chọn dòng dữ liệu hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    DataTable result1 = RoomBUS.KHselectBookingDetail(requestID);
+                    infoBookingDetail.DataSource = result1;
                 }
             }
         }

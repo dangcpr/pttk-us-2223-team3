@@ -192,7 +192,12 @@ namespace HotelSystem.BUS
         }
 
         //KhachHang tìm kiếm thông tin đặt phòng, hiện dữ liệu lên datagridview
-        public static int KHcheckRoomRequestInput(string value, DataGridView KhachHangFormBookingDataGridView)
+        public static DataTable KHselectRoomRequest (string value)
+        {
+            DataTable checkFindRoomRequest = RoomDAO.KHviewRoomRequestListById(value);
+            return checkFindRoomRequest;
+        }
+        public static int KHcheckRoomRequestInput(string value)
         {
             if (value == "")
             {
@@ -200,7 +205,6 @@ namespace HotelSystem.BUS
             }
 
             DataTable checkFindRoomRequest = RoomDAO.KHviewRoomRequestListById(value);
-            KhachHangFormBookingDataGridView.DataSource = checkFindRoomRequest;
 
             if (checkFindRoomRequest.Rows.Count == 0)
             {
@@ -209,8 +213,12 @@ namespace HotelSystem.BUS
             return 1;
         }
 
-
-        public static int KHcheckBookingDetailInput(int value, DataGridView BookingDetail)
+        public static DataTable KHselectBookingDetail(int value)
+        {
+            DataTable checkFindRoomRequest = RoomDAO.KHviewBookingDetail(value);
+            return checkFindRoomRequest;
+        }
+        public static int KHcheckBookingDetailInput(int value)
         {
             try
             {
@@ -220,7 +228,6 @@ namespace HotelSystem.BUS
                 }
 
                 DataTable checkFindRoomRequest = RoomDAO.KHviewBookingDetail(value);
-                BookingDetail.DataSource = checkFindRoomRequest;
 
                 if (checkFindRoomRequest.Rows.Count == 0)
                 {

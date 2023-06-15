@@ -29,7 +29,11 @@ namespace HotelSystem.BUS
                 return checkFeedback;
             }
         }
-        public static int checkSelectFeedback(string customerID, DataGridView feedbackTable)
+        public static DataTable selectFeedback(string customerID)
+        {
+            return FeedbackDAO.selectFeedback(customerID);
+        }
+        public static int checkSelectFeedback(string customerID)
         {
             if (customerID == "")
             {
@@ -41,7 +45,6 @@ namespace HotelSystem.BUS
                 DataTable checkFeedback = FeedbackDAO.selectFeedback(customerID);
                 if (checkFeedback.Rows.Count > 0)
                 {
-                    feedbackTable.DataSource = checkFeedback;
                     return 1;
                 }
                 else

@@ -4,6 +4,7 @@ using HotelSystem.BUS;
 using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace HotelSystem
 {
@@ -18,7 +19,8 @@ namespace HotelSystem
         public void setCustomerID(string customerID1)
         {
             customerID = customerID1;
-            int result = FeedbackBUS.checkSelectFeedback(customerID, feedbackTable);
+            DataTable result = FeedbackBUS.selectFeedback(customerID);
+            feedbackTable.DataSource = result;
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -48,7 +50,8 @@ namespace HotelSystem
             if (result == 1)
             {
                 MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                int result1 = FeedbackBUS.checkSelectFeedback(customerID, feedbackTable);
+                DataTable result1 = FeedbackBUS.selectFeedback(customerID);
+                feedbackTable.DataSource = result1;
             }
             else if (result == -1)
             {
