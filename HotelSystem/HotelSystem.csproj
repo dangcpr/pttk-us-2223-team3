@@ -57,11 +57,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\DriverBUS.cs" />
+    <Compile Include="BUS\InvoiceBUS.cs" />
+    <Compile Include="BUS\ServiceBUS.cs" />
+    <Compile Include="DAO\DriverDAO.cs" />
+    <Compile Include="DAO\InvoiceDAO.cs" />
+    <Compile Include="DAO\ServiceDAO.cs" />
     <Compile Include="KhachHang_Overview.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KhachHang_Overview.Designer.cs">
       <DependentUpon>KhachHang_Overview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_Checkout_Card.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Checkout_Card.Designer.cs">
+      <DependentUpon>LeTan_Checkout_Card.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_Checkout_Driver.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Checkout_Driver.Designer.cs">
+      <DependentUpon>LeTan_Checkout_Driver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_Invoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Invoice.Designer.cs">
+      <DependentUpon>LeTan_Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_Invoice_Search.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Invoice_Search.Designer.cs">
+      <DependentUpon>LeTan_Invoice_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_Invoice_Search_Detail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Invoice_Search_Detail.Designer.cs">
+      <DependentUpon>LeTan_Invoice_Search_Detail.cs</DependentUpon>
     </Compile>
     <Compile Include="LeTan_Room_Request.cs">
       <SubType>UserControl</SubType>
@@ -180,6 +216,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="KhachHang_Overview.resx">
       <DependentUpon>KhachHang_Overview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_Checkout_Card.resx">
+      <DependentUpon>LeTan_Checkout_Card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_Checkout_Driver.resx">
+      <DependentUpon>LeTan_Checkout_Driver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_Invoice.resx">
+      <DependentUpon>LeTan_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_Invoice_Search.resx">
+      <DependentUpon>LeTan_Invoice_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_Invoice_Search_Detail.resx">
+      <DependentUpon>LeTan_Invoice_Search_Detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LeTan_Room_Request.resx">
       <DependentUpon>LeTan_Room_Request.cs</DependentUpon>

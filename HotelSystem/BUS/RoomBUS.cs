@@ -1,6 +1,8 @@
 ﻿using HotelSystem.DAO;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -188,6 +190,43 @@ namespace HotelSystem.BUS
             RoomDAO.addNewRoomRequest(username, password, name, address, cccd, phone, dateStart, dateRequest, count, requestDes);
 
             return true;
+        }
+
+        public static SqlDataReader viewListRoom()
+        {
+            SqlDataReader reader = RoomDAO.getListRoom();
+            return reader;
+        }
+
+        public static Boolean checkRoomStatusCheckout(string MaPhong)
+        {
+            string status = RoomDAO.getRoomStatus(MaPhong);
+            if (status == "Hết")
+                return true;
+            return false;
+        }
+        
+
+        public static void createCheckoutCard(ref string status, ref string customerName, ref string roomType, ref SqlDataReader reader, string MaPhong)
+        {
+            status = RoomDAO.getRoomStatus(MaPhong);
+            string customerID = "";
+            RoomDAO.getCustomerByRoomID(MaPhong, ref customerID, ref customerName);
+            roomType = RoomDAO.getRoomTypeByRoomID(MaPhong);
+            reader = ServiceDAO.getListServicesByCustomerID(customerID);
+            reader.Read();
+        }
+
+        public static void changeRoomStatus(string MaPhong)
+        {
+            if (RoomDAO.getRoomStatus(MaPhong) == "Hết")
+            {
+                RoomDAO.updateRoomStatus(MaPhong, "Trống");
+            }
+            else if (RoomDAO.getRoomStatus(MaPhong) == "Trống")
+            {
+                RoomDAO.updateRoomStatus(MaPhong, "Hết");
+            }
         }
 
     }

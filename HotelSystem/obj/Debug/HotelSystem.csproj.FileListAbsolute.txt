@@ -56,3 +56,38 @@ D:\VS_project\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Room_Re
 E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Room_Request.resources
 E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Customer_Searching.resources
 E:\pttk-us-2223-team3\HotelSystem\obj\Debug\HotelSystem.LeTan_Room_Searching.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\bin\Debug\HotelSystem.exe.config
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\bin\Debug\HotelSystem.exe
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\bin\Debug\HotelSystem.pdb
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\bin\Debug\Guna.UI2.dll
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.csproj.AssemblyReference.cache
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.csproj.SuggestedBindingRedirects.cache
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.KhachHang_Overview.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_Room_Request.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_Customer_Searching.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_Room_Searching.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_Room_Booking.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_Tour.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_Checkout.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_Checkin.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_Room.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_Service.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_HomePage.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_Overview.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.Bellman_Service.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.Bellman_Rule.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.Bellman_Room.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.Bellman_HomePage.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.Bellman_Overview.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.SignInForm.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.Properties.Resources.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.csproj.GenerateResource.cache
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.csproj.CoreCompileInputs.cache
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.csproj.CopyComplete
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.exe
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.pdb
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_Checkout_Card.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_Invoice.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_Checkout_Driver.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_Invoice_Search.resources
+D:\OneDrive - VNU-HCMUS\Documents\Subjects\HK6_PTTK HTTT\Project\Source\HotelSystem\obj\Debug\HotelSystem.LeTan_Invoice_Search_Detail.resources

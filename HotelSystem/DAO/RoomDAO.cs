@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace HotelSystem.DAO
 {
@@ -353,5 +354,58 @@ namespace HotelSystem.DAO
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        public static SqlDataReader getListRoom()
+        {
+            SqlDataReader listRoom = RoomDAO.getQueryStr(DatabaseDAO.sqlConn, roomQueryStr);
+            return listRoom;
+        }
+
+        public static string getRoomStatus(string MaPhong)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT TINH_TRANG FROM THONG_TIN_PHONG_KHACH_SAN WHERE MA_PHONG = @MaPhong;", DatabaseDAO.sqlConn);
+            cmd.Parameters.AddWithValue("@MaPhong", MaPhong);
+            string status = cmd.ExecuteScalar().ToString();
+            return status;
+        }
+
+        public static void getCustomerByRoomID(string MaPhong, ref string MaKH, ref string HoTen)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT TOP 1 THONG_TIN_KHACH_HANG.MA_KHACH_HANG, HO_TEN FROM PHIEU_THONG_TIN_DAT_PHONG JOIN THONG_TIN_KHACH_HANG ON PHIEU_THONG_TIN_DAT_PHONG.MA_KHACH_HANG = THONG_TIN_KHACH_HANG.MA_KHACH_HANG WHERE MA_PHONG = @MaPhong ORDER BY NGAY_GHI DESC;", DatabaseDAO.sqlConn);
+            cmd.Parameters.AddWithValue("@MaPhong", MaPhong);
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
+            MaKH = reader[0].ToString();
+            HoTen = reader[1].ToString();
+            reader.Close();
+        }
+
+        public static string getRoomTypeByRoomID(string MaPhong)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT LOAI_PHONG FROM THONG_TIN_PHONG_KHACH_SAN WHERE MA_PHONG = @MaPhong;", DatabaseDAO.sqlConn);
+            cmd.Parameters.AddWithValue("@MaPhong", MaPhong);
+            string roomType = cmd.ExecuteScalar().ToString();
+            return roomType;
+        }
+
+        public static int getRoomPrice(string MaPhong)
+        {
+            int roomPrice = 0;
+            SqlCommand cmd = new SqlCommand("SELECT GIA_TIEN FROM THONG_TIN_PHONG_KHACH_SAN WHERE MA_PHONG = @MaPhong;", DatabaseDAO.sqlConn);
+            cmd.Parameters.AddWithValue("@MaPhong", MaPhong);
+            roomPrice = Convert.ToInt32(cmd.ExecuteScalar());
+            return roomPrice;
+        }
+
+        public static void updateRoomStatus(string MaPhong, string Status)
+        {
+            SqlCommand cmd = new SqlCommand("UPDATE THONG_TIN_PHONG_KHACH_SAN SET TINH_TRANG = @Status WHERE MA_PHONG = @MaPhong;", DatabaseDAO.sqlConn);
+            cmd.Parameters.AddWithValue("@Status", Status);
+            cmd.Parameters.AddWithValue("@MaPhong", MaPhong);
+            cmd.ExecuteNonQuery();
+        }
+
+
+
     }
 }
