@@ -39,25 +39,13 @@ namespace HotelSystem.BUS
             return list;
         }
 
-        public static void saveDataCheckin(List<String> list)
+        public static Boolean saveDataCheckin(List<String> list)
         {
             DateTime dateValue;
             DateTime.TryParse(list[2], out dateValue);
 
             bool check = CheckinDAO.saveDataCheckin(list, dateValue);
-                
-            if (check)
-            {
-                MessageBox.Show("Thêm dữ liệu vào Phiếu Đăng Ký thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Thêm dữ liệu vào Phiếu Đăng Ký bị lỗi !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
-            
-            
-
+            return check;
         }
     }
 }

@@ -43,7 +43,6 @@ namespace HotelSystem.DAO
             SqlCommand sqlCmd = new SqlCommand(getThongTinDatPhong, DatabaseDAO.sqlConn);
             SqlDataReader reader = sqlCmd.ExecuteReader();
 
-
             return reader;
         }
 
@@ -61,10 +60,6 @@ namespace HotelSystem.DAO
             catch (SqlException ex)
             {
                 return result;
-            }
-            finally
-            {
-                DatabaseDAO.sqlConn.Close();
             }
             return result;
         }

@@ -53,12 +53,12 @@ namespace HotelSystem
             // HomeLabel
             // 
             this.HomeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.HomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeLabel.Font = new System.Drawing.Font("Google Sans", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeLabel.ForeColor = System.Drawing.Color.DeepPink;
             this.HomeLabel.Location = new System.Drawing.Point(398, 43);
             this.HomeLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.HomeLabel.Name = "HomeLabel";
-            this.HomeLabel.Size = new System.Drawing.Size(575, 63);
+            this.HomeLabel.Size = new System.Drawing.Size(577, 71);
             this.HomeLabel.TabIndex = 0;
             this.HomeLabel.Text = "THÔNG TIN CHECK IN";
             this.HomeLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -71,7 +71,7 @@ namespace HotelSystem
             this.hoanthanh_checkin_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.hoanthanh_checkin_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.hoanthanh_checkin_btn.FillColor = System.Drawing.Color.DeepPink;
-            this.hoanthanh_checkin_btn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.hoanthanh_checkin_btn.Font = new System.Drawing.Font("Google Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hoanthanh_checkin_btn.ForeColor = System.Drawing.Color.White;
             this.hoanthanh_checkin_btn.Location = new System.Drawing.Point(703, 1001);
             this.hoanthanh_checkin_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -91,7 +91,7 @@ namespace HotelSystem
             this.madp_checkin_txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.madp_checkin_txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.madp_checkin_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.madp_checkin_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.madp_checkin_txt.Font = new System.Drawing.Font("Google Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.madp_checkin_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.madp_checkin_txt.Location = new System.Drawing.Point(71, 216);
             this.madp_checkin_txt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -105,22 +105,22 @@ namespace HotelSystem
             // makh_checkin
             // 
             this.makh_checkin.BackColor = System.Drawing.Color.Transparent;
-            this.makh_checkin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.makh_checkin.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.makh_checkin.Location = new System.Drawing.Point(840, 161);
             this.makh_checkin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.makh_checkin.Name = "makh_checkin";
-            this.makh_checkin.Size = new System.Drawing.Size(177, 31);
+            this.makh_checkin.Size = new System.Drawing.Size(174, 33);
             this.makh_checkin.TabIndex = 16;
             this.makh_checkin.Text = "Mã khách hàng";
             // 
             // loaiphong_checkin
             // 
             this.loaiphong_checkin.BackColor = System.Drawing.Color.Transparent;
-            this.loaiphong_checkin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loaiphong_checkin.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loaiphong_checkin.Location = new System.Drawing.Point(456, 161);
             this.loaiphong_checkin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.loaiphong_checkin.Name = "loaiphong_checkin";
-            this.loaiphong_checkin.Size = new System.Drawing.Size(133, 31);
+            this.loaiphong_checkin.Size = new System.Drawing.Size(130, 33);
             this.loaiphong_checkin.TabIndex = 17;
             this.loaiphong_checkin.Text = "Loại phòng";
             // 
@@ -134,7 +134,7 @@ namespace HotelSystem
             this.loaiphong_checkin_txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.loaiphong_checkin_txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.loaiphong_checkin_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.loaiphong_checkin_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loaiphong_checkin_txt.Font = new System.Drawing.Font("Google Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loaiphong_checkin_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.loaiphong_checkin_txt.Location = new System.Drawing.Point(456, 216);
             this.loaiphong_checkin_txt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -148,11 +148,11 @@ namespace HotelSystem
             // madp_checkin
             // 
             this.madp_checkin.BackColor = System.Drawing.Color.Transparent;
-            this.madp_checkin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.madp_checkin.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.madp_checkin.Location = new System.Drawing.Point(71, 161);
             this.madp_checkin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.madp_checkin.Name = "madp_checkin";
-            this.madp_checkin.Size = new System.Drawing.Size(161, 31);
+            this.madp_checkin.Size = new System.Drawing.Size(161, 33);
             this.madp_checkin.TabIndex = 19;
             this.madp_checkin.Text = "Mã đặt phòng";
             this.madp_checkin.Click += new System.EventHandler(this.guna2HtmlLabel6_Click);
@@ -167,7 +167,7 @@ namespace HotelSystem
             this.makh_checkin_txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.makh_checkin_txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.makh_checkin_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.makh_checkin_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.makh_checkin_txt.Font = new System.Drawing.Font("Google Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.makh_checkin_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.makh_checkin_txt.Location = new System.Drawing.Point(840, 216);
             this.makh_checkin_txt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -188,7 +188,7 @@ namespace HotelSystem
             this.ngaycheckin_checkin_txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.ngaycheckin_checkin_txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.ngaycheckin_checkin_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ngaycheckin_checkin_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngaycheckin_checkin_txt.Font = new System.Drawing.Font("Google Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngaycheckin_checkin_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ngaycheckin_checkin_txt.Location = new System.Drawing.Point(456, 428);
             this.ngaycheckin_checkin_txt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -209,7 +209,7 @@ namespace HotelSystem
             this.ngaydat_checkin_txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.ngaydat_checkin_txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.ngaydat_checkin_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ngaydat_checkin_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngaydat_checkin_txt.Font = new System.Drawing.Font("Google Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngaydat_checkin_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ngaydat_checkin_txt.Location = new System.Drawing.Point(71, 428);
             this.ngaydat_checkin_txt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -223,33 +223,33 @@ namespace HotelSystem
             // ngaydat_checkin
             // 
             this.ngaydat_checkin.BackColor = System.Drawing.Color.Transparent;
-            this.ngaydat_checkin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngaydat_checkin.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngaydat_checkin.Location = new System.Drawing.Point(71, 368);
             this.ngaydat_checkin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ngaydat_checkin.Name = "ngaydat_checkin";
-            this.ngaydat_checkin.Size = new System.Drawing.Size(106, 31);
+            this.ngaydat_checkin.Size = new System.Drawing.Size(107, 33);
             this.ngaydat_checkin.TabIndex = 23;
             this.ngaydat_checkin.Text = "Ngày đặt";
             // 
             // ngaycheckin_checkin
             // 
             this.ngaycheckin_checkin.BackColor = System.Drawing.Color.Transparent;
-            this.ngaycheckin_checkin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngaycheckin_checkin.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngaycheckin_checkin.Location = new System.Drawing.Point(456, 368);
             this.ngaycheckin_checkin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ngaycheckin_checkin.Name = "ngaycheckin_checkin";
-            this.ngaycheckin_checkin.Size = new System.Drawing.Size(168, 31);
+            this.ngaycheckin_checkin.Size = new System.Drawing.Size(170, 33);
             this.ngaycheckin_checkin.TabIndex = 24;
             this.ngaycheckin_checkin.Text = "Ngày check-in";
             // 
             // ngayckeckout__checkin
             // 
             this.ngayckeckout__checkin.BackColor = System.Drawing.Color.Transparent;
-            this.ngayckeckout__checkin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngayckeckout__checkin.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngayckeckout__checkin.Location = new System.Drawing.Point(840, 368);
             this.ngayckeckout__checkin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ngayckeckout__checkin.Name = "ngayckeckout__checkin";
-            this.ngayckeckout__checkin.Size = new System.Drawing.Size(183, 31);
+            this.ngayckeckout__checkin.Size = new System.Drawing.Size(188, 33);
             this.ngayckeckout__checkin.TabIndex = 25;
             this.ngayckeckout__checkin.Text = "Ngày check-out";
             // 
@@ -263,7 +263,7 @@ namespace HotelSystem
             this.ngaycheckout_checkin_txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.ngaycheckout_checkin_txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.ngaycheckout_checkin_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ngaycheckout_checkin_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngaycheckout_checkin_txt.Font = new System.Drawing.Font("Google Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngaycheckout_checkin_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ngaycheckout_checkin_txt.Location = new System.Drawing.Point(840, 428);
             this.ngaycheckout_checkin_txt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -284,7 +284,7 @@ namespace HotelSystem
             this.ghichu_checkin_txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.ghichu_checkin_txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.ghichu_checkin_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ghichu_checkin_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ghichu_checkin_txt.Font = new System.Drawing.Font("Google Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ghichu_checkin_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ghichu_checkin_txt.Location = new System.Drawing.Point(71, 739);
             this.ghichu_checkin_txt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -298,11 +298,11 @@ namespace HotelSystem
             // ghichu_checkin
             // 
             this.ghichu_checkin.BackColor = System.Drawing.Color.Transparent;
-            this.ghichu_checkin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ghichu_checkin.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ghichu_checkin.Location = new System.Drawing.Point(71, 697);
             this.ghichu_checkin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ghichu_checkin.Name = "ghichu_checkin";
-            this.ghichu_checkin.Size = new System.Drawing.Size(91, 31);
+            this.ghichu_checkin.Size = new System.Drawing.Size(92, 33);
             this.ghichu_checkin.TabIndex = 28;
             this.ghichu_checkin.Text = "Ghi chú";
             this.ghichu_checkin.Click += new System.EventHandler(this.ghichu_checkin_Click);
@@ -315,7 +315,7 @@ namespace HotelSystem
             this.check_checkin_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.check_checkin_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.check_checkin_btn.FillColor = System.Drawing.Color.DeepPink;
-            this.check_checkin_btn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.check_checkin_btn.Font = new System.Drawing.Font("Google Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.check_checkin_btn.ForeColor = System.Drawing.Color.White;
             this.check_checkin_btn.Location = new System.Drawing.Point(319, 1001);
             this.check_checkin_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -328,11 +328,11 @@ namespace HotelSystem
             // CCCD_checkin
             // 
             this.CCCD_checkin.BackColor = System.Drawing.Color.Transparent;
-            this.CCCD_checkin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CCCD_checkin.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CCCD_checkin.Location = new System.Drawing.Point(71, 542);
             this.CCCD_checkin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CCCD_checkin.Name = "CCCD_checkin";
-            this.CCCD_checkin.Size = new System.Drawing.Size(200, 31);
+            this.CCCD_checkin.Size = new System.Drawing.Size(197, 33);
             this.CCCD_checkin.TabIndex = 32;
             this.CCCD_checkin.Text = "CCCD / Passport";
             // 
@@ -346,7 +346,7 @@ namespace HotelSystem
             this.cccd_checkin_txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.cccd_checkin_txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.cccd_checkin_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cccd_checkin_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cccd_checkin_txt.Font = new System.Drawing.Font("Google Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cccd_checkin_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cccd_checkin_txt.Location = new System.Drawing.Point(71, 602);
             this.cccd_checkin_txt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);

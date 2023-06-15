@@ -58,9 +58,17 @@ namespace HotelSystem
             }
             else
             {
+                bool check = CheckinBUS.saveDataCheckin(list);
 
-                CheckinBUS.saveDataCheckin(list);
-                
+                if (check)
+                {
+                    MessageBox.Show("Thêm dữ liệu vào Phiếu Đăng Ký thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Thêm dữ liệu vào Phiếu Đăng Ký bị lỗi !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             } 
              
         }
@@ -71,13 +79,22 @@ namespace HotelSystem
 
             bool check = CheckinBUS.checkMadp(madp);
 
-            if (check == false)
+            if (madp_checkin_txt.Text == "")
             {
-                MessageBox.Show("Thông tin khách hàng không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } else
-            {
-                getAllInformation(madp);
+                MessageBox.Show("Vui lòng nhập Mã Đặt Phòng");
             }
+            else
+            {
+                if (check == false)
+                {
+                    MessageBox.Show("Thông tin khách hàng không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    getAllInformation(madp);
+                }
+
+            }     
    
         }
     }

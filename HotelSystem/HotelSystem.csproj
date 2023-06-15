@@ -58,7 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\CheckinBUS.cs" />
+    <Compile Include="BUS\DangKyTourBUS.cs" />
     <Compile Include="DAO\CheckinDAO.cs" />
+    <Compile Include="DAO\DangKyTourDAO.cs" />
     <Compile Include="KhachHang_Overview.cs">
       <SubType>Form</SubType>
     </Compile>
