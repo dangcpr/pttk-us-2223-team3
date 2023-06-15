@@ -1,6 +1,7 @@
 ﻿using HotelSystem.DAO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -191,50 +192,46 @@ namespace HotelSystem.BUS
         }
 
         //KhachHang tìm kiếm thông tin đặt phòng, hiện dữ liệu lên datagridview
-        public static Boolean KHcheckRoomRequestInput(string value, DataGridView KhachHangFormBookingDataGridView)
+        public static int KHcheckRoomRequestInput(string value, DataGridView KhachHangFormBookingDataGridView)
         {
             if (value == "")
             {
-                MessageBox.Show("Nhập mã khách hàng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+                return -1;
             }
 
-            Boolean checkFindRoomRequest = RoomDAO.KHviewRoomRequestListById(value, KhachHangFormBookingDataGridView);
+            DataTable checkFindRoomRequest = RoomDAO.KHviewRoomRequestListById(value);
+            KhachHangFormBookingDataGridView.DataSource = checkFindRoomRequest;
 
-            if (!checkFindRoomRequest)
+            if (checkFindRoomRequest.Rows.Count == 0)
             {
-                MessageBox.Show("Không tìm thấy thông tin đặt phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+                return 0;
             }
-
-            return true;
+            return 1;
         }
 
 
-        public static Boolean KHcheckBookingDetailInput(int value, DataGridView BookingDetail)
+        public static int KHcheckBookingDetailInput(int value, DataGridView BookingDetail)
         {
             try
             {
                 if (value.ToString() == "")
                 {
-                    MessageBox.Show("Nhập mã đặt phòng tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return false;
+                    return -1;
                 }
 
-                Boolean checkFindRoomRequest = RoomDAO.KHviewBookingDetail(value, BookingDetail);
+                DataTable checkFindRoomRequest = RoomDAO.KHviewBookingDetail(value);
+                BookingDetail.DataSource = checkFindRoomRequest;
 
-                if (!checkFindRoomRequest)
+                if (checkFindRoomRequest.Rows.Count == 0)
                 {
-                    MessageBox.Show("Không tìm thấy chi tiết thông tin đặt phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return false;
+                    return -2;
                 }
 
-                return true;
+                return 1;
             } 
             catch
             {
-                MessageBox.Show("Có lỗi xảy ra, vui lòng chọn dòng dữ liệu hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+                return -3;
             }
         }
 

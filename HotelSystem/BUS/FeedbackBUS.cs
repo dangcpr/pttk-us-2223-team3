@@ -1,6 +1,7 @@
 ﻿using HotelSystem.DAO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,8 +38,16 @@ namespace HotelSystem.BUS
             else
             {
                 FeedbackDAO FeedbackDAO = new FeedbackDAO();
-                int checkFeedback = FeedbackDAO.selectFeedback(customerID, feedbackTable);
-                return checkFeedback;
+                DataTable checkFeedback = FeedbackDAO.selectFeedback(customerID);
+                if (checkFeedback.Rows.Count > 0)
+                {
+                    feedbackTable.DataSource = checkFeedback;
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
             }
         }
         public static int checkUpdateFeedback(int feedbackID, string customerID, string feedbackContent)

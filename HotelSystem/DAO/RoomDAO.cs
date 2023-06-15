@@ -364,34 +364,22 @@ namespace HotelSystem.DAO
             }
         }
         //KhachHang tìm kiếm thông tin đặt phòng, hiện thông tin lên Datagridview
-        public static Boolean KHviewRoomRequestListById(string customerID, DataGridView KhachHangRoomBookingDataGridView)
+        public static DataTable KHviewRoomRequestListById(string customerID)
         {
             string roomIdStr = $"SELECT * FROM THONG_TIN_DAT_PHONG WHERE MA_KHACH_HANG = '{customerID}'";
 
             // Call Room DAO method to get room list
             DataTable dataTable = fillData(DatabaseDAO.sqlConn, roomIdStr);
-            KhachHangRoomBookingDataGridView.DataSource = dataTable;
-
-            if (KhachHangRoomBookingDataGridView.RowCount == 0)
-            {
-                return false;
-            }
-            else return true;
+            return dataTable;
         }
 
-        public static Boolean KHviewBookingDetail(int requestID, DataGridView BookingDetail)
+        public static DataTable KHviewBookingDetail(int requestID)
         {
             string requestIdStr = $"SELECT * FROM CHI_TIET_DAT_PHONG WHERE MA_DP = {requestID}";
 
             // Call Room DAO method to get room list
             DataTable dataTable = fillData(DatabaseDAO.sqlConn, requestIdStr);
-            BookingDetail.DataSource = dataTable;
-
-            if (BookingDetail.RowCount == 0)
-            {
-                return false;
-            }
-            else return true;
+            return dataTable;
         }
     }
 }

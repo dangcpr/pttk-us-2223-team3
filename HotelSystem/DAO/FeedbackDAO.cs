@@ -41,19 +41,13 @@ namespace HotelSystem.DAO
             }
         }
 
-        public static int selectFeedback(string customerID, DataGridView feedbackTable)
+        public static DataTable selectFeedback(string customerID)
         {
             string requestIdStr = $"SELECT * FROM PHIEU_FEED_BACK WHERE MA_KHACH_HANG = '{customerID}'";
 
             // Call Room DAO method to get room list
             DataTable dataTable = fillData(DatabaseDAO.sqlConn, requestIdStr);
-            feedbackTable.DataSource = dataTable;
-
-            if (feedbackTable.RowCount == 0)
-            {
-                return 0;
-            }
-            else return 1;
+            return dataTable;
         }
 
         public static int updateFeedback(int feedbackID, string customerID, string feedbackContent)
