@@ -39,6 +39,7 @@ namespace HotelSystem
             this.makh_tour_txt = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.xemtour_tour_btn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -185,11 +186,30 @@ namespace HotelSystem
             this.dateTimePicker1.Size = new System.Drawing.Size(280, 35);
             this.dateTimePicker1.TabIndex = 38;
             // 
+            // xemtour_tour_btn
+            // 
+            this.xemtour_tour_btn.BorderRadius = 5;
+            this.xemtour_tour_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.xemtour_tour_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.xemtour_tour_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.xemtour_tour_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.xemtour_tour_btn.FillColor = System.Drawing.Color.DeepPink;
+            this.xemtour_tour_btn.Font = new System.Drawing.Font("Google Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xemtour_tour_btn.ForeColor = System.Drawing.Color.White;
+            this.xemtour_tour_btn.Location = new System.Drawing.Point(1087, 144);
+            this.xemtour_tour_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.xemtour_tour_btn.Name = "xemtour_tour_btn";
+            this.xemtour_tour_btn.Size = new System.Drawing.Size(205, 42);
+            this.xemtour_tour_btn.TabIndex = 39;
+            this.xemtour_tour_btn.Text = "Xem tour du lịch";
+            this.xemtour_tour_btn.Click += new System.EventHandler(this.xemtour_tour_btn_Click);
+            // 
             // LeTan_Tour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Controls.Add(this.xemtour_tour_btn);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.makh_tour);
@@ -221,5 +241,6 @@ namespace HotelSystem
         private Guna.UI2.WinForms.Guna2TextBox makh_tour_txt;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private Guna.UI2.WinForms.Guna2Button xemtour_tour_btn;
     }
 }

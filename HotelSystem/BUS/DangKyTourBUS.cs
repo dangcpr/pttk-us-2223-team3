@@ -13,6 +13,8 @@ namespace HotelSystem.BUS
     {
         public static DataTable getTourDuLich()
         {
+
+
             SqlDataAdapter adapter = new SqlDataAdapter();
             adapter = DangKyTourDAO.getTourDuLich();
             DataTable dt = new DataTable();

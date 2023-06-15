@@ -16,15 +16,6 @@ namespace HotelSystem
         public LeTan_Tour()
         {
             InitializeComponent();
-            getDataTourDuLich();
-        }
-
-        private void getDataTourDuLich()
-        {
-            dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            DataTable dt = new DataTable();
-            dt = DangKyTourBUS.getTourDuLich();
-            dataGridView1.DataSource= dt;
         }
 
         private void hoanthanh_tour_btn_Click(object sender, EventArgs e)
@@ -50,6 +41,14 @@ namespace HotelSystem
                 }
 
             }
+        }
+
+        private void xemtour_tour_btn_Click(object sender, EventArgs e)
+        {
+            dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            DataTable dt = new DataTable();
+            dt = DangKyTourBUS.getTourDuLich();
+            dataGridView1.DataSource = dt;
         }
     }
 }
