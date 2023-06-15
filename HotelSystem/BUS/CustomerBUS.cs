@@ -11,42 +11,44 @@ namespace HotelSystem.BUS
 {
     internal class CustomerBUS
     {       
-        public static Boolean checkCustomerInfoInput(string value, ListView LeTanCustomerListView)
+        public static int checkCustomerInfoInput(string value, ListView LeTanCustomerListView)
         {
+            // 1: Thiếu mã khách hàng
+            // 2: Không tìm thấy khách hàng
+
             if (value == "")
-            {
-                MessageBox.Show("Nhập mã khách hàng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {               
+                return 1;
             }
 
             Boolean checkFindCustomer = CustomerDAO.viewCustomerById(value, LeTanCustomerListView);
 
             if (!checkFindCustomer)
-            {
-                MessageBox.Show("Không tìm thấy khách hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {               
+                return 2;
             }
 
-            return true;
+            return 0;
         }
 
-        public static Boolean checkCustomerGroupInfoInput(string value, ListView LeTanCustomerListView, ListView LeTanCustomerGroupListView)
+        public static int checkCustomerGroupInfoInput(string value, ListView LeTanCustomerListView, ListView LeTanCustomerGroupListView)
         {
+            // 1: Thiếu mã khách hàng
+            // 2: Không tìm thấy khách hàng
+
             if (value == "")
-            {
-                MessageBox.Show("Nhập mã khách hàng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {              
+                return 1;
             }
 
             Boolean checkFindCustomer = CustomerDAO.viewCustomerGroupById(value, LeTanCustomerListView, LeTanCustomerGroupListView);
 
             if (!checkFindCustomer)
-            {
-                MessageBox.Show("Không tìm thấy khách hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {               
+                return 2;
             }
 
-            return true;
+            return 0;
         }
     }
 }

@@ -153,7 +153,10 @@ namespace HotelSystem
                     LeTanRoomListView.Columns.Add("Ngày yêu cầu", 150);
                     LeTanRoomListView.Columns.Add("Ngày ghi nhận", 150);
 
-                    RoomBUS.checkRoomRequestInput(LeTanSearchInput.Text, LeTanRoomListView);
+                    int checkRoomRequestInput = RoomBUS.checkRoomRequestInput(LeTanSearchInput.Text, LeTanRoomListView);
+
+                    if (checkRoomRequestInput == 1) MessageBox.Show("Nhập mã yêu cầu đặt phòng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (checkRoomRequestInput == 2) MessageBox.Show("Không tìm thấy yêu cầu đặt phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
@@ -210,7 +213,10 @@ namespace HotelSystem
                     LeTanRoomBookingListView.Columns.Add("Ngày checkout", 150);
                     LeTanRoomBookingListView.Columns.Add("Mã phòng", width);
 
-                    RoomBUS.checkRoomBookingInput(LeTanSearchInput.Text, LeTanRoomBookingListView);
+                    int checkRoomBookingInput = RoomBUS.checkRoomBookingInput(LeTanSearchInput.Text, LeTanRoomBookingListView);
+
+                    if (checkRoomBookingInput == 1) MessageBox.Show("Nhập mã phòng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (checkRoomBookingInput == 2) MessageBox.Show("Không tìm thấy.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
@@ -240,7 +246,10 @@ namespace HotelSystem
                     LeTanRoomListListView.Columns.Add("Tình trang", width);
                     LeTanRoomListListView.Columns.Add("Dọn dẹp", width);
 
-                    RoomBUS.checkRoomListInput(LeTanSearchInput.Text, LeTanRoomListListView);
+                    int checkRoomListInput = RoomBUS.checkRoomListInput(LeTanSearchInput.Text, LeTanRoomListListView);
+                    if (checkRoomListInput == 1) MessageBox.Show("Nhập mã phòng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (checkRoomListInput == 2) MessageBox.Show("Không tìm thấy danh sách phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (checkRoomListInput == 3) MessageBox.Show("Không tìm thấy danh sách phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 

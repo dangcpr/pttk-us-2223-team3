@@ -10,130 +10,139 @@ namespace HotelSystem.BUS
 {
     public class RoomBUS
     {
-        public static Boolean checkRoomBookingInput(string customerIdText, string roomIdText, string bookingDateText, string roomTypeText, string checkinDateText, string checkoutDateText, string specialRequestText)
+        public static int checkRoomBookingInput(string customerIdText, string roomIdText, string bookingDateText, string roomTypeText, string checkinDateText, string checkoutDateText, string specialRequestText)
         {
+            // 1: Nhập đầy đủ thông tin
+            // 2: Ngày đặt phải là số
+            // 3: Ngày checkin phải là số
+            // 4: Ngày checkout phải là số
+
             DateTime dDate;
 
             if (customerIdText == "" || roomIdText == "" || bookingDateText == "" || roomTypeText == "" || checkinDateText == "" || checkoutDateText == "" || specialRequestText == "")
-            {
-                MessageBox.Show("Nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {               
+                return 1;
             }
             else if (!DateTime.TryParse(bookingDateText, out dDate))
-            {
-                MessageBox.Show("Ngày đặt phải là số.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {             
+                return 2;
             }
             else if (!DateTime.TryParse(checkinDateText, out dDate))
-            {
-                MessageBox.Show("Ngày checkin phải là số.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {            
+                return 3;
             }
             else if (!DateTime.TryParse(checkoutDateText, out dDate))
-            {
-                MessageBox.Show("Ngày checkout phải là số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {            
+                return 4;
             }
 
-            return true;
+            return 0;
         }
 
-        public static Boolean checkAddRoomBooking(Boolean checkInput, string customerId, string roomId, string bookingDate, string roomType, string checkinDate, string checkoutDate, string specialRequest)
+        public static int checkAddRoomBooking(int checkInput, string customerId, string roomId, string bookingDate, string roomType, string checkinDate, string checkoutDate, string specialRequest)
         {
+            // 1: Không tồn tại khách hàng
+            // 2: Thêm thất bại
+
             Boolean checkInitCustomer = CustomerDAO.checkInitCustomerUsername(customerId);
 
             if (!checkInitCustomer)
-            {
-                MessageBox.Show("Khách hàng không tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {              
+                return 1;
             }
 
-            RoomDAO.addNewRoomBooking(customerId, roomId, bookingDate, roomType, checkinDate, checkoutDate, specialRequest);
+            int checkAddNewRoomBooking = RoomDAO.addNewRoomBooking(customerId, roomId, bookingDate, roomType, checkinDate, checkoutDate, specialRequest);
 
-            return true;
+            if (checkAddNewRoomBooking == 2) return 2;
+            else return 0;
         }
 
-        public static Boolean checkRoomInfoInput(string value, ListView LeTanRoomInfoListView, ListView LeTanFormBookingListView)
+        public static int checkRoomInfoInput(string value, ListView LeTanRoomInfoListView, ListView LeTanFormBookingListView)
         {
+            // 1: Thiếu mã phòng
+            // 2: Mã phòng phải là số
+            // 3: Không tìm thấy mã phòng
+
             int n;
             bool isNumeric = int.TryParse(value, out n);
 
             if (value == "")
-            {
-                MessageBox.Show("Nhập mã đặt phòng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {                
+                return 1;
             }
 
             if (!isNumeric)
-            {
-                MessageBox.Show("Mã phòng phải là số.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {            
+                return 2;
             }
 
             Boolean checkFindRoomInfo = RoomDAO.viewRoomInfoById(value, LeTanRoomInfoListView, LeTanFormBookingListView);
 
             if(!checkFindRoomInfo)
-            {
-                MessageBox.Show("Không tìm thấy mã phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {             
+                return 3;
             }
 
-            return true;
+            return 0;
         }
 
-        public static Boolean checkRoomRequestInput(string value, ListView LeTanKHListView)
+        public static int checkRoomRequestInput(string value, ListView LeTanKHListView)
         {
+            // 1: Thiếu mã yêu cầu
+            // 2: Không tìm thấy mã yêu cầu
+
             if (value == "")
-            {
-                MessageBox.Show("Nhập mã yêu cầu đặt phòng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {             
+                return 1;
             }
 
             Boolean checkFindRoomRequest = RoomDAO.viewRoomRequestById(value, LeTanKHListView);
 
             if (!checkFindRoomRequest)
-            {
-                MessageBox.Show("Không tìm thấy yêu cầu đặt phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {               
+                return 2;
             }
 
-            return true;
+            return 0;
         }
         
-        public static Boolean checkRoomBookingInput(string value, ListView LeTanRoomBookingListView)
+        public static int checkRoomBookingInput(string value, ListView LeTanRoomBookingListView)
         {
+            // 1: Thiếu mã đặt phòng
+            // 2: Không tìm thấy thông tin đặt phòng
+
             if (value == "")
-            {
-                MessageBox.Show("Nhập mã phòng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {                
+                return 1;
             }
 
             Boolean checkFindRoomBooking = RoomDAO.viewRoomBookingById(value, LeTanRoomBookingListView);
 
             if (!checkFindRoomBooking)
-            {
-                MessageBox.Show("Không tìm thấy.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {         
+                return 2;
             }
 
-            return true;
+            return 0;
         }
 
-        public static Boolean checkRoomListInput(string value, ListView LeTanRoomListListView)
+        public static int checkRoomListInput(string value, ListView LeTanRoomListListView)
         {
+            // 1: Thiếu mã phòng
+            // 2: Loại phòng không hợp lệ
+            // 3: Không tìm thấy danh sách phòng
+
             if (value == "")
-            {
-                MessageBox.Show("Nhập mã phòng để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {            
+                return 1;
             }
             else if (value == "Thường" || value == "Vip")
             {
                 Boolean checkFindRoomList = RoomDAO.viewRoomListByType(value, LeTanRoomListListView);
 
                 if (!checkFindRoomList)
-                {
-                    MessageBox.Show("Không tìm thấy danh sách phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return false;
+                {                   
+                    return 2;
                 }
             }
             else
@@ -141,53 +150,53 @@ namespace HotelSystem.BUS
                 Boolean checkFindRoomList = RoomDAO.viewRoomListById(value, LeTanRoomListListView);
 
                 if (!checkFindRoomList)
-                {
-                    MessageBox.Show("Không tìm thấy danh sách phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return false;
+                {                   
+                    return 3;
                 }
-
             }
-            return true;
+            return 0;
         }
 
-        public static Boolean checkRoomRequestInput(string username, string password, string name, string address, string cccd, string phone, string dateStart, string dateRequest, string count, string requestDes)
+        public static int checkRoomRequestInput(string username, string password, string name, string address, string cccd, string phone, string dateStart, string dateRequest, string count, string requestDes)
         {
+            // 1: Nhập đầy đủ thông tin
+            // 2: Khách hàng tồn tại
+            // 3: CCCD phải là số
+            // 4: Số điện thoại phải là số
+            // 5: Số đêm lưu trú phải là số
 
             if (username == "" || password == "" || name == "" || address == "" || cccd == "" || phone == "" || dateStart == "" || dateRequest == "" || count == "" || requestDes == "")
-            {
-                MessageBox.Show("Nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {               
+                return 1;
             }
 
             Boolean checkInitCustomer = CustomerDAO.checkInitCustomerUsername(username);
 
             if (checkInitCustomer)
-            {
-                MessageBox.Show("Khách hàng đã tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {               
+                return 2;
             }
 
             if(!int.TryParse(cccd, out _))
-            {
-                MessageBox.Show("CCCD phải là số.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {               
+                return 3;
             }
 
             if (!int.TryParse(phone, out _))
-            {
-                MessageBox.Show("Số điện thoại phải là số.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {              
+                return 4;
             }
 
             if (!int.TryParse(count, out _))
-            {
-                MessageBox.Show("Số đêm lưu trú phải là số.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+            {               
+                return 5;
             }
 
-            RoomDAO.addNewRoomRequest(username, password, name, address, cccd, phone, dateStart, dateRequest, count, requestDes);
+            int checkAddNewRoomRequest = RoomDAO.addNewRoomRequest(username, password, name, address, cccd, phone, dateStart, dateRequest, count, requestDes);
 
-            return true;
+            if (checkAddNewRoomRequest == 6) return 6;
+
+            return 0;
         }
 
     }

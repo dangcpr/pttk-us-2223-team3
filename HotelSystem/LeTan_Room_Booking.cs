@@ -43,8 +43,30 @@ namespace HotelSystem
 
             if (confirmAddRoomBooking == DialogResult.Yes)
             {
-                Boolean checkInput = RoomBUS.checkRoomBookingInput(customerId.Text, roomId.Text, bookingDate.Text, roomType.Text, checkinDate.Text, checkoutDate.Text, specialRequest.Text);
-                Boolean addRoomBooking = RoomBUS.checkAddRoomBooking(checkInput, customerId.Text, roomId.Text, bookingDate.Text, roomType.Text, checkinDate.Text, checkoutDate.Text, specialRequest.Text);
+                int checkInput = RoomBUS.checkRoomBookingInput(customerId.Text, roomId.Text, bookingDate.Text, roomType.Text, checkinDate.Text, checkoutDate.Text, specialRequest.Text);
+
+                if (checkInput == 1) MessageBox.Show("Nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (checkInput == 2) MessageBox.Show("Ngày đặt phải là số.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (checkInput == 3) MessageBox.Show("Ngày checkin phải là số.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (checkInput == 4) MessageBox.Show("Ngày checkout phải là số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                if (checkInput == 0)
+                {
+                    int addRoomBooking = RoomBUS.checkAddRoomBooking(checkInput, customerId.Text, roomId.Text, bookingDate.Text, roomType.Text, checkinDate.Text, checkoutDate.Text, specialRequest.Text);
+                    if (addRoomBooking == 1)
+                    {
+                        MessageBox.Show("Khách hàng không tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                    }
+                    else if(addRoomBooking == 2)
+                    {
+                        MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
 
                 resetAddBookingInput();
             }
