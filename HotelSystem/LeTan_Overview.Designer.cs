@@ -49,11 +49,12 @@ namespace HotelSystem
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.BellmanCancel = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.LeTan_Checkout = new HotelSystem.LeTan_Checkout();
-            this.LeTan_Checkin = new HotelSystem.LeTan_Checkin();
-            this.LeTan_Room = new HotelSystem.LeTan_Room();
-            this.LeTan_Service = new HotelSystem.LeTan_Service();
             this.LeTan_HomePage = new HotelSystem.LeTan_HomePage();
+            this.LeTan_Service = new HotelSystem.LeTan_Service();
+            this.LeTan_Room = new HotelSystem.LeTan_Room();
+            this.LeTan_Checkin = new HotelSystem.LeTan_Checkin();
+            this.LeTan_Checkout = new HotelSystem.LeTan_Checkout();
+            this.LeTan_Tour = new HotelSystem.LeTan_Tour();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -389,6 +390,7 @@ namespace HotelSystem
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.guna2Panel2.Controls.Add(this.LeTan_Tour);
             this.guna2Panel2.Controls.Add(this.LeTan_Checkout);
             this.guna2Panel2.Controls.Add(this.LeTan_Checkin);
             this.guna2Panel2.Controls.Add(this.LeTan_Room);
@@ -402,32 +404,14 @@ namespace HotelSystem
             this.guna2Panel2.Size = new System.Drawing.Size(1219, 923);
             this.guna2Panel2.TabIndex = 6;
             // 
-            // LeTan_Checkout
+            // LeTan_HomePage
             // 
-            this.LeTan_Checkout.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.LeTan_Checkout.Location = new System.Drawing.Point(0, 0);
-            this.LeTan_Checkout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.LeTan_Checkout.Name = "LeTan_Checkout";
-            this.LeTan_Checkout.Size = new System.Drawing.Size(1219, 923);
-            this.LeTan_Checkout.TabIndex = 9;
-            // 
-            // LeTan_Checkin
-            // 
-            this.LeTan_Checkin.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.LeTan_Checkin.Location = new System.Drawing.Point(0, 0);
-            this.LeTan_Checkin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.LeTan_Checkin.Name = "LeTan_Checkin";
-            this.LeTan_Checkin.Size = new System.Drawing.Size(1219, 923);
-            this.LeTan_Checkin.TabIndex = 8;
-            // 
-            // LeTan_Room
-            // 
-            this.LeTan_Room.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.LeTan_Room.Location = new System.Drawing.Point(0, 0);
-            this.LeTan_Room.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.LeTan_Room.Name = "LeTan_Room";
-            this.LeTan_Room.Size = new System.Drawing.Size(1219, 923);
-            this.LeTan_Room.TabIndex = 7;
+            this.LeTan_HomePage.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.LeTan_HomePage.Location = new System.Drawing.Point(0, 0);
+            this.LeTan_HomePage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LeTan_HomePage.Name = "LeTan_HomePage";
+            this.LeTan_HomePage.Size = new System.Drawing.Size(1219, 923);
+            this.LeTan_HomePage.TabIndex = 5;
             // 
             // LeTan_Service
             // 
@@ -438,14 +422,41 @@ namespace HotelSystem
             this.LeTan_Service.Size = new System.Drawing.Size(1219, 923);
             this.LeTan_Service.TabIndex = 6;
             // 
-            // LeTan_HomePage
+            // LeTan_Room
             // 
-            this.LeTan_HomePage.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.LeTan_HomePage.Location = new System.Drawing.Point(0, 0);
-            this.LeTan_HomePage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.LeTan_HomePage.Name = "LeTan_HomePage";
-            this.LeTan_HomePage.Size = new System.Drawing.Size(1219, 923);
-            this.LeTan_HomePage.TabIndex = 5;
+            this.LeTan_Room.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.LeTan_Room.Location = new System.Drawing.Point(0, 0);
+            this.LeTan_Room.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LeTan_Room.Name = "LeTan_Room";
+            this.LeTan_Room.Size = new System.Drawing.Size(1219, 923);
+            this.LeTan_Room.TabIndex = 7;
+            // 
+            // LeTan_Checkin
+            // 
+            this.LeTan_Checkin.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.LeTan_Checkin.Location = new System.Drawing.Point(0, 0);
+            this.LeTan_Checkin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LeTan_Checkin.Name = "LeTan_Checkin";
+            this.LeTan_Checkin.Size = new System.Drawing.Size(1219, 923);
+            this.LeTan_Checkin.TabIndex = 8;
+            // 
+            // LeTan_Checkout
+            // 
+            this.LeTan_Checkout.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.LeTan_Checkout.Location = new System.Drawing.Point(0, 0);
+            this.LeTan_Checkout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LeTan_Checkout.Name = "LeTan_Checkout";
+            this.LeTan_Checkout.Size = new System.Drawing.Size(1219, 923);
+            this.LeTan_Checkout.TabIndex = 9;
+            // 
+            // LeTan_Tour
+            // 
+            this.LeTan_Tour.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.LeTan_Tour.Location = new System.Drawing.Point(0, 0);
+            this.LeTan_Tour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LeTan_Tour.Name = "LeTan_Tour";
+            this.LeTan_Tour.Size = new System.Drawing.Size(1219, 923);
+            this.LeTan_Tour.TabIndex = 10;
             // 
             // LeTan_Overview
             // 
@@ -490,11 +501,11 @@ namespace HotelSystem
         private Guna.UI2.WinForms.Guna2Button CheckinButton;
         private Guna.UI2.WinForms.Guna2Button TourDuLichButton;
         private Guna.UI2.WinForms.Guna2Button CheckoutButton;
-        private LeTan_Tour LeTan_Tour;
-        private LeTan_Checkout LeTan_Checkout;
-        private LeTan_Checkin LeTan_Checkin;
-        private LeTan_Room LeTan_Room;
-        private LeTan_Service LeTan_Service;
         private LeTan_HomePage LeTan_HomePage;
+        private LeTan_Service LeTan_Service;
+        private LeTan_Room LeTan_Room;
+        private LeTan_Checkin LeTan_Checkin;
+        private LeTan_Checkout LeTan_Checkout;
+        private LeTan_Tour LeTan_Tour;
     }
 }
