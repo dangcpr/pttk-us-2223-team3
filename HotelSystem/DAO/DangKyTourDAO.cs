@@ -16,6 +16,13 @@ namespace HotelSystem.DAO
             return adapter;
         }
 
+        public static SqlDataAdapter getDoiTacDuLich()
+        {
+            String getData = "SELECT * FROM DON_VI_LU_HANH";
+            SqlDataAdapter adapter = new SqlDataAdapter(getData, DatabaseDAO.sqlConn);
+            return adapter;
+        }
+
         public static Boolean saveDataDatTour(List<String> list, DateTime dateValue)
         {
             bool result = false;

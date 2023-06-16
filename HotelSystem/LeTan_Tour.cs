@@ -50,5 +50,18 @@ namespace HotelSystem
             dt = DangKyTourBUS.getTourDuLich();
             dataGridView1.DataSource = dt;
         }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            dataGridView2.BackgroundColor = System.Drawing.SystemColors.Control;
+            DataTable dt = new DataTable();
+            dt = DangKyTourBUS.getDoiTacDuLich();
+            dataGridView2.DataSource = dt;
+        }
     }
 }

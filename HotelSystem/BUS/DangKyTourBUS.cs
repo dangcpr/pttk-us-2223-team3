@@ -14,7 +14,6 @@ namespace HotelSystem.BUS
         public static DataTable getTourDuLich()
         {
 
-
             SqlDataAdapter adapter = new SqlDataAdapter();
             adapter = DangKyTourDAO.getTourDuLich();
             DataTable dt = new DataTable();
@@ -26,6 +25,16 @@ namespace HotelSystem.BUS
 
             bool check = DangKyTourDAO.saveDataDatTour(list, dateValue);
             return check;
+        }
+
+        public static DataTable getDoiTacDuLich()
+        {
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter = DangKyTourDAO.getDoiTacDuLich();
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
         }
     }
 }

@@ -40,7 +40,11 @@ namespace HotelSystem
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.xemtour_tour_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.xemdtlh_tour_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // HomeLabel
@@ -60,7 +64,7 @@ namespace HotelSystem
             // 
             this.madp_checkin.BackColor = System.Drawing.Color.Transparent;
             this.madp_checkin.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.madp_checkin.Location = new System.Drawing.Point(133, 570);
+            this.madp_checkin.Location = new System.Drawing.Point(133, 731);
             this.madp_checkin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.madp_checkin.Name = "madp_checkin";
             this.madp_checkin.Size = new System.Drawing.Size(204, 33);
@@ -79,7 +83,7 @@ namespace HotelSystem
             this.madvlh_tour_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.madvlh_tour_txt.Font = new System.Drawing.Font("Google Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.madvlh_tour_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.madvlh_tour_txt.Location = new System.Drawing.Point(133, 633);
+            this.madvlh_tour_txt.Location = new System.Drawing.Point(133, 794);
             this.madvlh_tour_txt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.madvlh_tour_txt.Name = "madvlh_tour_txt";
             this.madvlh_tour_txt.PasswordChar = '\0';
@@ -114,31 +118,32 @@ namespace HotelSystem
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(133, 212);
+            this.dataGridView1.Location = new System.Drawing.Point(132, 454);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1159, 276);
+            this.dataGridView1.Size = new System.Drawing.Size(1159, 214);
             this.dataGridView1.TabIndex = 32;
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(133, 144);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(133, 396);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(258, 33);
             this.guna2HtmlLabel1.TabIndex = 33;
             this.guna2HtmlLabel1.Text = "Danh sách tour du lịch";
+            this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // makh_tour
             // 
             this.makh_tour.BackColor = System.Drawing.Color.Transparent;
             this.makh_tour.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.makh_tour.Location = new System.Drawing.Point(531, 570);
+            this.makh_tour.Location = new System.Drawing.Point(531, 731);
             this.makh_tour.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.makh_tour.Name = "makh_tour";
             this.makh_tour.Size = new System.Drawing.Size(174, 33);
@@ -157,7 +162,7 @@ namespace HotelSystem
             this.makh_tour_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.makh_tour_txt.Font = new System.Drawing.Font("Google Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.makh_tour_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.makh_tour_txt.Location = new System.Drawing.Point(531, 633);
+            this.makh_tour_txt.Location = new System.Drawing.Point(531, 794);
             this.makh_tour_txt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.makh_tour_txt.Name = "makh_tour_txt";
             this.makh_tour_txt.PasswordChar = '\0';
@@ -170,7 +175,7 @@ namespace HotelSystem
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(949, 570);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(949, 731);
             this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(108, 33);
@@ -181,7 +186,7 @@ namespace HotelSystem
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Google Sans", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(949, 642);
+            this.dateTimePicker1.Location = new System.Drawing.Point(949, 803);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(280, 35);
             this.dateTimePicker1.TabIndex = 38;
@@ -196,7 +201,7 @@ namespace HotelSystem
             this.xemtour_tour_btn.FillColor = System.Drawing.Color.DeepPink;
             this.xemtour_tour_btn.Font = new System.Drawing.Font("Google Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xemtour_tour_btn.ForeColor = System.Drawing.Color.White;
-            this.xemtour_tour_btn.Location = new System.Drawing.Point(1087, 144);
+            this.xemtour_tour_btn.Location = new System.Drawing.Point(1086, 396);
             this.xemtour_tour_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.xemtour_tour_btn.Name = "xemtour_tour_btn";
             this.xemtour_tour_btn.Size = new System.Drawing.Size(205, 42);
@@ -204,11 +209,57 @@ namespace HotelSystem
             this.xemtour_tour_btn.Text = "Xem tour du lịch";
             this.xemtour_tour_btn.Click += new System.EventHandler(this.xemtour_tour_btn_Click);
             // 
+            // xemdtlh_tour_btn
+            // 
+            this.xemdtlh_tour_btn.BorderRadius = 5;
+            this.xemdtlh_tour_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.xemdtlh_tour_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.xemdtlh_tour_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.xemdtlh_tour_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.xemdtlh_tour_btn.FillColor = System.Drawing.Color.DeepPink;
+            this.xemdtlh_tour_btn.Font = new System.Drawing.Font("Google Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xemdtlh_tour_btn.ForeColor = System.Drawing.Color.White;
+            this.xemdtlh_tour_btn.Location = new System.Drawing.Point(596, 137);
+            this.xemdtlh_tour_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.xemdtlh_tour_btn.Name = "xemdtlh_tour_btn";
+            this.xemdtlh_tour_btn.Size = new System.Drawing.Size(205, 42);
+            this.xemdtlh_tour_btn.TabIndex = 40;
+            this.xemdtlh_tour_btn.Text = "Xem đối tác lữ hành";
+            this.xemdtlh_tour_btn.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(132, 200);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidth = 62;
+            this.dataGridView2.RowTemplate.Height = 28;
+            this.dataGridView2.Size = new System.Drawing.Size(336, 174);
+            this.dataGridView2.TabIndex = 41;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(133, 137);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(296, 33);
+            this.guna2HtmlLabel2.TabIndex = 42;
+            this.guna2HtmlLabel2.Text = "Danh sách đối tác lữ hành";
+            // 
             // LeTan_Tour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Controls.Add(this.guna2HtmlLabel2);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.xemdtlh_tour_btn);
             this.Controls.Add(this.xemtour_tour_btn);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.guna2HtmlLabel3);
@@ -224,6 +275,7 @@ namespace HotelSystem
             this.Name = "LeTan_Tour";
             this.Size = new System.Drawing.Size(1371, 1154);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +294,8 @@ namespace HotelSystem
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private Guna.UI2.WinForms.Guna2Button xemtour_tour_btn;
+        private Guna.UI2.WinForms.Guna2Button xemdtlh_tour_btn;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
     }
 }
