@@ -25,14 +25,6 @@ namespace HotelSystem
             this.Hide();
         }
 
-        private void LeTan_Checkout_Driver_Load(object sender, EventArgs e)
-        {
-            SqlDataReader reader = DriverBUS.viewListDrivers();
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-            driverDataGridView.DataSource = dt;
-        }
-
         private void searchDriverBtn_Click(object sender, EventArgs e)
         {  
             if (DriverBUS.checkDriverExists(driverIDTxb.Text))
@@ -46,6 +38,14 @@ namespace HotelSystem
             {
                 MessageBox.Show("Tài xế không tồn tại!");
             }
+        }
+
+        private void loadBtn_Click(object sender, EventArgs e)
+        {
+            SqlDataReader reader = DriverBUS.viewListDrivers();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            driverDataGridView.DataSource = dt;
         }
     }
 }

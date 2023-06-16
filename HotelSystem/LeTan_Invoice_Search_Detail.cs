@@ -35,14 +35,6 @@ namespace HotelSystem
             MaHoaDon = invoiceID;
         }
 
-        private void LeTan_Invoice_Search_Detail_Load(object sender, EventArgs e)
-        {
-            SqlDataReader reader = InvoiceBUS.viewInvoiceDetailByID(MaHoaDon);
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-            listInvoiceDetailsDataGridView.DataSource = dt;
-        }
-
         private void quitBtn_Click(object sender, EventArgs e)
         {
             OnExit(null);
@@ -52,6 +44,14 @@ namespace HotelSystem
         private void returnBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void loadBtn_Click(object sender, EventArgs e)
+        {
+            SqlDataReader reader = InvoiceBUS.viewInvoiceDetailByID(MaHoaDon);
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            listInvoiceDetailsDataGridView.DataSource = dt;
         }
     }
 }

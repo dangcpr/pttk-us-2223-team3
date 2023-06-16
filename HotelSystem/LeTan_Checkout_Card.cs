@@ -39,16 +39,6 @@ namespace HotelSystem
         public void setRoomID(string roomID)
         {
             MaPhong = roomID;
-        }
-
-        private void returnBtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void LeTan_Checkout_Card_Load(object sender, EventArgs e)
-        {
-            
             string status = "";
             string customerName = "";
             string roomType = "";
@@ -62,13 +52,39 @@ namespace HotelSystem
             serviceDataGridView.DataSource = dt;
         }
 
-        private void createInvoiceBtn_Click(object sender, EventArgs e)
+        private void returnBtn_Click(object sender, EventArgs e)
         {
-            leTan_Invoice.setRoomID(MaPhong);
-            leTan_Invoice.setTypeInvoice("checkout");
-            leTan_Invoice.Show();
-            leTan_Invoice.BringToFront();
+            this.Hide();
         }
 
+        private void createInvoiceBtn_Click(object sender, EventArgs e)
+        {
+            if (roomStatusTxb.Text == "" || customerNameTxb.Text == "" || roomTypeTxb.Text == "" || serviceDataGridView.DataSource is null)
+            {
+                MessageBox.Show("Vui lòng tải dữ liệu!");
+            }
+            else
+            {
+                leTan_Invoice.setRoomID(MaPhong);
+                leTan_Invoice.setTypeInvoice("checkout");
+                leTan_Invoice.Show();
+                leTan_Invoice.BringToFront();
+            }
+        }
+
+        private void loadBtn_Click(object sender, EventArgs e)
+        {
+            string status = "";
+            string customerName = "";
+            string roomType = "";
+            SqlDataReader reader = null;
+            RoomBUS.createCheckoutCard(ref status, ref customerName, ref roomType, ref reader, MaPhong);
+            roomStatusTxb.Text = status;
+            customerNameTxb.Text = customerName;
+            roomTypeTxb.Text = roomType;
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            serviceDataGridView.DataSource = dt;
+        }
     }
 }

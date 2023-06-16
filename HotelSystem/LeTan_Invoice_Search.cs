@@ -32,14 +32,6 @@ namespace HotelSystem
             }
         }
 
-        private void LeTan_Invoice_Search_Load(object sender, EventArgs e)
-        {
-            SqlDataReader reader = InvoiceBUS.viewListInvoices();
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-            listInvoicesDataGridView.DataSource = dt;
-        }
-
         private void returnBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -93,18 +85,32 @@ namespace HotelSystem
 
         private void showDetailBtn_Click(object sender, EventArgs e)
         {
-            if (listInvoicesDataGridView.CurrentRow.Selected)
+            if (listInvoicesDataGridView.DataSource is null)
             {
-                string MaHoaDon = listInvoicesDataGridView.CurrentRow.Cells[0].Value.ToString();
-                leTan_Invoice_Search_Detail.setInvoiceID(MaHoaDon);
-                leTan_Invoice_Search_Detail.Show();
-                leTan_Invoice_Search_Detail.BringToFront();
+                MessageBox.Show("Vui lòng tải dữ liệu!");
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn hóa đơn cần xem chi tiết!");
+                if (listInvoicesDataGridView.CurrentRow.Selected)
+                {
+                    string MaHoaDon = listInvoicesDataGridView.CurrentRow.Cells[0].Value.ToString();
+                    leTan_Invoice_Search_Detail.setInvoiceID(MaHoaDon);
+                    leTan_Invoice_Search_Detail.Show();
+                    leTan_Invoice_Search_Detail.BringToFront();
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn hóa đơn cần xem chi tiết!");
+                }
             }
         }
 
+        private void loadBtn_Click(object sender, EventArgs e)
+        {
+            SqlDataReader reader = InvoiceBUS.viewListInvoices();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            listInvoicesDataGridView.DataSource = dt;
+        }
     }
 }

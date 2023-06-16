@@ -31,23 +31,30 @@ namespace HotelSystem
 
         private void createCheckoutCardBtn_Click(object sender, EventArgs e)
         {
-            if (roomDataGridView.CurrentRow.Selected)
+            if (roomDataGridView.DataSource is null)
             {
-                string MaPhong = roomDataGridView.CurrentRow.Cells[0].Value.ToString();
-                if (RoomBUS.checkRoomStatusCheckout(MaPhong) == true)
-                {
-                    leTan_Checkout_Card.setRoomID(MaPhong);
-                    leTan_Checkout_Card.Show();
-                    leTan_Checkout_Card.BringToFront();
-                }
-                else
-                {
-                    MessageBox.Show("Vui lòng chọn phòng có tình trạng 'Hết' để checkout!");
-                }
+                MessageBox.Show("Vui lòng tải dữ liệu!");
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn 1 phòng cần checkout!");
+                if (roomDataGridView.CurrentRow.Selected)
+                {
+                    string MaPhong = roomDataGridView.CurrentRow.Cells[0].Value.ToString();
+                    if (RoomBUS.checkRoomStatusCheckout(MaPhong) == true)
+                    {
+                        leTan_Checkout_Card.setRoomID(MaPhong);
+                        leTan_Checkout_Card.Show();
+                        leTan_Checkout_Card.BringToFront();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vui lòng chọn phòng có tình trạng 'Hết' để checkout!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn 1 phòng cần checkout!");
+                }
             }
         }
 
@@ -63,12 +70,7 @@ namespace HotelSystem
             leTan_Invoice_Search.BringToFront();
         }
 
-        private void reloadBtn_Click(object sender, EventArgs e)
-        {
-            this.OnLoad(null);
-        }
-
-        private void LeTan_Checkout_Load(object sender, EventArgs e)
+        private void loadBtn_Click(object sender, EventArgs e)
         {
             SqlDataReader listRoom = RoomBUS.viewListRoom();
             DataTable dt = new DataTable();

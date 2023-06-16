@@ -39,6 +39,7 @@
             this.listInvoiceDetailsPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.invoiceDetailPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.HomeLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.loadBtn = new Guna.UI2.WinForms.Guna2Button();
             this.controlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listInvoiceDetailsDataGridView)).BeginInit();
             this.listInvoiceDetailsPanel.SuspendLayout();
@@ -166,6 +167,7 @@
             // 
             // invoiceDetailPanel
             // 
+            this.invoiceDetailPanel.Controls.Add(this.loadBtn);
             this.invoiceDetailPanel.Controls.Add(this.controlPanel);
             this.invoiceDetailPanel.Controls.Add(this.listInvoiceDetailsPanel);
             this.invoiceDetailPanel.Controls.Add(this.HomeLabel);
@@ -192,6 +194,23 @@
             this.HomeLabel.Text = "CHI TIẾT PHIẾU THANH TOÁN";
             this.HomeLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // loadBtn
+            // 
+            this.loadBtn.BorderRadius = 5;
+            this.loadBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.loadBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.loadBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.loadBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.loadBtn.FillColor = System.Drawing.Color.DeepPink;
+            this.loadBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.loadBtn.ForeColor = System.Drawing.Color.White;
+            this.loadBtn.Location = new System.Drawing.Point(991, 15);
+            this.loadBtn.Name = "loadBtn";
+            this.loadBtn.Size = new System.Drawing.Size(126, 48);
+            this.loadBtn.TabIndex = 21;
+            this.loadBtn.Text = "Load data";
+            this.loadBtn.Click += new System.EventHandler(this.loadBtn_Click);
+            // 
             // LeTan_Invoice_Search_Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -199,7 +218,6 @@
             this.Controls.Add(this.invoiceDetailPanel);
             this.Name = "LeTan_Invoice_Search_Detail";
             this.Size = new System.Drawing.Size(1219, 923);
-            this.Load += new System.EventHandler(this.LeTan_Invoice_Search_Detail_Load);
             this.controlPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.listInvoiceDetailsDataGridView)).EndInit();
             this.listInvoiceDetailsPanel.ResumeLayout(false);
@@ -217,5 +235,6 @@
         private Guna.UI2.WinForms.Guna2Panel listInvoiceDetailsPanel;
         private Guna.UI2.WinForms.Guna2Panel invoiceDetailPanel;
         private Guna.UI2.WinForms.Guna2HtmlLabel HomeLabel;
+        private Guna.UI2.WinForms.Guna2Button loadBtn;
     }
 }

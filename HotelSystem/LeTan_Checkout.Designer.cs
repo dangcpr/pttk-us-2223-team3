@@ -29,11 +29,12 @@ namespace HotelSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.checkoutPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.loadBtn = new Guna.UI2.WinForms.Guna2Button();
             this.controlPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.showInvoiceBtn = new Guna.UI2.WinForms.Guna2Button();
             this.showDriverBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -41,7 +42,6 @@ namespace HotelSystem
             this.roomPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.roomDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.HomeLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.reloadBtn = new Guna.UI2.WinForms.Guna2Button();
             this.checkoutPanel.SuspendLayout();
             this.controlPanel.SuspendLayout();
             this.roomPanel.SuspendLayout();
@@ -50,7 +50,7 @@ namespace HotelSystem
             // 
             // checkoutPanel
             // 
-            this.checkoutPanel.Controls.Add(this.reloadBtn);
+            this.checkoutPanel.Controls.Add(this.loadBtn);
             this.checkoutPanel.Controls.Add(this.controlPanel);
             this.checkoutPanel.Controls.Add(this.roomPanel);
             this.checkoutPanel.Controls.Add(this.HomeLabel);
@@ -60,6 +60,23 @@ namespace HotelSystem
             this.checkoutPanel.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.checkoutPanel.Size = new System.Drawing.Size(1219, 923);
             this.checkoutPanel.TabIndex = 2;
+            // 
+            // loadBtn
+            // 
+            this.loadBtn.BorderRadius = 5;
+            this.loadBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.loadBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.loadBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.loadBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.loadBtn.FillColor = System.Drawing.Color.DeepPink;
+            this.loadBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.loadBtn.ForeColor = System.Drawing.Color.White;
+            this.loadBtn.Location = new System.Drawing.Point(1001, 14);
+            this.loadBtn.Name = "loadBtn";
+            this.loadBtn.Size = new System.Drawing.Size(110, 45);
+            this.loadBtn.TabIndex = 3;
+            this.loadBtn.Text = "Load data";
+            this.loadBtn.Click += new System.EventHandler(this.loadBtn_Click);
             // 
             // controlPanel
             // 
@@ -138,41 +155,41 @@ namespace HotelSystem
             // 
             this.roomDataGridView.AllowUserToAddRows = false;
             this.roomDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            this.roomDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.DeepPink;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.DeepPink;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.roomDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            this.roomDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.DeepPink;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.DeepPink;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.roomDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.roomDataGridView.ColumnHeadersHeight = 25;
             this.roomDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.roomDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.roomDataGridView.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.roomDataGridView.DefaultCellStyle = dataGridViewCellStyle11;
             this.roomDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.roomDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.roomDataGridView.Location = new System.Drawing.Point(8, 8);
             this.roomDataGridView.MultiSelect = false;
             this.roomDataGridView.Name = "roomDataGridView";
             this.roomDataGridView.ReadOnly = true;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.roomDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.roomDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.roomDataGridView.RowHeadersVisible = false;
             this.roomDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.roomDataGridView.RowTemplate.Height = 24;
@@ -216,23 +233,6 @@ namespace HotelSystem
             this.HomeLabel.Text = "THÔNG TIN CHECK OUT";
             this.HomeLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // reloadBtn
-            // 
-            this.reloadBtn.BorderRadius = 5;
-            this.reloadBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.reloadBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.reloadBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.reloadBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.reloadBtn.FillColor = System.Drawing.Color.DeepPink;
-            this.reloadBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.reloadBtn.ForeColor = System.Drawing.Color.White;
-            this.reloadBtn.Location = new System.Drawing.Point(1001, 14);
-            this.reloadBtn.Name = "reloadBtn";
-            this.reloadBtn.Size = new System.Drawing.Size(110, 45);
-            this.reloadBtn.TabIndex = 3;
-            this.reloadBtn.Text = "Reload";
-            this.reloadBtn.Click += new System.EventHandler(this.reloadBtn_Click);
-            // 
             // LeTan_Checkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -242,7 +242,6 @@ namespace HotelSystem
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LeTan_Checkout";
             this.Size = new System.Drawing.Size(1219, 923);
-            this.Load += new System.EventHandler(this.LeTan_Checkout_Load);
             this.checkoutPanel.ResumeLayout(false);
             this.checkoutPanel.PerformLayout();
             this.controlPanel.ResumeLayout(false);
@@ -262,6 +261,6 @@ namespace HotelSystem
         private Guna.UI2.WinForms.Guna2DataGridView roomDataGridView;
         private Guna.UI2.WinForms.Guna2Button showDriverBtn;
         private Guna.UI2.WinForms.Guna2Button showInvoiceBtn;
-        private Guna.UI2.WinForms.Guna2Button reloadBtn;
+        private Guna.UI2.WinForms.Guna2Button loadBtn;
     }
 }
