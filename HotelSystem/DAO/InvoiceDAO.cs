@@ -66,7 +66,7 @@ namespace HotelSystem.DAO
             insertNewInvoice.Parameters.AddWithValue("@TongTien", TongTien.ToString());
             insertNewInvoice.ExecuteNonQuery();
 
-            SqlCommand getServices = new SqlCommand("SELECT DICH_VU.MA_DICH_VU, SO_LUONG, GIA_TIEN, THANH_TIEN FROM THONG_TIN_DANG_KY_DICH_VU JOIN DICH_VU ON THONG_TIN_DANG_KY_DICH_VU.MA_DICH_VU = DICH_VU.MA_DICH_VU WHERE MA_KHACH_HANG = @CustomerID AND TINH_TRANG_THANH_TOAN = 'Chưa thanh toán';", DatabaseDAO.sqlConn);
+            SqlCommand getServices = new SqlCommand("SELECT DICH_VU.MA_DICH_VU, SO_LUONG, GIA_TIEN, THANH_TIEN FROM THONG_TIN_DANG_KY_DICH_VU JOIN DICH_VU ON THONG_TIN_DANG_KY_DICH_VU.MA_DICH_VU = DICH_VU.MA_DICH_VU WHERE MA_KHACH_HANG = @CustomerID AND TINH_TRANG_THANH_TOAN = N'Chưa thanh toán';", DatabaseDAO.sqlConn);
             getServices.Parameters.AddWithValue("@CustomerID", MaKH);
             SqlDataReader reader = getServices.ExecuteReader();
             DataTable dt = new DataTable();

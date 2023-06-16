@@ -24,7 +24,7 @@ namespace HotelSystem.DAO
         public static int getTotalPaymentByCustomerID(string CustomerID)
         {
             int TongTien = 0;
-            SqlCommand cmd = new SqlCommand("SELECT SUM(THANH_TIEN) FROM THONG_TIN_DANG_KY_DICH_VU WHERE MA_KHACH_HANG = @CustomerID AND TINH_TRANG_THANH_TOAN = 'Chưa thanh toán';", DatabaseDAO.sqlConn);
+            SqlCommand cmd = new SqlCommand("SELECT SUM(THANH_TIEN) FROM THONG_TIN_DANG_KY_DICH_VU WHERE MA_KHACH_HANG = @CustomerID AND TINH_TRANG_THANH_TOAN = N'Chưa thanh toán';", DatabaseDAO.sqlConn);
             cmd.Parameters.AddWithValue("@CustomerID", CustomerID);
             TongTien = Convert.ToInt32(cmd.ExecuteScalar());
             return TongTien;
