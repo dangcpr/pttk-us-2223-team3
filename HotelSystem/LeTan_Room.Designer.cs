@@ -47,10 +47,10 @@ namespace HotelSystem
             this.LeTanRoomBookingListView = new System.Windows.Forms.ListView();
             this.LeTanRoomListListView = new System.Windows.Forms.ListView();
             this.LeTanRoomRequestBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.leTanRoomRequest = new HotelSystem.LeTan_Room_Request();
             this.LeTanRoomBooking = new HotelSystem.LeTan_Room_Booking();
             this.LeTan_Room_Searching = new HotelSystem.LeTan_Room_Searching();
             this.LeTan_Customer_Searching = new HotelSystem.LeTan_Customer_Searching();
+            this.leTanRoomRequest = new HotelSystem.LeTan_Room_Request();
             this.SuspendLayout();
             // 
             // HomeLabel
@@ -59,9 +59,10 @@ namespace HotelSystem
             this.HomeLabel.BackColor = System.Drawing.Color.Transparent;
             this.HomeLabel.Font = new System.Drawing.Font("Google Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeLabel.ForeColor = System.Drawing.Color.DeepPink;
-            this.HomeLabel.Location = new System.Drawing.Point(0, 28);
+            this.HomeLabel.Location = new System.Drawing.Point(0, 34);
+            this.HomeLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HomeLabel.Name = "HomeLabel";
-            this.HomeLabel.Size = new System.Drawing.Size(914, 47);
+            this.HomeLabel.Size = new System.Drawing.Size(1219, 58);
             this.HomeLabel.TabIndex = 0;
             this.HomeLabel.Text = "THÔNG TIN ĐẶT PHÒNG KHÁCH SẠN";
             this.HomeLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,9 +77,10 @@ namespace HotelSystem
             this.TINHTRANG,
             this.LOAI});
             this.LeTanRoomListView.HideSelection = false;
-            this.LeTanRoomListView.Location = new System.Drawing.Point(95, 546);
+            this.LeTanRoomListView.Location = new System.Drawing.Point(50, 566);
+            this.LeTanRoomListView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LeTanRoomListView.Name = "LeTanRoomListView";
-            this.LeTanRoomListView.Size = new System.Drawing.Size(716, 165);
+            this.LeTanRoomListView.Size = new System.Drawing.Size(953, 202);
             this.LeTanRoomListView.TabIndex = 2;
             this.LeTanRoomListView.UseCompatibleStateImageBehavior = false;
             this.LeTanRoomListView.SelectedIndexChanged += new System.EventHandler(this.LeTanRoomListView_SelectedIndexChanged);
@@ -111,9 +113,10 @@ namespace HotelSystem
             // LeTanKHListView
             // 
             this.LeTanKHListView.HideSelection = false;
-            this.LeTanKHListView.Location = new System.Drawing.Point(95, 546);
+            this.LeTanKHListView.Location = new System.Drawing.Point(127, 672);
+            this.LeTanKHListView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LeTanKHListView.Name = "LeTanKHListView";
-            this.LeTanKHListView.Size = new System.Drawing.Size(716, 165);
+            this.LeTanKHListView.Size = new System.Drawing.Size(953, 202);
             this.LeTanKHListView.TabIndex = 4;
             this.LeTanKHListView.UseCompatibleStateImageBehavior = false;
             this.LeTanKHListView.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
@@ -121,9 +124,10 @@ namespace HotelSystem
             // LeTanRuleListView
             // 
             this.LeTanRuleListView.HideSelection = false;
-            this.LeTanRuleListView.Location = new System.Drawing.Point(95, 546);
+            this.LeTanRuleListView.Location = new System.Drawing.Point(127, 672);
+            this.LeTanRuleListView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LeTanRuleListView.Name = "LeTanRuleListView";
-            this.LeTanRuleListView.Size = new System.Drawing.Size(716, 165);
+            this.LeTanRuleListView.Size = new System.Drawing.Size(953, 202);
             this.LeTanRuleListView.TabIndex = 6;
             this.LeTanRuleListView.UseCompatibleStateImageBehavior = false;
             // 
@@ -133,9 +137,10 @@ namespace HotelSystem
             this.resultLabel.BackColor = System.Drawing.Color.Transparent;
             this.resultLabel.Font = new System.Drawing.Font("Google Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel.ForeColor = System.Drawing.Color.DeepPink;
-            this.resultLabel.Location = new System.Drawing.Point(0, 500);
+            this.resultLabel.Location = new System.Drawing.Point(0, 615);
+            this.resultLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(914, 47);
+            this.resultLabel.Size = new System.Drawing.Size(1219, 58);
             this.resultLabel.TabIndex = 7;
             this.resultLabel.Text = "KẾT QUẢ TRA CỨU";
             this.resultLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -150,9 +155,10 @@ namespace HotelSystem
             this.addRoomBookingBtn.FillColor = System.Drawing.Color.DeepPink;
             this.addRoomBookingBtn.Font = new System.Drawing.Font("Google Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addRoomBookingBtn.ForeColor = System.Drawing.Color.White;
-            this.addRoomBookingBtn.Location = new System.Drawing.Point(95, 365);
+            this.addRoomBookingBtn.Location = new System.Drawing.Point(127, 449);
+            this.addRoomBookingBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addRoomBookingBtn.Name = "addRoomBookingBtn";
-            this.addRoomBookingBtn.Size = new System.Drawing.Size(180, 45);
+            this.addRoomBookingBtn.Size = new System.Drawing.Size(240, 55);
             this.addRoomBookingBtn.TabIndex = 0;
             this.addRoomBookingBtn.Text = "Thêm thông tin đặt phòng";
             this.addRoomBookingBtn.Click += new System.EventHandler(this.addRoomBookingBtn_Click);
@@ -161,9 +167,10 @@ namespace HotelSystem
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(95, 111);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(127, 137);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(142, 23);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(173, 28);
             this.guna2HtmlLabel1.TabIndex = 12;
             this.guna2HtmlLabel1.Text = "Tra cứu thông tin:";
             // 
@@ -177,9 +184,10 @@ namespace HotelSystem
             this.LeTanSearchBtn.FillColor = System.Drawing.Color.DeepPink;
             this.LeTanSearchBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LeTanSearchBtn.ForeColor = System.Drawing.Color.White;
-            this.LeTanSearchBtn.Location = new System.Drawing.Point(95, 216);
+            this.LeTanSearchBtn.Location = new System.Drawing.Point(127, 266);
+            this.LeTanSearchBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LeTanSearchBtn.Name = "LeTanSearchBtn";
-            this.LeTanSearchBtn.Size = new System.Drawing.Size(180, 45);
+            this.LeTanSearchBtn.Size = new System.Drawing.Size(240, 55);
             this.LeTanSearchBtn.TabIndex = 13;
             this.LeTanSearchBtn.Text = "Tra cứu";
             this.LeTanSearchBtn.Click += new System.EventHandler(this.LeTanSearchBtn_Click);
@@ -195,12 +203,13 @@ namespace HotelSystem
             this.LeTanSearchInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LeTanSearchInput.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LeTanSearchInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LeTanSearchInput.Location = new System.Drawing.Point(305, 216);
+            this.LeTanSearchInput.Location = new System.Drawing.Point(407, 266);
+            this.LeTanSearchInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LeTanSearchInput.Name = "LeTanSearchInput";
             this.LeTanSearchInput.PasswordChar = '\0';
             this.LeTanSearchInput.PlaceholderText = "";
             this.LeTanSearchInput.SelectedText = "";
-            this.LeTanSearchInput.Size = new System.Drawing.Size(506, 45);
+            this.LeTanSearchInput.Size = new System.Drawing.Size(675, 55);
             this.LeTanSearchInput.TabIndex = 14;
             // 
             // LeTanRoomSearchingDropbox
@@ -220,27 +229,30 @@ namespace HotelSystem
             "Tra cứu quy định khách sạn",
             "Tra cứu danh sách đặt phòng (mã)",
             "Tra cứu danh sách phòng (mã/loại)"});
-            this.LeTanRoomSearchingDropbox.Location = new System.Drawing.Point(95, 155);
+            this.LeTanRoomSearchingDropbox.Location = new System.Drawing.Point(127, 191);
+            this.LeTanRoomSearchingDropbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LeTanRoomSearchingDropbox.Name = "LeTanRoomSearchingDropbox";
-            this.LeTanRoomSearchingDropbox.Size = new System.Drawing.Size(308, 36);
+            this.LeTanRoomSearchingDropbox.Size = new System.Drawing.Size(409, 36);
             this.LeTanRoomSearchingDropbox.TabIndex = 15;
             this.LeTanRoomSearchingDropbox.SelectedIndexChanged += new System.EventHandler(this.LeTanRoomSearchingDropbox_SelectedIndexChanged);
             // 
             // LeTanRoomBookingListView
             // 
             this.LeTanRoomBookingListView.HideSelection = false;
-            this.LeTanRoomBookingListView.Location = new System.Drawing.Point(95, 546);
+            this.LeTanRoomBookingListView.Location = new System.Drawing.Point(127, 672);
+            this.LeTanRoomBookingListView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LeTanRoomBookingListView.Name = "LeTanRoomBookingListView";
-            this.LeTanRoomBookingListView.Size = new System.Drawing.Size(716, 165);
+            this.LeTanRoomBookingListView.Size = new System.Drawing.Size(953, 202);
             this.LeTanRoomBookingListView.TabIndex = 18;
             this.LeTanRoomBookingListView.UseCompatibleStateImageBehavior = false;
             // 
             // LeTanRoomListListView
             // 
             this.LeTanRoomListListView.HideSelection = false;
-            this.LeTanRoomListListView.Location = new System.Drawing.Point(95, 546);
+            this.LeTanRoomListListView.Location = new System.Drawing.Point(127, 672);
+            this.LeTanRoomListListView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LeTanRoomListListView.Name = "LeTanRoomListListView";
-            this.LeTanRoomListListView.Size = new System.Drawing.Size(716, 165);
+            this.LeTanRoomListListView.Size = new System.Drawing.Size(953, 202);
             this.LeTanRoomListListView.TabIndex = 19;
             this.LeTanRoomListListView.UseCompatibleStateImageBehavior = false;
             // 
@@ -254,49 +266,53 @@ namespace HotelSystem
             this.LeTanRoomRequestBtn.FillColor = System.Drawing.Color.DeepPink;
             this.LeTanRoomRequestBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LeTanRoomRequestBtn.ForeColor = System.Drawing.Color.White;
-            this.LeTanRoomRequestBtn.Location = new System.Drawing.Point(358, 365);
+            this.LeTanRoomRequestBtn.Location = new System.Drawing.Point(477, 449);
+            this.LeTanRoomRequestBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LeTanRoomRequestBtn.Name = "LeTanRoomRequestBtn";
-            this.LeTanRoomRequestBtn.Size = new System.Drawing.Size(180, 45);
+            this.LeTanRoomRequestBtn.Size = new System.Drawing.Size(240, 55);
             this.LeTanRoomRequestBtn.TabIndex = 20;
             this.LeTanRoomRequestBtn.Text = "Thêm yêu cầu đặt phòng";
             this.LeTanRoomRequestBtn.Click += new System.EventHandler(this.LeTanRoomRequestBtn_Click);
-            // 
-            // leTanRoomRequest
-            // 
-            this.leTanRoomRequest.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.leTanRoomRequest.Location = new System.Drawing.Point(0, 0);
-            this.leTanRoomRequest.Name = "leTanRoomRequest";
-            this.leTanRoomRequest.Size = new System.Drawing.Size(913, 750);
-            this.leTanRoomRequest.TabIndex = 21;
             // 
             // LeTanRoomBooking
             // 
             this.LeTanRoomBooking.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.LeTanRoomBooking.Location = new System.Drawing.Point(0, 0);
-            this.LeTanRoomBooking.Margin = new System.Windows.Forms.Padding(4);
+            this.LeTanRoomBooking.Margin = new System.Windows.Forms.Padding(5);
             this.LeTanRoomBooking.Name = "LeTanRoomBooking";
-            this.LeTanRoomBooking.Size = new System.Drawing.Size(914, 750);
+            this.LeTanRoomBooking.Size = new System.Drawing.Size(1219, 923);
             this.LeTanRoomBooking.TabIndex = 11;
             // 
             // LeTan_Room_Searching
             // 
             this.LeTan_Room_Searching.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.LeTan_Room_Searching.Location = new System.Drawing.Point(0, 0);
+            this.LeTan_Room_Searching.Margin = new System.Windows.Forms.Padding(5);
             this.LeTan_Room_Searching.Name = "LeTan_Room_Searching";
-            this.LeTan_Room_Searching.Size = new System.Drawing.Size(913, 750);
+            this.LeTan_Room_Searching.Size = new System.Drawing.Size(1217, 923);
             this.LeTan_Room_Searching.TabIndex = 16;
             // 
             // LeTan_Customer_Searching
             // 
             this.LeTan_Customer_Searching.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.LeTan_Customer_Searching.Location = new System.Drawing.Point(0, 0);
+            this.LeTan_Customer_Searching.Margin = new System.Windows.Forms.Padding(5);
             this.LeTan_Customer_Searching.Name = "LeTan_Customer_Searching";
-            this.LeTan_Customer_Searching.Size = new System.Drawing.Size(914, 750);
+            this.LeTan_Customer_Searching.Size = new System.Drawing.Size(1219, 923);
             this.LeTan_Customer_Searching.TabIndex = 17;
+            // 
+            // leTanRoomRequest
+            // 
+            this.leTanRoomRequest.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.leTanRoomRequest.Location = new System.Drawing.Point(0, 0);
+            this.leTanRoomRequest.Margin = new System.Windows.Forms.Padding(5);
+            this.leTanRoomRequest.Name = "leTanRoomRequest";
+            this.leTanRoomRequest.Size = new System.Drawing.Size(1217, 923);
+            this.leTanRoomRequest.TabIndex = 21;
             // 
             // LeTan_Room
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Controls.Add(this.LeTanRoomRequestBtn);
@@ -316,8 +332,9 @@ namespace HotelSystem
             this.Controls.Add(this.LeTan_Room_Searching);
             this.Controls.Add(this.LeTan_Customer_Searching);
             this.Controls.Add(this.leTanRoomRequest);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LeTan_Room";
-            this.Size = new System.Drawing.Size(914, 750);
+            this.Size = new System.Drawing.Size(1219, 923);
             this.Load += new System.EventHandler(this.LeTan_Room_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
