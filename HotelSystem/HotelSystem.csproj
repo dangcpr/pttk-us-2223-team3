@@ -58,6 +58,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\DatabaseBUS.cs" />
+    <Compile Include="BUS\FeedbackBUS.cs" />
+    <Compile Include="KhachHang_Feedback.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KhachHang_Feedback.Designer.cs">
+      <DependentUpon>KhachHang_Feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\FeedbackDAO.cs" />
     <Compile Include="KhachHang_Overview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +77,12 @@
     </Compile>
     <Compile Include="KhachHang_SeeBooking.Designer.cs">
       <DependentUpon>KhachHang_SeeBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang_HomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KhachHang_HomePage.Designer.cs">
+      <DependentUpon>KhachHang_HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="LeTan_Room_Request.cs">
       <SubType>UserControl</SubType>
@@ -177,6 +191,12 @@
     </Compile>
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\DatabaseDAO.cs" />
+    <Compile Include="KhachHang_Feedback_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang_Feedback_Update.Designer.cs">
+      <DependentUpon>KhachHang_Feedback_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,11 +205,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="KhachHang_Feedback.resx">
+      <DependentUpon>KhachHang_Feedback.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KhachHang_Overview.resx">
       <DependentUpon>KhachHang_Overview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang_SeeBooking.resx">
       <DependentUpon>KhachHang_SeeBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang_HomePage.resx">
+      <DependentUpon>KhachHang_HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LeTan_Room_Request.resx">
       <DependentUpon>LeTan_Room_Request.cs</DependentUpon>
@@ -238,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bellman_Overview.resx">
       <DependentUpon>Bellman_Overview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang_Feedback_Update.resx">
+      <DependentUpon>KhachHang_Feedback_Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignInForm.resx">
       <DependentUpon>SignInForm.cs</DependentUpon>

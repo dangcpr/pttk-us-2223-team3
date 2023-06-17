@@ -62,8 +62,9 @@ namespace HotelSystem
                 }
                 else if (checkAccount && role.Text == "Khách hàng")
                 {
-                    KhachHang_Overview KhachHang_Overview = new KhachHang_Overview();
-                    KhachHang_Overview.Show();
+                    KhachHang_Overview khachHang_Overview = new KhachHang_Overview();
+                    khachHang_Overview.Show();
+                    khachHang_Overview.setCustomerID(username.Text);
                     this.Hide();
                 }
                 else

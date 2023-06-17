@@ -23,7 +23,7 @@ namespace HotelSystem
         private void LeTan_Overview_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-            leTan_HomePage.BringToFront();
+            //LeTan_HomePage.BringToFront();
             BellmanCancel.BringToFront();
 
             // Get account username
@@ -34,7 +34,7 @@ namespace HotelSystem
         private void HomeButton_Click(object sender, EventArgs e)
         {
             hoverPanel.Location = new Point(0, 213);
-            leTan_HomePage.BringToFront();
+            //LeTan_HomePage.BringToFront();
             BellmanCancel.BringToFront();
         }
 
@@ -49,13 +49,6 @@ namespace HotelSystem
         {
             hoverPanel.Location = new Point(0, 315);
             LeTan_Room.BringToFront();
-            BellmanCancel.BringToFront();
-        }
-
-        private void RuleButton_Click(object sender, EventArgs e)
-        {
-            hoverPanel.Location = new Point(0, 366);
-            //bellman_Rule1.BringToFront();
             BellmanCancel.BringToFront();
         }
 

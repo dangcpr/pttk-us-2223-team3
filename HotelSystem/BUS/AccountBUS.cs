@@ -27,5 +27,7 @@ namespace HotelSystem.BUS
             bool checkAccount = accountDAO.checkAccount(DatabaseDAO.sqlConn, username, password, role);
             return checkAccount;
         }
+
+
     }
 }
