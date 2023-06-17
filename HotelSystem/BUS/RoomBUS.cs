@@ -1,6 +1,8 @@
 ﻿using HotelSystem.DAO;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -199,5 +201,93 @@ namespace HotelSystem.BUS
             return 0;
         }
 
+    
+        public static DataTable KHselectRoomRequest (string value)
+        {
+            DataTable checkFindRoomRequest = RoomDAO.KHviewRoomRequestListById(value);
+            return checkFindRoomRequest;
+        }
+        public static int KHcheckRoomRequestInput(string value)
+        {
+            if (value == "")
+            {
+                return -1;
+            }
+
+            DataTable checkFindRoomRequest = RoomDAO.KHviewRoomRequestListById(value);
+
+            if (checkFindRoomRequest.Rows.Count == 0)
+            {
+                return 0;
+            }
+            return 1;
+        }
+
+        public static DataTable KHselectBookingDetail(int value)
+        {
+            DataTable checkFindRoomRequest = RoomDAO.KHviewBookingDetail(value);
+            return checkFindRoomRequest;
+        }
+        public static int KHcheckBookingDetailInput(int value)
+        {
+            try
+            {
+                if (value.ToString() == "")
+                {
+                    return -1;
+                }
+
+                DataTable checkFindRoomRequest = RoomDAO.KHviewBookingDetail(value);
+
+                if (checkFindRoomRequest.Rows.Count == 0)
+                {
+                    return -2;
+                }
+
+                return 1;
+            } 
+            catch
+            {
+                return -3;
+            }
+        }
+        public static SqlDataReader viewListRoom()
+        {
+            SqlDataReader reader = RoomDAO.getListRoom();
+            return reader;
+        }
+
+        public static Boolean checkRoomStatusCheckout(string MaPhong)
+        {
+            string status = RoomDAO.getRoomStatus(MaPhong);
+            if (status == "Hết")
+                return true;
+            return false;
+        }
+        
+
+        public static void createCheckoutCard(ref string status, ref string customerName, ref string roomType, ref SqlDataReader reader, string MaPhong)
+        {
+            status = RoomDAO.getRoomStatus(MaPhong);
+            string customerID = "";
+            RoomDAO.getCustomerByRoomID(MaPhong, ref customerID, ref customerName);
+            roomType = RoomDAO.getRoomTypeByRoomID(MaPhong);
+            reader = ServiceDAO.getListServicesByCustomerID(customerID);
+            reader.Read();
+        }
+
+        public static void changeRoomStatus(string MaPhong)
+        {
+            if (RoomDAO.getRoomStatus(MaPhong) == "Hết")
+            {
+                RoomDAO.updateRoomStatus(MaPhong, "Trống");
+            }
+            else if (RoomDAO.getRoomStatus(MaPhong) == "Trống")
+            {
+                RoomDAO.updateRoomStatus(MaPhong, "Hết");
+            }
+        }
     }
+
+    
 }
