@@ -49,7 +49,7 @@ namespace HotelSystem
                     int resultBooking = ServiceBUS.AddServiceBooking(tb_MKH.Text, cbLoaiDV.Text, DK_Date.Text, tbSoLuong.Text, cbThanhToan.Text);
                     if (resultBooking == 1)
                     {
-                        MessageBox.Show("Khách hàng không tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Khách hàng chưa đặt phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                     else if (resultBooking == 2)

@@ -26,7 +26,7 @@ namespace HotelSystem
 
             if (check == 1)
             {
-                MessageBox.Show("Không tồn tại Mã khách hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Khách hàng chưa đặt phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (check == 2)
             {

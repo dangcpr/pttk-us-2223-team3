@@ -49,7 +49,7 @@ namespace HotelSystem.DAO
 
         internal static int SelectKM1(string makh, ListView lvKM)
         {
-            string sql = $"SELECT * FROM THONG_TIN_KHACH_HANG WHERE MA_KHACH_HANG = '{makh}'";
+            string sql = $"SELECT * FROM THONG_TIN_DAT_PHONG WHERE MA_KHACH_HANG = '{makh}'";
 
             SqlDataReader reader = CheckinDAO.getQueryStr(DatabaseDAO.sqlConn, sql);
             if (!reader.Read())

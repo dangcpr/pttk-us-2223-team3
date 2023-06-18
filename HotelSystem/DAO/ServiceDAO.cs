@@ -59,7 +59,7 @@ namespace HotelSystem.DAO
 
         internal static int CheckServiceBooking(string makh, string loaidv)
         {
-            string sql = $"SELECT * FROM THONG_TIN_KHACH_HANG WHERE MA_KHACH_HANG = '{makh}'";
+            string sql = $"SELECT * FROM THONG_TIN_DAT_PHONG WHERE MA_KHACH_HANG = '{makh}'";
             SqlDataReader reader = ServiceDAO.getQueryStr(DatabaseDAO.sqlConn, sql);
             if (!reader.Read())
             {
@@ -123,7 +123,7 @@ namespace HotelSystem.DAO
 
         internal static int SearchDV1(string makh, ListView lvDVSe)
         {
-            string sql = $"SELECT * FROM THONG_TIN_KHACH_HANG WHERE MA_KHACH_HANG = '{makh}'";
+            string sql = $"SELECT * FROM THONG_TIN_DAT_PHONG WHERE MA_KHACH_HANG = '{makh}'";
 
             SqlDataReader reader = ServiceDAO.getQueryStr(DatabaseDAO.sqlConn, sql);
             if (!reader.Read())
