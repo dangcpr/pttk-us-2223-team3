@@ -29,7 +29,7 @@ namespace HotelSystem.DAO
 
             try
             {
-                string _saveDataDatTour = $"INSERT INTO THONG_TIN_DAT_TOUR (MA_KHACH_HANG, MA_DON_VI_LU_HANH, THOI_GIAN) VALUES ('{list[0]}', '{list[1]}','{dateValue.ToString()}')";
+                string _saveDataDatTour = $"INSERT INTO THONG_TIN_DAT_TOUR (MA_KHACH_HANG, MA_DON_VI_LU_HANH, THOI_GIAN) VALUES ('{list[0]}', '{list[1]}','{dateValue.Year}-{dateValue.Month}-{dateValue.Day}')";
                 SqlCommand sqlCmd = new SqlCommand(_saveDataDatTour, DatabaseDAO.sqlConn);
                 sqlCmd.ExecuteNonQuery();
                 result = true;
