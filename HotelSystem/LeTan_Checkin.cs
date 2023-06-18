@@ -1,4 +1,7 @@
-﻿using System;
+﻿using HotelSystem.BUS;
+using HotelSystem.DAO;
+using HotelSystem.CLASS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,8 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HotelSystem.DAO;
-using HotelSystem.BUS;
 
 namespace HotelSystem
 {
@@ -20,82 +21,22 @@ namespace HotelSystem
             InitializeComponent();
         }
 
-        private void getAllInformation(String makh)
+        private void btnAddPYC_Click(object sender, EventArgs e)
         {
-            List<String> list = new List<String>();
-            list = CheckinBUS.getThongTinDatPhongByMadp(makh);
-
-            madp_checkin_txt.Text = list[0];
-            makh_checkin_txt.Text = list[1];
-            ngaydat_checkin_txt.Text = list[2];
-            loaiphong_checkin_txt.Text = list[3];
-            ngaycheckin_checkin_txt.Text = list[4];
-            ngaycheckout_checkin_txt.Text = list[5];
-            
+            leTan_Checkin_PDK.Show();
+            leTan_Checkin_PDK.BringToFront();
         }
 
-        private void guna2HtmlLabel6_Click(object sender, EventArgs e)
+        private void leTan_Checkin_PDK_Load(object sender, EventArgs e)
         {
-
+            leTan_Checkin_PDK.Hide();
+            leTan_Checkin_KM1.Hide();
         }
 
-        private void ghichu_checkin_Click(object sender, EventArgs e)
+        private void btn_KM_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void hoanthanh_checkin_btn_Click(object sender, EventArgs e)
-        {
-            List<String> list = new List<String>();
-            list.Add(makh_checkin_txt.Text);
-            list.Add(cccd_checkin_txt.Text);
-            list.Add(ngaycheckin_checkin_txt.Text);
-            list.Add(ghichu_checkin_txt.Text);
-
-            if ((ngaycheckin_checkin_txt.Text == "") || (cccd_checkin_txt.Text == "") || (makh_checkin_txt.Text == ""))
-            {
-                MessageBox.Show("Không để thông tin trống");
-            }
-            else
-            {
-                bool check = CheckinBUS.saveDataCheckin(list);
-
-                if (check)
-                {
-                    MessageBox.Show("Thêm dữ liệu vào Phiếu Đăng Ký thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Thêm dữ liệu vào Phiếu Đăng Ký bị lỗi !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            } 
-             
-        }
-
-        private void check_checkin_btn_Click(object sender, EventArgs e)
-        {
-            string madp = madp_checkin_txt.Text;
-
-            bool check = CheckinBUS.checkMadp(madp);
-
-            if (madp_checkin_txt.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập Mã Đặt Phòng");
-            }
-            else
-            {
-                if (check == false)
-                {
-                    MessageBox.Show("Thông tin khách hàng không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    getAllInformation(madp);
-                }
-
-            }     
-   
+            leTan_Checkin_KM1.Show();
+            leTan_Checkin_KM1.BringToFront();
         }
     }
 }

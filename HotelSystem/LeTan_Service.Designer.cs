@@ -30,10 +30,12 @@ namespace HotelSystem
         private void InitializeComponent()
         {
             this.HomeLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.xemlichdv_service_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.lvService = new System.Windows.Forms.ListView();
+            this.btnSearchDV = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddDV = new Guna.UI2.WinForms.Guna2Button();
+            this.leTan_Service_Searching1 = new HotelSystem.LeTan_Service_Searching();
+            this.leTan_Service_Booking1 = new HotelSystem.LeTan_Service_Booking();
+            this.btnXemDV = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // HomeLabel
@@ -42,65 +44,107 @@ namespace HotelSystem
             this.HomeLabel.Font = new System.Drawing.Font("Google Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeLabel.ForeColor = System.Drawing.Color.DeepPink;
             this.HomeLabel.Location = new System.Drawing.Point(360, 34);
-            this.HomeLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HomeLabel.Margin = new System.Windows.Forms.Padding(4);
             this.HomeLabel.Name = "HomeLabel";
             this.HomeLabel.Size = new System.Drawing.Size(440, 59);
             this.HomeLabel.TabIndex = 0;
             this.HomeLabel.Text = "THÔNG TIN DỊCH VỤ";
             this.HomeLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel2
+            // lvService
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(59, 103);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(252, 28);
-            this.guna2HtmlLabel2.TabIndex = 45;
-            this.guna2HtmlLabel2.Text = "Danh sách đặt lịch dịch vụ";
+            this.lvService.GridLines = true;
+            this.lvService.HideSelection = false;
+            this.lvService.Location = new System.Drawing.Point(74, 178);
+            this.lvService.Name = "lvService";
+            this.lvService.Size = new System.Drawing.Size(1049, 444);
+            this.lvService.TabIndex = 1;
+            this.lvService.UseCompatibleStateImageBehavior = false;
             // 
-            // xemlichdv_service_btn
+            // btnSearchDV
             // 
-            this.xemlichdv_service_btn.BorderRadius = 5;
-            this.xemlichdv_service_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.xemlichdv_service_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.xemlichdv_service_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.xemlichdv_service_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.xemlichdv_service_btn.FillColor = System.Drawing.Color.DeepPink;
-            this.xemlichdv_service_btn.Font = new System.Drawing.Font("Google Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xemlichdv_service_btn.ForeColor = System.Drawing.Color.White;
-            this.xemlichdv_service_btn.Location = new System.Drawing.Point(801, 103);
-            this.xemlichdv_service_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.xemlichdv_service_btn.Name = "xemlichdv_service_btn";
-            this.xemlichdv_service_btn.Size = new System.Drawing.Size(286, 34);
-            this.xemlichdv_service_btn.TabIndex = 43;
-            this.xemlichdv_service_btn.Text = "Xem danh sách đặt lịch dịch vụ";
-            this.xemlichdv_service_btn.Click += new System.EventHandler(this.xemlichdv_service_btn_Click);
+            this.btnSearchDV.BorderRadius = 5;
+            this.btnSearchDV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearchDV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearchDV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearchDV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearchDV.FillColor = System.Drawing.Color.DeepPink;
+            this.btnSearchDV.Font = new System.Drawing.Font("Google Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchDV.ForeColor = System.Drawing.Color.White;
+            this.btnSearchDV.Location = new System.Drawing.Point(74, 724);
+            this.btnSearchDV.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchDV.Name = "btnSearchDV";
+            this.btnSearchDV.Size = new System.Drawing.Size(267, 55);
+            this.btnSearchDV.TabIndex = 2;
+            this.btnSearchDV.Text = "Tra cứu sử dụng dịch vụ";
+            this.btnSearchDV.Click += new System.EventHandler(this.btnSearchDV_Click);
             // 
-            // dataGridView3
+            // btnAddDV
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(59, 167);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(1028, 276);
-            this.dataGridView3.TabIndex = 46;
+            this.btnAddDV.BorderRadius = 5;
+            this.btnAddDV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddDV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddDV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddDV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddDV.FillColor = System.Drawing.Color.DeepPink;
+            this.btnAddDV.Font = new System.Drawing.Font("Google Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddDV.ForeColor = System.Drawing.Color.White;
+            this.btnAddDV.Location = new System.Drawing.Point(856, 724);
+            this.btnAddDV.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddDV.Name = "btnAddDV";
+            this.btnAddDV.Size = new System.Drawing.Size(267, 55);
+            this.btnAddDV.TabIndex = 3;
+            this.btnAddDV.Text = "Lập phiếu đăng ký dịch vụ";
+            this.btnAddDV.Click += new System.EventHandler(this.btnAddDV_Click);
+            // 
+            // leTan_Service_Searching1
+            // 
+            this.leTan_Service_Searching1.Location = new System.Drawing.Point(0, -3);
+            this.leTan_Service_Searching1.Name = "leTan_Service_Searching1";
+            this.leTan_Service_Searching1.Size = new System.Drawing.Size(1219, 923);
+            this.leTan_Service_Searching1.TabIndex = 4;
+            // 
+            // leTan_Service_Booking1
+            // 
+            this.leTan_Service_Booking1.Location = new System.Drawing.Point(-3, -3);
+            this.leTan_Service_Booking1.Name = "leTan_Service_Booking1";
+            this.leTan_Service_Booking1.Size = new System.Drawing.Size(1219, 923);
+            this.leTan_Service_Booking1.TabIndex = 5;
+            // 
+            // btnXemDV
+            // 
+            this.btnXemDV.BorderRadius = 5;
+            this.btnXemDV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXemDV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXemDV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXemDV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXemDV.FillColor = System.Drawing.Color.DeepPink;
+            this.btnXemDV.Font = new System.Drawing.Font("Google Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemDV.ForeColor = System.Drawing.Color.White;
+            this.btnXemDV.Location = new System.Drawing.Point(74, 122);
+            this.btnXemDV.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXemDV.Name = "btnXemDV";
+            this.btnXemDV.Size = new System.Drawing.Size(236, 40);
+            this.btnXemDV.TabIndex = 6;
+            this.btnXemDV.Text = "Xem thông tin dịch vụ";
+            this.btnXemDV.Click += new System.EventHandler(this.btnXemKM_Click);
             // 
             // LeTan_Service
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.xemlichdv_service_btn);
+            this.Controls.Add(this.btnXemDV);
+            this.Controls.Add(this.btnAddDV);
+            this.Controls.Add(this.btnSearchDV);
+            this.Controls.Add(this.lvService);
             this.Controls.Add(this.HomeLabel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.leTan_Service_Searching1);
+            this.Controls.Add(this.leTan_Service_Booking1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LeTan_Service";
             this.Size = new System.Drawing.Size(1219, 923);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.Load += new System.EventHandler(this.LeTan_Service_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,8 +153,11 @@ namespace HotelSystem
         #endregion
 
         private Guna.UI2.WinForms.Guna2HtmlLabel HomeLabel;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2Button xemlichdv_service_btn;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.ListView lvService;
+        private Guna.UI2.WinForms.Guna2Button btnSearchDV;
+        private Guna.UI2.WinForms.Guna2Button btnAddDV;
+        private LeTan_Service_Searching leTan_Service_Searching1;
+        private LeTan_Service_Booking leTan_Service_Booking1;
+        private Guna.UI2.WinForms.Guna2Button btnXemDV;
     }
 }

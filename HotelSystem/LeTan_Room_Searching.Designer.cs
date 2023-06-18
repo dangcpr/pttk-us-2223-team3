@@ -46,9 +46,10 @@ namespace HotelSystem
             this.HomeLabel.BackColor = System.Drawing.Color.Transparent;
             this.HomeLabel.Font = new System.Drawing.Font("Google Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeLabel.ForeColor = System.Drawing.Color.DeepPink;
-            this.HomeLabel.Location = new System.Drawing.Point(0, 28);
+            this.HomeLabel.Location = new System.Drawing.Point(0, 34);
+            this.HomeLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HomeLabel.Name = "HomeLabel";
-            this.HomeLabel.Size = new System.Drawing.Size(914, 47);
+            this.HomeLabel.Size = new System.Drawing.Size(1219, 58);
             this.HomeLabel.TabIndex = 0;
             this.HomeLabel.Text = "TRA CỨU THÔNG TIN ĐẶT PHÒNG";
             this.HomeLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -63,9 +64,10 @@ namespace HotelSystem
             this.quitBookingBtn.FillColor = System.Drawing.Color.DeepPink;
             this.quitBookingBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.quitBookingBtn.ForeColor = System.Drawing.Color.White;
-            this.quitBookingBtn.Location = new System.Drawing.Point(743, 90);
+            this.quitBookingBtn.Location = new System.Drawing.Point(991, 111);
+            this.quitBookingBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.quitBookingBtn.Name = "quitBookingBtn";
-            this.quitBookingBtn.Size = new System.Drawing.Size(107, 45);
+            this.quitBookingBtn.Size = new System.Drawing.Size(143, 55);
             this.quitBookingBtn.TabIndex = 1;
             this.quitBookingBtn.Text = "Thoát";
             this.quitBookingBtn.Click += new System.EventHandler(this.quitBookingBtn_Click);
@@ -74,9 +76,10 @@ namespace HotelSystem
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(68, 112);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(91, 138);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(244, 23);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(300, 27);
             this.guna2HtmlLabel1.TabIndex = 2;
             this.guna2HtmlLabel1.Text = "Nhập mã đặt phòng để tra cứu:";
             this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
@@ -91,9 +94,10 @@ namespace HotelSystem
             this.LeTanRoomInfoBtn.FillColor = System.Drawing.Color.DeepPink;
             this.LeTanRoomInfoBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LeTanRoomInfoBtn.ForeColor = System.Drawing.Color.White;
-            this.LeTanRoomInfoBtn.Location = new System.Drawing.Point(68, 161);
+            this.LeTanRoomInfoBtn.Location = new System.Drawing.Point(91, 198);
+            this.LeTanRoomInfoBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LeTanRoomInfoBtn.Name = "LeTanRoomInfoBtn";
-            this.LeTanRoomInfoBtn.Size = new System.Drawing.Size(107, 45);
+            this.LeTanRoomInfoBtn.Size = new System.Drawing.Size(143, 55);
             this.LeTanRoomInfoBtn.TabIndex = 3;
             this.LeTanRoomInfoBtn.Text = "Tra cứu";
             this.LeTanRoomInfoBtn.Click += new System.EventHandler(this.LeTanRoomInfoBtn_Click);
@@ -109,55 +113,61 @@ namespace HotelSystem
             this.LeTanRoomInfoInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LeTanRoomInfoInput.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LeTanRoomInfoInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.LeTanRoomInfoInput.Location = new System.Drawing.Point(225, 161);
+            this.LeTanRoomInfoInput.Location = new System.Drawing.Point(300, 198);
+            this.LeTanRoomInfoInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LeTanRoomInfoInput.Name = "LeTanRoomInfoInput";
             this.LeTanRoomInfoInput.PasswordChar = '\0';
             this.LeTanRoomInfoInput.PlaceholderText = "";
             this.LeTanRoomInfoInput.SelectedText = "";
-            this.LeTanRoomInfoInput.Size = new System.Drawing.Size(287, 45);
+            this.LeTanRoomInfoInput.Size = new System.Drawing.Size(383, 55);
             this.LeTanRoomInfoInput.TabIndex = 4;
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(68, 261);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(91, 321);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(161, 23);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(196, 27);
             this.guna2HtmlLabel2.TabIndex = 5;
             this.guna2HtmlLabel2.Text = "Thông tin đặt phòng";
             // 
             // LeTanRoomInfoListView
             // 
             this.LeTanRoomInfoListView.HideSelection = false;
-            this.LeTanRoomInfoListView.Location = new System.Drawing.Point(64, 290);
+            this.LeTanRoomInfoListView.Location = new System.Drawing.Point(85, 357);
+            this.LeTanRoomInfoListView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LeTanRoomInfoListView.Name = "LeTanRoomInfoListView";
-            this.LeTanRoomInfoListView.Size = new System.Drawing.Size(786, 134);
+            this.LeTanRoomInfoListView.Size = new System.Drawing.Size(1047, 164);
             this.LeTanRoomInfoListView.TabIndex = 6;
             this.LeTanRoomInfoListView.UseCompatibleStateImageBehavior = false;
+            this.LeTanRoomInfoListView.SelectedIndexChanged += new System.EventHandler(this.LeTanRoomInfoListView_SelectedIndexChanged);
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(68, 487);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(91, 599);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(206, 23);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(249, 27);
             this.guna2HtmlLabel3.TabIndex = 7;
             this.guna2HtmlLabel3.Text = "Phiếu thông tin đặt phòng";
             // 
             // LeTanFormBookingListView
             // 
             this.LeTanFormBookingListView.HideSelection = false;
-            this.LeTanFormBookingListView.Location = new System.Drawing.Point(68, 516);
+            this.LeTanFormBookingListView.Location = new System.Drawing.Point(91, 635);
+            this.LeTanFormBookingListView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LeTanFormBookingListView.Name = "LeTanFormBookingListView";
-            this.LeTanFormBookingListView.Size = new System.Drawing.Size(785, 134);
+            this.LeTanFormBookingListView.Size = new System.Drawing.Size(1045, 164);
             this.LeTanFormBookingListView.TabIndex = 8;
             this.LeTanFormBookingListView.UseCompatibleStateImageBehavior = false;
             // 
             // LeTan_Room_Searching
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Controls.Add(this.LeTanFormBookingListView);
@@ -169,8 +179,9 @@ namespace HotelSystem
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.quitBookingBtn);
             this.Controls.Add(this.HomeLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LeTan_Room_Searching";
-            this.Size = new System.Drawing.Size(914, 750);
+            this.Size = new System.Drawing.Size(1219, 923);
             this.Load += new System.EventHandler(this.LeTan_Room_Booking_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
