@@ -43,9 +43,16 @@ namespace HotelSystem
                     string MaPhong = roomDataGridView.CurrentRow.Cells[0].Value.ToString();
                     if (RoomBUS.checkRoomStatusCheckout(MaPhong) == true)
                     {
-                        leTan_Checkout_Card.setRoomID(MaPhong);
-                        leTan_Checkout_Card.Show();
-                        leTan_Checkout_Card.BringToFront();
+                        if (RoomBUS.checkRoomHasCustomer(MaPhong))
+                        {
+                            leTan_Checkout_Card.Show();
+                            leTan_Checkout_Card.BringToFront();
+                            leTan_Checkout_Card.setRoomID(MaPhong);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vui lòng chọn phòng có khách hàng đang lưu tru!");
+                        }
                     }
                     else
                     {

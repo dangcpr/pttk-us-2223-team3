@@ -35,33 +35,28 @@ namespace HotelSystem
         public void setRoomID(string roomID)
         {
             MaPhong = roomID;
-            if (ServiceBUS.checkCustomerHasServicePaymentByRoomID(MaPhong))
+            MaHoaDon = InvoiceBUS.createInvoice(MaPhong, LoaiHoaDon);
+            roomIDTxb.Text = MaPhong;
+            SqlDataReader readerInvoiceDetail = InvoiceBUS.viewInvoiceDetailByID(MaHoaDon);
+            if (!readerInvoiceDetail.HasRows || readerInvoiceDetail is null)
             {
-                MaHoaDon = InvoiceBUS.createInvoice(MaPhong, LoaiHoaDon);
-                roomIDTxb.Text = MaPhong;
-                SqlDataReader readerInvoiceDetail = InvoiceBUS.viewInvoiceDetailByID(MaHoaDon);
                 DataTable dtInvoiceDetail = new DataTable();
                 dtInvoiceDetail.Load(readerInvoiceDetail);
                 invoiceDetailDataGridView.DataSource = dtInvoiceDetail;
-                readerInvoiceDetail.Close();
-                SqlDataReader readerInvoice = InvoiceBUS.viewInvoiceByID(MaHoaDon);
-                DataTable dtInvoice = new DataTable();
-                dtInvoice.Load(readerInvoice);
-                invoiceDataGridView.DataSource = dtInvoice;
-                readerInvoice.Close();
             }
             else
             {
                 DataTable dtInvoiceDetail = new DataTable();
                 dtInvoiceDetail.Columns.Add("MA_HOA_DON");
-                dtInvoiceDetail.Rows.Add("Không có hóa đơn cần thanh toán");
+                dtInvoiceDetail.Rows.Add("Không có dịch vụ cần thanh toán");
                 invoiceDetailDataGridView.DataSource = dtInvoiceDetail;
-
-                DataTable dtInvoice = new DataTable();
-                dtInvoice.Columns.Add("MA_HOA_DON");
-                dtInvoice.Rows.Add("Không có hóa đơn cần thanh toán");
-                invoiceDataGridView.DataSource = dtInvoice;
             }
+            readerInvoiceDetail.Close();
+            SqlDataReader readerInvoice = InvoiceBUS.viewInvoiceByID(MaHoaDon);
+            DataTable dtInvoice = new DataTable();
+            dtInvoice.Load(readerInvoice);
+            invoiceDataGridView.DataSource = dtInvoice;
+            readerInvoice.Close();
         }
 
         public void setTypeInvoice(string typeInvoice)
@@ -82,14 +77,10 @@ namespace HotelSystem
             }
             else
             {
-                if (ServiceBUS.checkCustomerHasServicePaymentByRoomID(MaPhong))
+                if (InvoiceBUS.checkInvoiceExists(MaHoaDon, null, null))
                 {
-                    if (InvoiceBUS.checkInvoiceExists(MaHoaDon, null, null))
-                    {
-                        InvoiceBUS.changeStatusPayment(MaHoaDon);
-                        ServiceBUS.changeStatusPaymentByInvoiceID(MaHoaDon);
-                    }
-
+                    InvoiceBUS.changeStatusPayment(MaHoaDon);
+                    ServiceBUS.changeStatusPaymentByInvoiceID(MaHoaDon);
                 }
                 RoomBUS.changeRoomStatus(MaPhong);
                 MessageBox.Show("Checkout thành công!");
@@ -100,33 +91,28 @@ namespace HotelSystem
 
         private void loadBtn_Click(object sender, EventArgs e)
         {
-            if (ServiceBUS.checkCustomerHasServicePaymentByRoomID(MaPhong))
+            MaHoaDon = InvoiceBUS.createInvoice(MaPhong, LoaiHoaDon);
+            roomIDTxb.Text = MaPhong;
+            SqlDataReader readerInvoiceDetail = InvoiceBUS.viewInvoiceDetailByID(MaHoaDon);
+            if (!readerInvoiceDetail.HasRows || readerInvoiceDetail is null)
             {
-                MaHoaDon = InvoiceBUS.createInvoice(MaPhong, LoaiHoaDon);
-                roomIDTxb.Text = MaPhong;
-                SqlDataReader readerInvoiceDetail = InvoiceBUS.viewInvoiceDetailByID(MaHoaDon);
                 DataTable dtInvoiceDetail = new DataTable();
                 dtInvoiceDetail.Load(readerInvoiceDetail);
                 invoiceDetailDataGridView.DataSource = dtInvoiceDetail;
-                readerInvoiceDetail.Close();
-                SqlDataReader readerInvoice = InvoiceBUS.viewInvoiceByID(MaHoaDon);
-                DataTable dtInvoice = new DataTable();
-                dtInvoice.Load(readerInvoice);
-                invoiceDataGridView.DataSource = dtInvoice;
-                readerInvoice.Close();
             }
             else
             {
                 DataTable dtInvoiceDetail = new DataTable();
                 dtInvoiceDetail.Columns.Add("MA_HOA_DON");
-                dtInvoiceDetail.Rows.Add("Không có hóa đơn cần thanh toán");
+                dtInvoiceDetail.Rows.Add("Không có dịch vụ cần thanh toán");
                 invoiceDetailDataGridView.DataSource = dtInvoiceDetail;
-
-                DataTable dtInvoice = new DataTable();
-                dtInvoice.Columns.Add("MA_HOA_DON");
-                dtInvoice.Rows.Add("Không có hóa đơn cần thanh toán");
-                invoiceDataGridView.DataSource = dtInvoice;
             }
+            readerInvoiceDetail.Close();
+            SqlDataReader readerInvoice = InvoiceBUS.viewInvoiceByID(MaHoaDon);
+            DataTable dtInvoice = new DataTable();
+            dtInvoice.Load(readerInvoice);
+            invoiceDataGridView.DataSource = dtInvoice;
+            readerInvoice.Close();
         }
     }
 }

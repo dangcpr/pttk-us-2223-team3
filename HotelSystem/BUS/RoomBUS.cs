@@ -257,6 +257,17 @@ namespace HotelSystem.BUS
             return reader;
         }
 
+        public static Boolean checkRoomHasCustomer(string MaPhong)
+        {
+            Boolean check = true;
+            string MaKH = "";
+            string HoTen = "";
+            RoomDAO.getCustomerByRoomID(MaPhong, ref MaKH, ref HoTen);
+            if (MaKH is null || MaKH == "")
+                check = false;
+            return check;
+        }
+
         public static Boolean checkRoomStatusCheckout(string MaPhong)
         {
             string status = RoomDAO.getRoomStatus(MaPhong);

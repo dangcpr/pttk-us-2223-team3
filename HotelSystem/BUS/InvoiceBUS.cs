@@ -38,7 +38,14 @@ namespace HotelSystem.BUS
             if (typeInvoice == "checkout")
             {
                 RoomDAO.getCustomerByRoomID(MaPhong, ref CustomerID, ref CustomerName);
-                InvoiceDAO.addInvoiceAndDetail(MaHoaDon, CustomerID, caculateRoomChargeCheckout(MaPhong), caculateToTalPaymentCheckout(MaPhong, CustomerID));
+                if (ServiceBUS.checkCustomerHasServicePaymentByRoomID(MaPhong))
+                {
+                    InvoiceDAO.addInvoiceAndDetail(MaHoaDon, CustomerID, caculateRoomChargeCheckout(MaPhong), caculateToTalPaymentCheckout(MaPhong, CustomerID), true);
+                }
+                else
+                {
+                    InvoiceDAO.addInvoiceAndDetail(MaHoaDon, CustomerID, caculateRoomChargeCheckout(MaPhong), caculateRoomChargeCheckout(MaPhong), false);
+                }
             }
             return MaHoaDon;
         }
