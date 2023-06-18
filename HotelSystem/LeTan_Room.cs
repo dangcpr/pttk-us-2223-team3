@@ -311,6 +311,11 @@ namespace HotelSystem
         private void viewRuleBtn_Click(object sender, EventArgs e)
         {
 
-        }      
+        }
+
+        private void HomeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

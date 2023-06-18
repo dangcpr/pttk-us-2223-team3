@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DragAssembly">
-      <HintPath>C:\Users\HAI DANG\Downloads\DragAssembly.dll</HintPath>
+      <HintPath>..\..\DragAssembly.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web" />
@@ -57,7 +58,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\CheckinBUS.cs" />
     <Compile Include="BUS\DatabaseBUS.cs" />
+    <Compile Include="BUS\ServiceBUS.cs" />
+    <Compile Include="DAO\CheckinDAO.cs" />
+    <Compile Include="DAO\ServiceDAO.cs" />
     <Compile Include="KhachHang_Overview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +74,18 @@
     </Compile>
     <Compile Include="KhachHang_SeeBooking.Designer.cs">
       <DependentUpon>KhachHang_SeeBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_Checkin_KM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Checkin_KM.Designer.cs">
+      <DependentUpon>LeTan_Checkin_KM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_Checkin_PDK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Checkin_PDK.Designer.cs">
+      <DependentUpon>LeTan_Checkin_PDK.cs</DependentUpon>
     </Compile>
     <Compile Include="LeTan_Room_Request.cs">
       <SubType>UserControl</SubType>
@@ -102,6 +119,18 @@
     </Compile>
     <Compile Include="LeTan_Room_Booking.Designer.cs">
       <DependentUpon>LeTan_Room_Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_Service_Booking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Service_Booking.Designer.cs">
+      <DependentUpon>LeTan_Service_Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_Service_Searching.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Service_Searching.Designer.cs">
+      <DependentUpon>LeTan_Service_Searching.cs</DependentUpon>
     </Compile>
     <Compile Include="LeTan_Tour.cs">
       <SubType>UserControl</SubType>
@@ -191,6 +220,12 @@
     <EmbeddedResource Include="KhachHang_SeeBooking.resx">
       <DependentUpon>KhachHang_SeeBooking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_Checkin_KM.resx">
+      <DependentUpon>LeTan_Checkin_KM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_Checkin_PDK.resx">
+      <DependentUpon>LeTan_Checkin_PDK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LeTan_Room_Request.resx">
       <DependentUpon>LeTan_Room_Request.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +237,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LeTan_Room_Booking.resx">
       <DependentUpon>LeTan_Room_Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_Service_Booking.resx">
+      <DependentUpon>LeTan_Service_Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_Service_Searching.resx">
+      <DependentUpon>LeTan_Service_Searching.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LeTan_Tour.resx">
       <DependentUpon>LeTan_Tour.cs</DependentUpon>
