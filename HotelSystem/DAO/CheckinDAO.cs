@@ -41,7 +41,7 @@ namespace HotelSystem.DAO
             }
             reader.Close();
 
-            sql = $"INSERT INTO PHIEU_DANG_KY VALUES ('{customerId}','{CCCD}')";
+            sql = $"INSERT INTO PHIEU_DANG_KY (MA_KHACH_HANG, CCCD) VALUES ('{customerId}','{CCCD}')";
             reader = CheckinDAO.getQueryStr(DatabaseDAO.sqlConn, sql);
             reader.Close();
             return 0;

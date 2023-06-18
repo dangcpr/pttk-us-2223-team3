@@ -68,7 +68,7 @@ namespace HotelSystem.DAO
             }
             reader.Close();
 
-            sql = $"SELECT * FROM DICH_VU WHERE TEN_DICH_VU = '{loaidv}'AND TINH_TRANG = N'Còn'";
+            sql = $"SELECT * FROM DICH_VU WHERE TEN_DICH_VU = N'{loaidv}'AND TINH_TRANG = N'Còn'";
             reader = ServiceDAO.getQueryStr(DatabaseDAO.sqlConn, sql);
             if (!reader.Read())
             {
@@ -77,7 +77,7 @@ namespace HotelSystem.DAO
             }
             reader.Close();
 
-            sql = $"select * from DICH_VU WHERE TEN_DICH_VU = '{loaidv}' AND (LOAI_PHONG_CHO_PHEP = N'Tất cả' OR LOAI_PHONG_CHO_PHEP IN (SELECT LOAI_PHONG FROM THONG_TIN_DAT_PHONG WHERE MA_KHACH_HANG = '{makh}'))";
+            sql = $"select * from DICH_VU WHERE TEN_DICH_VU = N'{loaidv}' AND (LOAI_PHONG_CHO_PHEP = N'Tất cả' OR LOAI_PHONG_CHO_PHEP IN (SELECT LOAI_PHONG FROM THONG_TIN_DAT_PHONG WHERE MA_KHACH_HANG = '{makh}'))";
             reader = ServiceDAO.getQueryStr(DatabaseDAO.sqlConn, sql);
             if (!reader.Read())
             {
@@ -95,10 +95,10 @@ namespace HotelSystem.DAO
 
 
             string sql = "DECLARE @id int;";
-            sql += "SET @id = (SELECT MA_DICH_VU FROM DICH_VU WHERE TEN_DICH_VU = '" + loaidv + "');";
+            sql += "SET @id = (SELECT MA_DICH_VU FROM DICH_VU WHERE TEN_DICH_VU = N'" + loaidv + "');";
 
             sql += "DECLARE @sum int;";
-            sql += "SET @sum =" + sl + "*(SELECT GIA_TIEN FROM DICH_VU WHERE TEN_DICH_VU = '" + loaidv + "');";
+            sql += "SET @sum =" + sl + "*(SELECT GIA_TIEN FROM DICH_VU WHERE TEN_DICH_VU = N'" + loaidv + "');";
 
             sql += "INSERT INTO THONG_TIN_DANG_KY_DICH_VU VALUES (@id, '";
             sql += makh + "', '";
