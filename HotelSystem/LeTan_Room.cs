@@ -311,6 +311,6 @@ namespace HotelSystem
         private void viewRuleBtn_Click(object sender, EventArgs e)
         {
 
-        }      
+        }
     }
 }
