@@ -69,5 +69,12 @@ namespace HotelSystem.DAO
 
             return reader;
         }
+        public static SqlDataAdapter getDanhSachDatLichDv()
+        {
+            String getData = "SELECT * FROM LICH_SU_DUNG_DICH_VU";
+            SqlDataAdapter adapter = new SqlDataAdapter(getData, DatabaseDAO.sqlConn);
+            return adapter;
+
+        }
     }
 }

@@ -32,5 +32,14 @@ namespace HotelSystem.BUS
         {
             ServiceDAO.updateStatusPaymentByInvoiceID(InvoiceID);
         }
+        public static DataTable getDanhSachDatLichDv()
+        {
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter = ServiceDAO.getDanhSachDatLichDv();
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+        }
     }
 }
