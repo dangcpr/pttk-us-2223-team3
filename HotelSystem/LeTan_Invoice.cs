@@ -38,7 +38,7 @@ namespace HotelSystem
             MaHoaDon = InvoiceBUS.createInvoice(MaPhong, LoaiHoaDon);
             roomIDTxb.Text = MaPhong;
             SqlDataReader readerInvoiceDetail = InvoiceBUS.viewInvoiceDetailByID(MaHoaDon);
-            if (!readerInvoiceDetail.HasRows || readerInvoiceDetail is null)
+            if (readerInvoiceDetail.HasRows || readerInvoiceDetail is null)
             {
                 DataTable dtInvoiceDetail = new DataTable();
                 dtInvoiceDetail.Load(readerInvoiceDetail);

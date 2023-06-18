@@ -53,12 +53,12 @@ namespace HotelSystem.DAO
         public static string getNewInvoiceID()
         {
             string MaHoaDon = "";
-            SqlCommand getNewID = new SqlCommand("SELECT MAX(MA_HOA_DON) + 1 FROM HOA_DON;", DatabaseDAO.getConnectDB());
+            SqlCommand getNewID = new SqlCommand("SELECT MAX(MA_HOA_DON) FROM HOA_DON;", DatabaseDAO.getConnectDB());
             MaHoaDon = getNewID.ExecuteScalar().ToString();
             return MaHoaDon;
         }
 
-        public static void addInvoiceAndDetail(string MaHoaDon, string MaKH, float TienPhong, float TongTien, Boolean hasServicePayment)
+        public static void addInvoiceAndDetail(string MaKH, float TienPhong, float TongTien, Boolean hasServicePayment)
         {
             SqlCommand insertNewInvoice = new SqlCommand("INSERT INTO HOA_DON(TIEN_PHONG,TONG_TIEN,TINH_TRANG_THANH_TOAN,LE_TAN_GHI_NHAN) VALUES(@TienPhong,@TongTien,N'Chưa thanh toán',@LeTan);", DatabaseDAO.sqlConn);
             insertNewInvoice.Parameters.AddWithValue("@TienPhong", TienPhong.ToString());
@@ -73,6 +73,7 @@ namespace HotelSystem.DAO
                 SqlDataReader reader = getServices.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(reader);
+                string MaHoaDon = getNewInvoiceID();
                 foreach (DataRow row in dt.Rows)
                 {
                     string MaDV = row["MA_DICH_VU"].ToString();

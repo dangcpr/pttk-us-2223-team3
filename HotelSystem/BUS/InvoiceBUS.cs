@@ -32,21 +32,21 @@ namespace HotelSystem.BUS
         {
             string CustomerID = "";
             string CustomerName = "";
-            string MaHoaDon = InvoiceDAO.getNewInvoiceID();
-            if (MaHoaDon is null||MaHoaDon == "")
-                MaHoaDon = "1";
             if (typeInvoice == "checkout")
             {
                 RoomDAO.getCustomerByRoomID(MaPhong, ref CustomerID, ref CustomerName);
                 if (ServiceBUS.checkCustomerHasServicePaymentByRoomID(MaPhong))
                 {
-                    InvoiceDAO.addInvoiceAndDetail(MaHoaDon, CustomerID, caculateRoomChargeCheckout(MaPhong), caculateToTalPaymentCheckout(MaPhong, CustomerID), true);
+                    InvoiceDAO.addInvoiceAndDetail(CustomerID, caculateRoomChargeCheckout(MaPhong), caculateToTalPaymentCheckout(MaPhong, CustomerID), true);
                 }
                 else
                 {
-                    InvoiceDAO.addInvoiceAndDetail(MaHoaDon, CustomerID, caculateRoomChargeCheckout(MaPhong), caculateRoomChargeCheckout(MaPhong), false);
+                    InvoiceDAO.addInvoiceAndDetail(CustomerID, caculateRoomChargeCheckout(MaPhong), caculateRoomChargeCheckout(MaPhong), false);
                 }
             }
+            string MaHoaDon = InvoiceDAO.getNewInvoiceID();
+            if (MaHoaDon is null || MaHoaDon == "")
+                MaHoaDon = "1";
             return MaHoaDon;
         }
         
