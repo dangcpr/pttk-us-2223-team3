@@ -47,9 +47,20 @@ namespace HotelSystem
             roomStatusTxb.Text = status;
             customerNameTxb.Text = customerName;
             roomTypeTxb.Text = roomType;
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-            serviceDataGridView.DataSource = dt;
+            if (reader is null || !reader.HasRows)
+            {
+                DataTable dt = new DataTable();
+                dt.Columns.Add("MA_DICH_VU");
+                dt.Rows.Add("Khách hàng không sử dụng dịch vụ");
+                serviceDataGridView.DataSource = dt;
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+                serviceDataGridView.DataSource = dt;
+                reader.Close();
+            }
         }
 
         private void returnBtn_Click(object sender, EventArgs e)
@@ -65,10 +76,10 @@ namespace HotelSystem
             }
             else
             {
-                leTan_Invoice.setRoomID(MaPhong);
                 leTan_Invoice.setTypeInvoice("checkout");
                 leTan_Invoice.Show();
                 leTan_Invoice.BringToFront();
+                leTan_Invoice.setRoomID(MaPhong);
             }
         }
 
@@ -82,9 +93,20 @@ namespace HotelSystem
             roomStatusTxb.Text = status;
             customerNameTxb.Text = customerName;
             roomTypeTxb.Text = roomType;
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-            serviceDataGridView.DataSource = dt;
+            if (reader is null || !reader.HasRows)
+            {
+                DataTable dt = new DataTable();
+                dt.Columns.Add("MA_DICH_VU");
+                dt.Rows.Add("Khách hàng không sử dụng dịch vụ");
+                serviceDataGridView.DataSource = dt;
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+                serviceDataGridView.DataSource = dt;
+            }
+            reader.Close();
         }
     }
 }

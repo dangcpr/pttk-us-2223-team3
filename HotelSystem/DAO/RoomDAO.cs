@@ -384,7 +384,7 @@ namespace HotelSystem.DAO
 
         public static string getRoomStatus(string MaPhong)
         {
-            SqlCommand cmd = new SqlCommand("SELECT TINH_TRANG FROM THONG_TIN_PHONG_KHACH_SAN WHERE MA_PHONG = @MaPhong;", DatabaseDAO.sqlConn);
+            SqlCommand cmd = new SqlCommand("SELECT TINH_TRANG FROM THONG_TIN_PHONG_KHACH_SAN WHERE MA_PHONG = @MaPhong;", DatabaseDAO.getConnectDB());
             cmd.Parameters.AddWithValue("@MaPhong", MaPhong);
             string status = cmd.ExecuteScalar().ToString();
             return status;
@@ -396,8 +396,12 @@ namespace HotelSystem.DAO
             cmd.Parameters.AddWithValue("@MaPhong", MaPhong);
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Read();
-            MaKH = reader[0].ToString();
-            HoTen = reader[1].ToString();
+            if (reader.HasRows)
+            {
+                MaKH = reader[0].ToString();
+                HoTen = reader[1].ToString();
+                reader.Close();
+            }
             reader.Close();
         }
 
