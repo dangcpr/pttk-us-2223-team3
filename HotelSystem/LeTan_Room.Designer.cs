@@ -42,10 +42,12 @@ namespace HotelSystem
             this.LeTanRoomListListView = new System.Windows.Forms.ListView();
             this.LeTanRoomRequestBtn = new Guna.UI2.WinForms.Guna2Button();
             this.LeTanRoomListView = new System.Windows.Forms.ListView();
+            this.LeTanAddKhachDoanBtn = new Guna.UI2.WinForms.Guna2Button();
             this.LeTanRoomBooking = new HotelSystem.LeTan_Room_Booking();
             this.LeTan_Room_Searching = new HotelSystem.LeTan_Room_Searching();
             this.LeTan_Customer_Searching = new HotelSystem.LeTan_Customer_Searching();
             this.leTanRoomRequest = new HotelSystem.LeTan_Room_Request();
+            this.LeTan_Room_KhachDoan = new HotelSystem.LeTan_Room_KhachDoan();
             this.SuspendLayout();
             // 
             // HomeLabel
@@ -235,6 +237,24 @@ namespace HotelSystem
             this.LeTanRoomListView.TabIndex = 22;
             this.LeTanRoomListView.UseCompatibleStateImageBehavior = false;
             // 
+            // LeTanAddKhachDoanBtn
+            // 
+            this.LeTanAddKhachDoanBtn.BorderRadius = 5;
+            this.LeTanAddKhachDoanBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.LeTanAddKhachDoanBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.LeTanAddKhachDoanBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LeTanAddKhachDoanBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.LeTanAddKhachDoanBtn.FillColor = System.Drawing.Color.DeepPink;
+            this.LeTanAddKhachDoanBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.LeTanAddKhachDoanBtn.ForeColor = System.Drawing.Color.White;
+            this.LeTanAddKhachDoanBtn.Location = new System.Drawing.Point(779, 449);
+            this.LeTanAddKhachDoanBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.LeTanAddKhachDoanBtn.Name = "LeTanAddKhachDoanBtn";
+            this.LeTanAddKhachDoanBtn.Size = new System.Drawing.Size(240, 55);
+            this.LeTanAddKhachDoanBtn.TabIndex = 23;
+            this.LeTanAddKhachDoanBtn.Text = "Thêm thông tin khách đoàn";
+            this.LeTanAddKhachDoanBtn.Click += new System.EventHandler(this.LeTanAddKhachDoanBtn_Click);
+            // 
             // LeTanRoomBooking
             // 
             this.LeTanRoomBooking.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -271,11 +291,19 @@ namespace HotelSystem
             this.leTanRoomRequest.Size = new System.Drawing.Size(1217, 923);
             this.leTanRoomRequest.TabIndex = 21;
             // 
+            // LeTan_Room_KhachDoan
+            // 
+            this.LeTan_Room_KhachDoan.Location = new System.Drawing.Point(0, 0);
+            this.LeTan_Room_KhachDoan.Name = "LeTan_Room_KhachDoan";
+            this.LeTan_Room_KhachDoan.Size = new System.Drawing.Size(1219, 923);
+            this.LeTan_Room_KhachDoan.TabIndex = 24;
+            // 
             // LeTan_Room
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Controls.Add(this.LeTanAddKhachDoanBtn);
             this.Controls.Add(this.LeTanRoomListView);
             this.Controls.Add(this.LeTanRoomRequestBtn);
             this.Controls.Add(this.LeTanRoomListListView);
@@ -293,6 +321,7 @@ namespace HotelSystem
             this.Controls.Add(this.LeTan_Room_Searching);
             this.Controls.Add(this.LeTan_Customer_Searching);
             this.Controls.Add(this.leTanRoomRequest);
+            this.Controls.Add(this.LeTan_Room_KhachDoan);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LeTan_Room";
             this.Size = new System.Drawing.Size(1219, 923);
@@ -321,5 +350,7 @@ namespace HotelSystem
         private Guna.UI2.WinForms.Guna2Button LeTanRoomRequestBtn;
         private LeTan_Room_Request leTanRoomRequest;
         private System.Windows.Forms.ListView LeTanRoomListView;
+        private Guna.UI2.WinForms.Guna2Button LeTanAddKhachDoanBtn;
+        private LeTan_Room_KhachDoan LeTan_Room_KhachDoan;
     }
 }

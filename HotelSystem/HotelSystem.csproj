@@ -59,6 +59,8 @@
   <ItemGroup>
     <Compile Include="BUS\DatabaseBUS.cs" />
     <Compile Include="BUS\FeedbackBUS.cs" />
+    <Compile Include="BUS\KhachDoanBUS.cs" />
+    <Compile Include="DAO\KhachDoanDAO.cs" />
     <Compile Include="KhachHang_Feedback.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -123,6 +125,12 @@
     </Compile>
     <Compile Include="LeTan_Invoice_Search_Detail.Designer.cs">
       <DependentUpon>LeTan_Invoice_Search_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeTan_Room_KhachDoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeTan_Room_KhachDoan.Designer.cs">
+      <DependentUpon>LeTan_Room_KhachDoan.cs</DependentUpon>
     </Compile>
     <Compile Include="LeTan_Room_Request.cs">
       <SubType>UserControl</SubType>
@@ -271,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LeTan_Invoice_Search_Detail.resx">
       <DependentUpon>LeTan_Invoice_Search_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeTan_Room_KhachDoan.resx">
+      <DependentUpon>LeTan_Room_KhachDoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LeTan_Room_Request.resx">
       <DependentUpon>LeTan_Room_Request.cs</DependentUpon>
