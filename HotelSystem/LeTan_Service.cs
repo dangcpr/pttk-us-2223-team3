@@ -58,7 +58,7 @@ namespace HotelSystem
             lvService.Items.Clear(); // Clear all list view data
             ServiceBUS.loadData(lvService);
         }
-
+        /*
         private void xemlichdv_service_btn_Click(object sender, EventArgs e)
         {
             dataGridView3.BackgroundColor = System.Drawing.SystemColors.Control;
@@ -66,5 +66,6 @@ namespace HotelSystem
             dt = ServiceBUS.getDanhSachDatLichDv();
             dataGridView3.DataSource = dt;
         }
+        */
     }
 }

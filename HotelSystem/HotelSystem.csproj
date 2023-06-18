@@ -133,6 +133,7 @@
     </Compile>
     <Compile Include="LeTan_Room_KhachDoan.Designer.cs">
       <DependentUpon>LeTan_Room_KhachDoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="LeTan_Checkin_KM.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -307,6 +308,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LeTan_Room_KhachDoan.resx">
       <DependentUpon>LeTan_Room_KhachDoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LeTan_Checkin_KM.resx">
       <DependentUpon>LeTan_Checkin_KM.cs</DependentUpon>
     </EmbeddedResource>

@@ -68,7 +68,7 @@ namespace HotelSystem
         {
             this.Hide();
         }
-        
+
         private void confirmBtn_Click(object sender, EventArgs e)
         {
             if (invoiceDetailDataGridView.DataSource is null || invoiceDataGridView.DataSource is null)
