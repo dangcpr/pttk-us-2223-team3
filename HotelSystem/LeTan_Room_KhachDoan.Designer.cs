@@ -44,6 +44,8 @@
             this.selectListCustomerBtn = new Guna.UI2.WinForms.Guna2Button();
             this.password = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.leader = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SuspendLayout();
             // 
             // HomeLabel
@@ -295,10 +297,44 @@
             this.guna2HtmlLabel3.TabIndex = 37;
             this.guna2HtmlLabel3.Text = "Mật khẩu";
             // 
+            // leader
+            // 
+            this.leader.BorderRadius = 4;
+            this.leader.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.leader.DefaultText = "";
+            this.leader.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.leader.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.leader.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.leader.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.leader.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.leader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leader.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.leader.Location = new System.Drawing.Point(159, 506);
+            this.leader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.leader.Name = "leader";
+            this.leader.PasswordChar = '\0';
+            this.leader.PlaceholderText = "";
+            this.leader.SelectedText = "";
+            this.leader.Size = new System.Drawing.Size(255, 44);
+            this.leader.TabIndex = 40;
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(159, 471);
+            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(185, 28);
+            this.guna2HtmlLabel4.TabIndex = 39;
+            this.guna2HtmlLabel4.Text = "Mã người dẫn đoàn";
+            // 
             // LeTan_Room_KhachDoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.leader);
+            this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.password);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.selectListCustomerBtn);
@@ -340,5 +376,7 @@
         private Guna.UI2.WinForms.Guna2Button selectListCustomerBtn;
         private Guna.UI2.WinForms.Guna2TextBox password;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2TextBox leader;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
     }
 }

@@ -36,7 +36,7 @@ namespace HotelSystem
             BellmanCancel.BringToFront();
         }
 
-        private void ServiceButton_Click(object sender, EventArgs e)
+        private void FeedbackButton_Click(object sender, EventArgs e)
         {
             hoverPanel.Location = new Point(0, 264);
             KhachHang_Feedback.BringToFront();
@@ -81,6 +81,7 @@ namespace HotelSystem
             KhachHang_SeeBooking.setCustomerID(customerID);
             KhachHang_Feedback.setCustomerID(customerID);
         }
+
 
     }
 }

@@ -32,10 +32,10 @@ namespace HotelSystem
             {
                 customers.Add(item);
             }
-            int result = KhachDoanBUS.checkInput(doanId.Text, password.Text, doanName.Text, numberFax.Text, numberCustomer.Text, customers);
+            int result = KhachDoanBUS.checkInput(doanId.Text, password.Text, doanName.Text, numberFax.Text, numberCustomer.Text, leader.Text, customers);
             if (result == 0)
             {
-                MessageBox.Show("Đã có lỗi xảy ra, có thể là mã đoàn đã tồn tại hoặc lỗi kết nối");
+                MessageBox.Show("Đã có lỗi xảy ra, có thể là mã đoàn đã tồn tại, người dẫn đoàn chưa đăng ký thông tin hoặc lỗi kết nối");
             }
             else if (result == 1)
             {

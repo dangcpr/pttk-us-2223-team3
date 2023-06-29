@@ -38,7 +38,7 @@ namespace HotelSystem
             this.hoverPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.RoomButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.ServiceButton = new Guna.UI2.WinForms.Guna2Button();
+            this.FeedbackButton = new Guna.UI2.WinForms.Guna2Button();
             this.HomeButton = new Guna.UI2.WinForms.Guna2Button();
             this.name = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.hello = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -46,9 +46,9 @@ namespace HotelSystem
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.BellmanCancel = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.KhachHang_HomePage = new HotelSystem.KhachHang_HomePage();
             this.KhachHang_SeeBooking = new HotelSystem.KhachHang_SeeBooking();
             this.KhachHang_Feedback = new HotelSystem.BUS.KhachHang_Feedback();
-            this.KhachHang_HomePage = new HotelSystem.KhachHang_HomePage();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -67,7 +67,7 @@ namespace HotelSystem
             this.guna2Panel1.Controls.Add(this.hoverPanel);
             this.guna2Panel1.Controls.Add(this.RoomButton);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
-            this.guna2Panel1.Controls.Add(this.ServiceButton);
+            this.guna2Panel1.Controls.Add(this.FeedbackButton);
             this.guna2Panel1.Controls.Add(this.HomeButton);
             this.guna2Panel1.Controls.Add(this.name);
             this.guna2Panel1.Controls.Add(this.hello);
@@ -174,37 +174,37 @@ namespace HotelSystem
             this.guna2PictureBox2.Image = global::HotelSystem.Properties.Resources.Cover;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(30, 529);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(180, 131);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 5;
             this.guna2PictureBox2.TabStop = false;
             // 
-            // ServiceButton
+            // FeedbackButton
             // 
-            this.ServiceButton.Animated = true;
-            this.ServiceButton.AutoRoundedCorners = true;
-            this.ServiceButton.BorderRadius = 21;
-            this.ServiceButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ServiceButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ServiceButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ServiceButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ServiceButton.FillColor = System.Drawing.Color.White;
-            this.ServiceButton.Font = new System.Drawing.Font("Google Sans", 12.75F, System.Drawing.FontStyle.Bold);
-            this.ServiceButton.ForeColor = System.Drawing.Color.DeepPink;
-            this.ServiceButton.HoverState.FillColor = System.Drawing.Color.DeepPink;
-            this.ServiceButton.HoverState.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ServiceButton.HoverState.ForeColor = System.Drawing.Color.White;
-            this.ServiceButton.Image = global::HotelSystem.Properties.Resources.services_64;
-            this.ServiceButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ServiceButton.Location = new System.Drawing.Point(16, 264);
-            this.ServiceButton.Name = "ServiceButton";
-            this.ServiceButton.Size = new System.Drawing.Size(216, 45);
-            this.ServiceButton.TabIndex = 10;
-            this.ServiceButton.Text = "Feedback";
-            this.ServiceButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ServiceButton.Click += new System.EventHandler(this.ServiceButton_Click);
+            this.FeedbackButton.Animated = true;
+            this.FeedbackButton.AutoRoundedCorners = true;
+            this.FeedbackButton.BorderRadius = 21;
+            this.FeedbackButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.FeedbackButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.FeedbackButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.FeedbackButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.FeedbackButton.FillColor = System.Drawing.Color.White;
+            this.FeedbackButton.Font = new System.Drawing.Font("Google Sans", 12.75F, System.Drawing.FontStyle.Bold);
+            this.FeedbackButton.ForeColor = System.Drawing.Color.DeepPink;
+            this.FeedbackButton.HoverState.FillColor = System.Drawing.Color.DeepPink;
+            this.FeedbackButton.HoverState.Font = new System.Drawing.Font("Google Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeedbackButton.HoverState.ForeColor = System.Drawing.Color.White;
+            this.FeedbackButton.Image = global::HotelSystem.Properties.Resources.services_64;
+            this.FeedbackButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.FeedbackButton.Location = new System.Drawing.Point(16, 264);
+            this.FeedbackButton.Name = "FeedbackButton";
+            this.FeedbackButton.Size = new System.Drawing.Size(216, 45);
+            this.FeedbackButton.TabIndex = 10;
+            this.FeedbackButton.Text = "Feedback";
+            this.FeedbackButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.FeedbackButton.Click += new System.EventHandler(this.FeedbackButton_Click);
             // 
             // HomeButton
             // 
@@ -282,7 +282,7 @@ namespace HotelSystem
             this.BellmanCancel.FillColor = System.Drawing.Color.DeepPink;
             this.BellmanCancel.IconColor = System.Drawing.Color.White;
             this.BellmanCancel.Location = new System.Drawing.Point(872, 10);
-            this.BellmanCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.BellmanCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BellmanCancel.Name = "BellmanCancel";
             this.BellmanCancel.Size = new System.Drawing.Size(34, 24);
             this.BellmanCancel.TabIndex = 4;
@@ -297,10 +297,19 @@ namespace HotelSystem
             this.guna2Panel2.Controls.Add(this.BellmanCancel);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel2.Location = new System.Drawing.Point(243, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(914, 671);
             this.guna2Panel2.TabIndex = 6;
+            // 
+            // KhachHang_HomePage
+            // 
+            this.KhachHang_HomePage.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.KhachHang_HomePage.Location = new System.Drawing.Point(0, 0);
+            this.KhachHang_HomePage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KhachHang_HomePage.Name = "KhachHang_HomePage";
+            this.KhachHang_HomePage.Size = new System.Drawing.Size(914, 750);
+            this.KhachHang_HomePage.TabIndex = 7;
             // 
             // KhachHang_SeeBooking
             // 
@@ -317,14 +326,6 @@ namespace HotelSystem
             this.KhachHang_Feedback.Name = "KhachHang_Feedback";
             this.KhachHang_Feedback.Size = new System.Drawing.Size(914, 671);
             this.KhachHang_Feedback.TabIndex = 5;
-            // 
-            // KhachHang_HomePage
-            // 
-            this.KhachHang_HomePage.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.KhachHang_HomePage.Location = new System.Drawing.Point(0, 0);
-            this.KhachHang_HomePage.Name = "KhachHang_HomePage";
-            this.KhachHang_HomePage.Size = new System.Drawing.Size(914, 750);
-            this.KhachHang_HomePage.TabIndex = 7;
             // 
             // KhachHang_Overview
             // 
@@ -353,7 +354,7 @@ namespace HotelSystem
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button RoomButton;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2Button ServiceButton;
+        private Guna.UI2.WinForms.Guna2Button FeedbackButton;
         private Guna.UI2.WinForms.Guna2Button HomeButton;
         private Guna.UI2.WinForms.Guna2HtmlLabel name;
         private Guna.UI2.WinForms.Guna2HtmlLabel hello;

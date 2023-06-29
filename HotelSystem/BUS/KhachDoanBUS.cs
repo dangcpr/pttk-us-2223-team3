@@ -14,9 +14,9 @@ namespace HotelSystem.BUS
         {
             return KhachDoanDAO.selectKhachHang();
         }
-        public static int checkInput(string maDoan, string password, string tenDoan, string soFax, string soLuong, List<String> customers)
+        public static int checkInput(string maDoan, string password, string tenDoan, string soFax, string soLuong, string leader, List<String> customers)
         {
-            if (maDoan == "" || password == "" || tenDoan == "" || soFax == "" || soLuong == "" || customers.Count == 0)
+            if (maDoan == "" || password == "" || tenDoan == "" || soFax == "" || soLuong == "" || leader == "" || customers.Count == 0)
             {
                 return 2;
             }
@@ -34,7 +34,7 @@ namespace HotelSystem.BUS
             }
             else
             {
-                return KhachDoanDAO.ThemKhachDoan(maDoan, password, tenDoan, soFax, soLuong, customers);
+                return KhachDoanDAO.ThemKhachDoan(maDoan, password, tenDoan, soFax, soLuong, leader, customers);
             }
         }
     }
